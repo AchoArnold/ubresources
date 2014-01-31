@@ -7,9 +7,6 @@ hosting: http://62.210.239.213/<br/>
 Datamapping ORM :http://www.phpactiverecord.org/ We use the developer version not the stable one<br/>
 Data Warehouse: My Dropbox Account<br/>
 
-	- Username:	*******
-	- Password: 	******
-
 
 <h4>Framework</h4>
 * Backend
