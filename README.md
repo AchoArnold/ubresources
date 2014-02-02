@@ -16,7 +16,7 @@ Data Warehouse: My Dropbox Account <br/>
 
 <h4>TO DO  (Pre-release)</h4>
 * Core Application
-- [ ]  Create a means of uploading pictures to my dropbox account
+- [ ] Create a means of uploading pictures to my drop box account
 
 
 <h4>TO DO (Final-Release)</h4>
