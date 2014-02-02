@@ -13,4 +13,4 @@ Data Warehouse: My Dropbox Account<br/>
 	- Ruby on Rails
 
 * Front End
-	- Laravel
+	- Laravel PHP framework
