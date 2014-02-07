@@ -17,9 +17,15 @@ Data Warehouse: My Dropbox Account <br/>
 <h4>TO DO  (Pre-release)</h4>
 * Core Application
 - [ ] Create a means of uploading pictures to my drop box account
+- [ ] Use the dropbox uploader from github.com
 
 
 <h4>TO DO (Final-Release)</h4>
 * Core Application
 - [ ] Create accounts for each user
 - [ ] Users should be awarded points for each question they upload first
+- [ ] Automatically convert the pictures to question files
+- [ ] Use google callender to edit and create callender by course deligates and stuff
+
+<h4>TO DO (Version 1.2) </h4>
+- [ ] create a fully functional blog -- Using wordpress
