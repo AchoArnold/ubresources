@@ -41,7 +41,8 @@
                <h1 class="cover-heading">Upload</h1>
                <p class="lead">Please help us grow by submitting your past questions here</p>
                <p class="lead">
-                  <a href="#" class="btn btn-lg btn-warning">Upload</a>
+                  <a data-toggle="modal" href="#myModal" class="btn btn-lg btn-warning">Upload</a>
+                  
                </p>
             </div>
             </div>
@@ -54,6 +55,43 @@
          </div>
       </div>
    </div>
+    <!-- Modal -->
+      <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+              <h4 style="font-family:tahoma;color:lightskyblue" class="modal-title"><em>FILE UPLOAD</em></h4>
+            </div>
+            <div class="modal-body">
+              <form role="form" onsubmit="validate()" name="upload_form">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Full Name <small>*</small></label>
+                  <input type="name" class="form-control" placeholder="Your name here">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Email address <small><em>(optional)</em></small></label>
+                  <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputFile">SELECT FILE</label>
+                  <input type="file" required>
+                  <p style="font-family:tahoma; color:blue;" class="help-block"><em>Chose the file you wish to submit to us</em></p>
+                </div>
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox"  checked required> I agree to the <a href="http://www.gnu.org/copyleft/fdl.html">terms and conditions</a>
+                  </label>
+                </div>
+                <button type="submit" class="btn btn-success">Upload</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+      </div><!-- /.modal -->
    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
    <script src="../javascript/vendor/jquery.min.js"></script>
    <!-- Include all compiled plugins (below), or include individual files as needed -->
