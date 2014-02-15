@@ -25,7 +25,7 @@ Data Warehouse: My Dropbox Account <br/>
 - [ ] Create accounts for each user
 - [ ] Users should be awarded points for each question they upload first
 - [ ] Automatically convert the pictures to question files
-- [ ] Use google callender to edit and create callender by course deligates and stuff
+- [ ] Use google calendar to edit and create calendar by course deligates and stuff
 
 <h4>TO DO (Version 1.2) </h4>
-- [ ] create a fully functional blog -- Using wordpress
+- [ ] create a fully functional blog -- Using wordpress.
