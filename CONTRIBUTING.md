@@ -7,8 +7,7 @@
 *	[Bootstrap](http://getbootstrap.com).
 
 ##Backend Framework
-![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)
-*	[Laravel](http://laravel.com/docs).
+*	[Laravel Stable Version](http://laravel.com/docs).
 
 ##Data Warehouse
 *	[Dropbox](http://dropbox.com).
@@ -16,8 +15,7 @@
 *	password: fetbuea2014
 
 ##Contributing Code
-
-  *  You agree to license your contributions under [MIT license](http://opensource.org/licenses/MIT)
+*  You agree to license your contributions under [MIT license](http://opensource.org/licenses/MIT)
 
 ##How to submit code
 
@@ -28,7 +26,7 @@
 
    [Time passes, the najela/ubresources repository accumulates new commits]
    4. Commit changes to bug branch ($ git add . ; git commit -m 'fix bug 888888 - commit message')
-   5. Fetch mozilla ($ git fetch ubresources)
+   5. Fetch ubresources ($ git fetch ubresources)
    6. Update local master ($ git checkout master; git pull origin master)
 
    Repeat steps 4-7 till dev is complete

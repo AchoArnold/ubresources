@@ -3,7 +3,6 @@ UB Resources
 
 ##General information
 *	Url : Still to be bought
-*	hosting: http://62.210.239.213/
 *	To contribute, have a look at [CONTRIBUTING.md](https://github.com/najela/ubresources/blob/master/CONTRIBUTING.md)
 
 <pre>
@@ -11,7 +10,7 @@ UB Resources
  - [X] done.
 </pre>
 
-<h4>TO DO (Final-Release)</h4>
+<h4>TO DO</h4>
 * Core Application
 - [ ] Create a means of uploading pictures to my drop box account
 - [ ] Use the dropbox uploader from github.com
