@@ -26,7 +26,7 @@ return array(
 	|
 	*/
 
-	'default' => 'sqlite',
+	'default' => 'pgsql',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -66,11 +66,11 @@ return array(
 		'pgsql' => array(
 			'driver'   => 'pgsql',
 			'host'     => 'localhost',
-			'database' => 'database',
-			'username' => 'root',
+			'database' => 'ub_resources',
+			'username' => 'bepolite',
 			'password' => '',
 			'charset'  => 'utf8',
-			'prefix'   => '',
+			'prefix'   => 'ub_res_',
 			'schema'   => 'public',
 		),
 
