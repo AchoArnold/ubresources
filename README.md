@@ -2,15 +2,16 @@ UB Resources
 =========
 
 <h4>General information</h4>
-*Url : Still to be bought<br />
-*hosting: http://62.210.239.213/
-*To contribute, have a look at (contributing.md)[]
+<ul>
+<li>Url : Still to be bought<br /></li>
+<li>hosting: http://62.210.239.213/</li>
+<li>To contribute, have a look at [CONTRIBUTING.md](https://github.com/najela/ubresources/blob/master/CONTRIBUTING.md)</li>
+</ul>
 
 <pre>
  - [ ] To do.
  - [X] done.
 </pre>
-
 
 <h4>TO DO (Final-Release)</h4>
 * Core Application

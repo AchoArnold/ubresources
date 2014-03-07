@@ -1,27 +1,25 @@
 #Contribution Guidelines
 
 ##Database
-*[Sqlite3](http://www.sqlite.org/)
+*	[Sqlite3](http://www.sqlite.org/)
 
 ##UI Framewowk
-*[Bootstrap](http://getbootstrap.com).
+*	[Bootstrap](http://getbootstrap.com).
 
 ##Backend Framework
-[![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)]
-*[Laravel](http://laravel.com/docs).
+![Latest Stable Version](https://poser.pugx.org/laravel/framework/version.png)
+*	[Laravel](http://laravel.com/docs).
 
 ##Data Warehouse
-*[Dropbox](http://dropbox.com).
-*username: ubresources2014@gmail.com
-*password: fetbuea2014
+*	[Dropbox](http://dropbox.com).
+*	username: ubresources2014@gmail.com
+*	password: fetbuea2014
 
 ##Contributing Code
-=================
 
   *  You agree to license your contributions under [MIT license](http://opensource.org/licenses/MIT)
 
 ##How to submit code
-==================
 
 ###GitHub work-flow
    1. Set up remote repo ($ git remote add ubresources git@github.com:najela/ubresources.git)
