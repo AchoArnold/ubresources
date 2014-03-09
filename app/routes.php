@@ -1,6 +1,11 @@
 <?php
 
 /*
+	Binding $cat variable to the Cat model
+ */
+Route::model('cat', 'Cat');
+
+/*
 |--------------------------------------------------------------------------
 | Application Routes
 |--------------------------------------------------------------------------
@@ -11,7 +16,27 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
+Route::get('/', function(){
+	return Redirect::to('cats');
+});
+
+
+Route::get('about', function(){
+	return View::make('hello')->with('number_of_cats', 9000);
+});
+
+
+Route::get('cats', function(){
+	$cats = Cat::all();
+	return View::make('cats.index')->with('cats', $cats);
+});
+
+Route::get('cats/breeds/{name}', function($name){
+	$breed = Breed::whereName($name)->with('cats')->first();
+	return View::make('cats.index')->with('breed', $breed)->with('cats', $breed->cats);
+});
+
+
+Route::get('Cats/{cat}', function(Cat $cat){
+	return View::make('cats.single')->with('cat',$cat);
 });

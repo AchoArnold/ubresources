@@ -1,7 +1,7 @@
 #Contribution Guidelines
 
 ##Database
-*	[Sqlite3](http://www.sqlite.org/)
+*	[Postgresql](http://www.postgresql.org/)
 
 ##UI Framewowk
 *	[Bootstrap](http://getbootstrap.com).

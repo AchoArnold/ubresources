@@ -70,7 +70,7 @@ return array(
 			'username' => 'bepolite',
 			'password' => '',
 			'charset'  => 'utf8',
-			'prefix'   => 'ub_res_',
+			'prefix'   => '',
 			'schema'   => 'public',
 		),
 
@@ -120,5 +120,4 @@ return array(
 		),
 
 	),
-
 );
