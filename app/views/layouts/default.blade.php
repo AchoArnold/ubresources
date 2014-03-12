@@ -3,16 +3,17 @@
   <head>
     	<title>{{ $title }}</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      @yield('head')
     	<!-- CSS are placed here -->
-   	{{ HTML::style('/assets/css/vendor/bootstrap.min.css') }}
-    	{{ HTML::style('/assets/css/vendor/rondo_fonts.min.css') }}
-     	{{ HTML::style('/assets/css/ui_style.min.css') }}
+   	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
+    	{{ HTML::style('assets/css/vendor/rondo_fonts.min.css') }}
+     	{{ HTML::style('assets/css/ui_style.css') }}
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       {{HTML::script('assets/js/vendor/html5shiv.min.js')}}
       {{HTML::script('assets/js/vendor/respond.min.js')}}
     <![endif]-->
-    
+
   </head>
   <body>
     <header class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -29,18 +30,14 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <div class="col-md-12">
-            <form class="navbar-form navbar-left" role="search">
+          <div class="navbar-left">
+            <form class="navbar-form" role="search">
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="I want to search this site for">
+                <input type="text" class="form-control" placeholder="Search...">
               </div>
-              <button type="submit" class="btn  btn-info"><span class="glyphicon glyphicon-search"></span> </button>
+              <button type="submit" class="btn  btn-info"><span class="glyphicon glyphicon-search"></span></button>
             </form>
             <div>
-              <ul class="nav navbar-nav navbar-right" role="social">
-                <li><a href="#"><span aria-hidden="true" class="icon-facebook"></span></a></li>
-                <li><a href="#"><span aria-hidden="true" class="icon-twitter"></span></a></li>
-              </ul>
               </div><!-- /.navbar-collapse -->
             </div>
           </div>
@@ -50,7 +47,8 @@
       <section class="bs-header" id="content">
         <div class="container">
            
-           @yeild('header')
+           <!-- Put the page header here -->
+           @yield('header')
 
         </div>
       </section>
@@ -58,12 +56,12 @@
         <section class="row">
           <div class="col-md-3">
             <div class="list-group side-nav">
-               {{ HTML:: link('gist/','<span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>Gist',array('class' =>'list-group-item active')) }}
+               {{ HTML:: link('gist/','Gist',array('class' =>'list-group-item active')) }}
               	{{ HTML:: link('timetables/','Timetables',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('past-questions/','Past Questions',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('gpa-calculator/','GPA Calculator',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('course-outline/','Course Outline',array('class' =>'list-group-item')) }}
-         		{{ HTML:: link('good-links/','Useful Links',array('class' =>'list-group-item')) }}
+         		{{ HTML:: link('good-stuff/','Useful Links',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('contribute/','Contribute',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('support/','support',array('class' =>'list-group-item')) }}
             </div>
@@ -73,7 +71,7 @@
             <div class="main-content">
 
               <!-- Put the main page content here -->
-              @yeild('content')
+              @yield('content')
             
             </div>
           </div>
@@ -81,24 +79,26 @@
       </section>
       
       <footer class="copyright">
+      <div class="container">
         <div class="row">
             <div class="col-md-4">
               <p>&copy; {{ date('Y') }} UB Resources</p>
             </div>
-            <div class="col-md-5 col-md-offset-3">
+            <div class="navbar-right">
               <ul class="list-inline">
-                <li>{{ HTML:: link('contribute/error', 'Report Error') }}</li>
-                <li>{{ HTML:: link('shared/about', 'About Us') }}</li>
-                <li>{{ HTML:: link('shared/declaimer.html', 'Disclaimer') }}</li>
+                <li>{{ HTML:: link('error', 'Report Error') }}</li>
+                <li>{{ HTML:: link('about', 'About Us') }}</li>
+                <li>{{ HTML:: link('declaimer', 'Disclaimer') }}</li>
               </ul>
             </div>
           </div>
+        </div>
         </div>
       </footer>
       
 
       <!-- Scripts are placed here -->
-        {{ HTML::script('assets/js/vendor/jquery.v1.8.3.min.js') }}
-        {{ HTML::script('assets/js/vendor/bootstrap.min.js') }}
+        {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
+        {{ HTML::script('assets/js/vendor/bootstrap.js') }}
     </body>
   </html>

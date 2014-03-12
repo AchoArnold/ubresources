@@ -1,6 +1,6 @@
 /*-- Icon Fonts --*/
 .icon-facebook{
-color:greenyellow;
+color:greenyellodw;
 font-size:40px;
 }
 .icon-twitter{
@@ -27,10 +27,7 @@ background: black url(../images/navbar.png) repeat;
 border:none;
 font-size: 17px;
 }
-.navbar-default .navbar-brand{
-color:greenyellow;
-font-size: 35px;
-}
+
 .bs-header {
 background:rgb(242, 242, 242);
 border-bottom:2px solid rgb(240, 230, 242);
@@ -41,6 +38,15 @@ text-align: center;
 .navbar-nav li a, .navbar-form{
 text-align: center;
 }
+
+.navbar-form .form-control{
+  width:100%;
+}
+
+.temp
+{
+  border:red 2px solid;
+}
 .bs-header p {
 font-weight: 300;
 line-height: 1.5;
@@ -49,9 +55,6 @@ line-height: 1.5;
 position: relative;
 }
 
-.header-form-group{
-  width:300px;
-}
 .side-nav{
 padding-bottom: 25px;
 display:block;
@@ -247,6 +250,16 @@ Copyright
   padding-right: 10px;
 }
 
+.navbar-default .navbar-brand{
+color:greenyellow;
+font-size: 35px;
+}
+
+.navbar-default .navbar-form{
+  border:none;
+}
+
+
 /* Media Queries  */
 @media screen and (min-width: 768px) {
   .bs-header {
@@ -266,9 +279,11 @@ Copyright
   .bs-header p {
   margin-right: 380px;
   }
+}
 
-  .form-control{
-  width:500px;
+@media screen and (max-width: 843px) {
+  .navbar-default .navbar-form .btn-info:before{
+    content: 'Search  ';
   }
 }
 
@@ -284,3 +299,4 @@ url('../fonts/BebasNeue-webfont.woff') format('woff'),
 url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
 url('../fonts/BebasNeue-webfont.svg#BebasNeuemedium') format('svg');
 }
+

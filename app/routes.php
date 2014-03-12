@@ -11,5 +11,8 @@
 |
 */
 
-
 Route::get('/', 'HomeController@showWelcome');
+
+Route::get('about', 'AboutController@showPage');
+
+Route::get('good-stuff', 'LinksController@showPage');

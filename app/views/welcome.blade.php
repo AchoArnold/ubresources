@@ -18,7 +18,7 @@
         <li>{{HTML::link('past-questions/','Past Questions')}}</li>
         <li>{{HTML::link('gpa-calc/','GPA Calculator')}}</li>
         <li>{{HTML::link('course-outline/','Course Outline')}}</li>
-        <li>{{HTML::link('links/','Useful Links')}}</li>
+        <li>{{HTML::link('good-stuff/','Useful Links')}}</li>
         <li>{{HTML::link('contribute/','Contribute')}}</li>
         <li>{{HTML::link('help/','Help')}}</li>
       </ul>
