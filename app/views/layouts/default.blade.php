@@ -7,12 +7,12 @@
    	{{ HTML::style('/assets/css/vendor/bootstrap.min.css') }}
     	{{ HTML::style('/assets/css/vendor/rondo_fonts.min.css') }}
      	{{ HTML::style('/assets/css/ui_style.min.css') }}
-	
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	   <!--[if lt IE 9]>
-	   <script src="./javascript/vendor/html5shiv.min.js"></script>
-	   <script src="./javascript/vendor/respond.min.js"></script>
-	   <![endif]-->
+    <!--[if lt IE 9]>
+      {{HTML::script('assets/js/vendor/html5shiv.min.js')}}
+      {{HTML::script('assets/js/vendor/respond.min.js')}}
+    <![endif]-->
+    
   </head>
   <body>
     <header class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -25,7 +25,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="../">UB Resources</a>
+          <a class="navbar-brand" href="/">UB Resources</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -49,8 +49,9 @@
       <!-- Docs page layout -->
       <section class="bs-header" id="content">
         <div class="container">
-          <h1>Gist</h1>
-          <p>Get updated with what's happening in the  <a href="http://www.ubuea.cm">university</a> wherever you are</p>
+           
+           @yeild('header')
+
         </div>
       </section>
       <section class="container">
@@ -67,11 +68,12 @@
               	{{ HTML:: link('support/','support',array('class' =>'list-group-item')) }}
             </div>
           </div>
-          
+
           <div class="col-md-9">
             <div class="main-content">
 
-               @yeild('content')
+              <!-- Put the main page content here -->
+              @yeild('content')
             
             </div>
           </div>
@@ -85,9 +87,9 @@
             </div>
             <div class="col-md-5 col-md-offset-3">
               <ul class="list-inline">
-                <li>{{ HTML:: link('./contribute/error.html', 'Report Error') }}</li>
-                <li>{{ HTML:: link('./contribute/about.html', 'About Us') }}</li>
-                <li>{{ HTML:: link('./contribute/declaimer.html', 'Disclaimer') }}</li>
+                <li>{{ HTML:: link('contribute/error', 'Report Error') }}</li>
+                <li>{{ HTML:: link('shared/about', 'About Us') }}</li>
+                <li>{{ HTML:: link('shared/declaimer.html', 'Disclaimer') }}</li>
               </ul>
             </div>
           </div>
@@ -96,7 +98,7 @@
       
 
       <!-- Scripts are placed here -->
-        {{ HTML::script('/assets/js/vendor/jquery.v1.8.3.min.js') }}
-        {{ HTML::script('/assets/js/vendor/bootstrap.min.js') }}
+        {{ HTML::script('assets/js/vendor/jquery.v1.8.3.min.js') }}
+        {{ HTML::script('assets/js/vendor/bootstrap.min.js') }}
     </body>
   </html>
