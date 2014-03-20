@@ -1,6 +1,6 @@
 <?php
 
-class LinksController extends \BaseController {
+class CourseOutlineController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -40,8 +40,8 @@ class LinksController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('links.index')
-		->with('title', 'Useful links to external resources');
+		return View::Make('course-outline.index')
+		->with('title', 'Courses taken at the university of Buea');
 	}
 
 	/**
@@ -76,4 +76,5 @@ class LinksController extends \BaseController {
 	{
 		//
 	}
+
 }

@@ -5,7 +5,7 @@
 @stop
 @section('header')
    <h1>Useful Links</h1>
-          <p>This are some links to external sites which provide top notch resources you should know about
+          <p>These are some links to external sites which provide top notch resources you should know about
     </p>
 @stop
 

@@ -1,6 +1,6 @@
 <?php
 
-class LinksController extends \BaseController {
+class GistController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -40,8 +40,8 @@ class LinksController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('links.index')
-		->with('title', 'Useful links to external resources');
+		return View::make('gist.index')
+		->with('title', 'Latest news in the University of Buea');
 	}
 
 	/**
@@ -76,4 +76,5 @@ class LinksController extends \BaseController {
 	{
 		//
 	}
+
 }

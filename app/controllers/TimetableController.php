@@ -1,6 +1,6 @@
 <?php
 
-class LinksController extends \BaseController {
+class TimetableController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -40,8 +40,8 @@ class LinksController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('links.index')
-		->with('title', 'Useful links to external resources');
+		return View::make('timetables.index')
+		->with('title', 'Easily Verify Your timetable');
 	}
 
 	/**

@@ -16,11 +16,11 @@
         <li>{{HTML::link('gist/','Gist')}}</li>
         <li>{{HTML::link('timetables/','Timetables')}}</li>
         <li>{{HTML::link('past-questions/','Past Questions')}}</li>
-        <li>{{HTML::link('gpa-calc/','GPA Calculator')}}</li>
+        <li>{{HTML::link('gpa-calculator/','GPA Calculator')}}</li>
         <li>{{HTML::link('course-outline/','Course Outline')}}</li>
-        <li>{{HTML::link('good-stuff/','Useful Links')}}</li>
+        <li>{{HTML::link('useful-links/','Useful Links')}}</li>
         <li>{{HTML::link('contribute/','Contribute')}}</li>
-        <li>{{HTML::link('help/','Help')}}</li>
+        <li>{{HTML::link('help-desk/','Help')}}</li>
       </ul>
     </section>
   </body>

@@ -61,15 +61,17 @@
               	{{ HTML:: link('past-questions/','Past Questions',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('gpa-calculator/','GPA Calculator',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('course-outline/','Course Outline',array('class' =>'list-group-item')) }}
-         		{{ HTML:: link('good-stuff/','Useful Links',array('class' =>'list-group-item')) }}
+         		{{ HTML:: link('useful-links/','Useful Links',array('class' =>'list-group-item')) }}
               	{{ HTML:: link('contribute/','Contribute',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('support/','support',array('class' =>'list-group-item')) }}
+              	{{ HTML:: link('help-desk/','Help desk',array('class' =>'list-group-item')) }}
             </div>
           </div>
 
           <div class="col-md-9">
             <div class="main-content">
 
+              @yield('warning')
+          
               <!-- Put the main page content here -->
               @yield('content')
             
@@ -86,9 +88,9 @@
             </div>
             <div class="navbar-right">
               <ul class="list-inline">
-                <li>{{ HTML:: link('error', 'Report Error') }}</li>
+                <li>{{ HTML:: link('contribute/errors', 'Report Error') }}</li>
                 <li>{{ HTML:: link('about', 'About Us') }}</li>
-                <li>{{ HTML:: link('declaimer', 'Disclaimer') }}</li>
+                <li>{{ HTML:: link('disclaimer', 'Disclaimer') }}</li>
               </ul>
             </div>
           </div>
