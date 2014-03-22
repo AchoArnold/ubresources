@@ -40,8 +40,10 @@ class GistController extends \BaseController {
 	 */
 	public function show()
 	{
+		$gists =  Gist::all();
 		return View::make('gist.index')
-		->with('title', 'Latest news in the University of Buea');
+		->with('title', 'Latest news in the University of Buea')
+		->with('gists', $gists);
 	}
 
 	/**

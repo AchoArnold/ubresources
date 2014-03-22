@@ -10,17 +10,25 @@
 @stop
 
 @section('content')
-	<article class="gist-post">
-   <h3>Official School Reopening</h3>
-   <p class="post-date">Posted on 9<sup>th</sup> October 2013</p>
-   <p>The official reopening date for the start of classes this  2013/2014 academic year is the <strong>14<sup>th</sup> of October 2013</strong>. Matriculation shall take place three weeks later on the 2<sup>nd</sup> of November. Please do check out the  official school calender at <a href="http://ubuea.cm/ub-academic-calendar/r">http://ubuea.cm/ub-academic-calendar/</a> for the dates of other important events
-   </p>
-   <div class="social-buttons">
-     <ul>
-       <li><a href="">Twitter</a></li>
-       <li><a href="">Google+</a></li>
-       <li><a href="">facebook</a></li>
-     </ul>
-   </div>
-   </article>
+	@foreach($gists as $gist)
+		<article class="gist-post">
+	   <h3>{{$gist->title}}</h3>
+	   <p class="post-date">Posted on
+			@if ($gist->created_at->diffInDays() > 30)
+		    		{{$gist->created_at->toFormattedDateString()}}
+			@else
+				   {{$gist->created_at->diffForHumans()}}
+			@endif
+	   </p>
+	   <p>{{$gist->content}}
+	   </p>
+	   <div class="social-buttons">
+	     <ul>
+	       <li><a href="">Twitter</a></li>
+	       <li><a href="">Google+</a></li>
+	       <li><a href="">facebook</a></li>
+	     </ul>
+	   </div>
+	   </article>
+	@endforeach
 @stop
