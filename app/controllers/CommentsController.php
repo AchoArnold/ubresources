@@ -19,16 +19,24 @@ class CommentsController extends \BaseController {
 	 */
 	public function create($uri)
 	{
-		$comment = new Comment;
-		$comment->content= Input::get('content');
-		$comment->author_id ='1';
-		$comment->gist_id = Gist::whereGistUri($uri)->firstOrFail()->id;
-		if($comment->save()){
+		 $v = Comment::validate(Input::all());
+
+        if ( $v->passes() ) {
+			$comment = new Comment;
+			$comment->content = String::makeLinks( HTML::entities(Input::get('content')) );
+			$comment->author_id ='1';
+			$comment->gist_id = Gist::whereGistUri($uri)->firstOrFail()->id;
+			if($comment->save()){
+				return Redirect::back()
+				->with('message', 'Comment posted successfully!');
+			}else{
+				return Redirect::back()
+				->with('error', 'Comment could not be posted!');
+			}
+		}
+		else{
 			return Redirect::back()
-			->with('message', 'Comment posted successfully!');
-		}else{
-			return Redirect::back()
-			->with('error', 'Comment could not be posted!');
+			->with('error', $v->messages()->get('content'));
 		}
 	}
 

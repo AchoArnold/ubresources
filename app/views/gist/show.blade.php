@@ -13,7 +13,17 @@
 @if( Session::has('message') )
 	@section('message')
 		<div class="alert alert-success">
-	   <p><strong><span class="glyphicon glyphicon-ok-circle"></span></strong> {{Session::get('message')}}</p>
+	   <p>
+	   	@if(is_array(Session::get('message')))
+				@foreach(Session::get('message') as $messages)
+					<strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
+					{{$messages}}<br/>
+				@endforeach
+			@else
+	   		<strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
+	   		{{Session::get('message')}}
+			@endif
+	   </p>
  		</div>
 	@stop
 @endif
@@ -21,7 +31,17 @@
 @if(Session::has('error'))
 	@section('error')
 		 <div class="alert alert-danger">
-       <p><strong><span class="glyphicon glyphicon-remove-circle"></span></strong> {{Session::get('error')}}</p>
+       <p>
+			@if(is_array(Session::get('error')))
+				@foreach(Session::get('error') as $errors)
+					<strong><span class="glyphicon glyphicon-remove-circle"></span></strong>
+					{{$errors}}<br/>
+				@endforeach
+			@else
+	   		<strong><span class="glyphicon glyphicon-remove-circle"></span></strong>
+	   		{{Session::get('error')}}
+			@endif
+      </p>
    </div>
   	@stop
 @endif
@@ -83,11 +103,11 @@
 			  		<div class="panel-body">
 			  			{{Form::open( array('method' => 'post', 'url' => 'gist/'.$gist->gist_uri))}}
 			  			<div class="form-group">
-			  				{{Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4'))}}
+			  				{{Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'onkeyup' => 'toggle_button(this)'))}}
 			  			</div>
 			  			<div class="form-group">
 			    			<div class="text-right">
-			      			{{Form::submit("Post Comment", array("class"=>"btn btn-success"))}}
+			      			{{Form::submit("Post Comment", array("class"=>"btn btn-success", 'id' => 'post-comment','disabled' => 'true'))}}
 			    			</div>
 						</div>
 					</div>
