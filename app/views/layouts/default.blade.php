@@ -69,8 +69,8 @@
 
           <div class="col-md-9">
             <div class="main-content">
-
-              @yield('warning')
+              @yield('error')
+              @yield('message')
           
               <!-- Put the main page content here -->
               @yield('content')

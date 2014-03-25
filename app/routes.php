@@ -17,7 +17,13 @@ Route::get('about', 'AboutController@showPage');
 
 Route::get('disclaimer', 'DisclaimerController@show');
 
-Route::get('gist', 'GistController@show');
+Route::get('gist', 'GistController@index');
+
+Route::get('gist/{uri}', 'GistController@show');
+
+Route::get('gist/{comment}/delete', 'CommentsController@destroy');
+
+Route::post('gist/{uri}', 'CommentsController@create');
 
 Route::get('useful-links', 'LinksController@show');
 

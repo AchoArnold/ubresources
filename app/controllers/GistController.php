@@ -9,27 +9,10 @@ class GistController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-	}
-
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
+		$gists =  Gist::all();
+		return View::make('gist.index')
+		->with('title', 'Latest news in the University of Buea')
+		->with('gists', $gists);
 	}
 
 	/**
@@ -38,45 +21,15 @@ class GistController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show()
+	public function show($uri)
 	{
-		$gists =  Gist::all();
-		return View::make('gist.index')
-		->with('title', 'Latest news in the University of Buea')
-		->with('gists', $gists);
-	}
-
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function edit($id)
-	{
-		//
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
+		$gist =  Gist::whereGistUri($uri)->firstOrFail();
+		$comments = Comment::whereGistId($gist->id)->get();
+		
+		return View::make('gist.show')
+		->with('title', $gist->title .' | UBresources')
+		->with('gist', $gist)
+		->with('comments', $comments);
 	}
 
 }

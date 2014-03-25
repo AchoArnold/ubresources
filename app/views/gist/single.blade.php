@@ -12,16 +12,16 @@
 @section('content')
 	@foreach($gists as $gist)
 		<article class="gist-post">
-	   <h3>{{HTML::link('gist/'.$gist->gist_uri, $gist->title)}}</h3>
-	   <p class="post-date">Posted 
+	   <h3>{{HTML::link($gist->gist_url, $gist->title)}}</h3>
+	   <p class="post-date">Posted on
 			@if ($gist->created_at->diffInDays() > 30)
-		    		on {{$gist->created_at->toFormattedDateString()}}
+		    		{{$gist->created_at->toFormattedDateString()}}
 			@else
 				   {{$gist->created_at->diffForHumans()}}
 			@endif
 	   </p>
 	   <p>{{substr($gist->content, 0,350)}}
-	   		[{{HTML::link('gist/'.$gist->gist_uri,'Read more')}}]
+	   		[{{HTML::link($gist->gist_url,"Read more")}}]
 	   </p>
 	   <div class="social-buttons">
 	     <ul>
