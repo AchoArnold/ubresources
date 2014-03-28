@@ -9,7 +9,11 @@ class TimetableController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$department_list = Timetable::departments();
+		return $department_list;
+		
+		return View::make('timetables.index')
+		->with('title', 'Easily Verify Your timetable');
 	}
 
 	/**
@@ -40,8 +44,6 @@ class TimetableController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('timetables.index')
-		->with('title', 'Easily Verify Your timetable');
 	}
 
 	/**

@@ -27,7 +27,7 @@ Route::post('gist/{uri}', 'CommentsController@create');
 
 Route::get('useful-links', 'LinksController@show');
 
-Route::get('timetables', 'TimetableController@show');
+Route::get('timetables', 'TimetableController@index');
 
 Route::get('gpa-calculator', 'GpaCalcController@show');
 
