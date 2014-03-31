@@ -1,3 +1,0 @@
-app/config/*
-app/start/global.php
-app/database/production.sqlite
