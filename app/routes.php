@@ -29,6 +29,10 @@ Route::get('useful-links', 'LinksController@show');
 
 Route::get('timetables', 'TimetableController@index');
 
+Route::post('timetables', 'TimetableController@handle_form');
+
+Route::get('timetables/{faculty_id}/{department_id}/{level}', 'TimetableController@show');
+
 Route::get('gpa-calculator', 'GpaCalcController@show');
 
 Route::get('past-questions', 'PastQuestionsController@show');

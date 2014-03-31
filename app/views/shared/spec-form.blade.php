@@ -1,27 +1,32 @@
 @section('spec-form')
-<h2>Please specify your details below</h2>
-   <form  role="user-specificaion" class="course-form" name="specification" method="get" onsubmit=" return specificationFormProcess()">
-     <div class="form-group">
-       <label>Faculty:</label>
-       <select  name="faculty"class="form-control">
-         <option value="FET">Engineering and Technology</option>
-       </select>
-     </div>
-     <div class="form-group">
-       <label>Department:</label>
-       <select class="form-control" name="department" id="department">
-         <option value="CE">Computer Engineering</option>
-         <option value="EE">Electrical Engineering</option>
-       </select>
-     </div>
-     <div class="form-group">
-       <label>Level:</label>
-       <select class="form-control" name="level" id="level">
-         <option value="200">200</option>
-         <option value="300">300</option>
-         <option value="400">400</option>
-       </select>
-     </div>
-     <button type="submit" class=" col-md-2 col-md-offset-4 btn btn-primary"> View <span class="glyphicon glyphicon-chevron-right"></span></button>
-   </form>
+	<h2>Please specify your details below</h2>
+	{{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => 'timetables/'))}}
+		<div class="form-group">
+			{{Form::label('Faculty:')}}
+			<select  name="faculty"class="form-control" id="faculty" onchange="fill_department(this.value)"></select>
+		</div>
+		<div class="form-group">
+			{{Form::label('Department:')}}
+   		<select class="form-control" name="department" id="department" onchange="fill_level(this.value)">
+   		</select>
+		</div>
+		<div class="form-group">
+     		{{Form::label('Level:')}}
+     		<select class="form-control" name="level" id="level">
+     		</select>
+   	</div>
+		<div class="form-group">
+ 			<div class="text-right">
+ 				<button type="submit" class="btn btn-info">Next <span class="glyphicon glyphicon-chevron-right"></span></button>
+ 			</div>
+		</div>
+	{{Form::close()}}
+
+   <script>
+      window.obj = {{ json_encode($form_list) }};
+      window.onload= function(){
+      	fill_faculty();
+      }
+   </script>
+   {{HTML::script('assets/js/feild.js')}}
 @stop

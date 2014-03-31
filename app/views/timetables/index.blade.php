@@ -1,4 +1,5 @@
 @extends('../layouts/default')
+@include('../shared/spec-form')
 
 @section('head')
 	<meta name="description" content="Links to some useful Material">
@@ -15,6 +16,5 @@
 @stop
 
 @section('content')
-  @include('../shared/spec-form')
   @yield('spec-form')
 @stop

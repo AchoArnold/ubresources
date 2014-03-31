@@ -110,6 +110,7 @@
 			      			{{Form::submit("Post Comment", array("class"=>"btn btn-success", 'id' => 'post-comment','disabled' => 'true'))}}
 			    			</div>
 						</div>
+						{{Form::close()}}
 					</div>
 				</div>
 			</div>

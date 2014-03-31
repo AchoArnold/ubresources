@@ -11,13 +11,11 @@
 	</p>
 @stop
 
-@section('warning')
-<noscript>
-  <div class="alert alert-danger">
-    <p><strong> This website requires JavaScript to be enabled on your browser</strong></p>
-    <p>Please enable JavaScript if you want to continue</p>
+@section('error')
+  <div class="alert alert-info">
+    <p><strong>This is an unofficial tool</strong></p>
+    <p>The results you get from this gpa calculator are not 100% accurate and may differ from what is on your transcript</p>
   </div>
-</noscript>
 @stop
 
 @section('content')

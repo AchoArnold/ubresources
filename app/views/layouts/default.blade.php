@@ -56,19 +56,73 @@
         <section class="row">
           <div class="col-md-3">
             <div class="list-group side-nav">
-               {{ HTML:: link('gist/','Gist',array('class' =>'list-group-item active')) }}
-              	{{ HTML:: link('timetables/','Timetables',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('past-questions/','Past Questions',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('gpa-calculator/','GPA Calculator',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('course-outline/','Course Outline',array('class' =>'list-group-item')) }}
-         		{{ HTML:: link('useful-links/','Useful Links',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('contribute/','Contribute',array('class' =>'list-group-item')) }}
-              	{{ HTML:: link('help-desk/','Help desk',array('class' =>'list-group-item')) }}
+              <a href="{{URL::to('gist')}}" class="list-group-item
+              @if (Request::is('gist*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Gist</a>
+              <a href="{{URL::to('timetables')}}" class="list-group-item
+              @if (Request::is('timetable*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Timetables</a>
+              <a href="{{URL::to('past-questions')}}" class="list-group-item
+              @if (Request::is('past-questions*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Past Questions</a>
+              <a href="{{URL::to('gpa-calculator')}}" class="list-group-item
+              @if (Request::is('gpa-calculator*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              GPA Calculator</a>
+              <a href="{{URL::to('course-outline')}}" class="list-group-item
+              @if (Request::is('course-outline*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Course Outline</a>
+              <a href="{{URL::to('useful-links')}}" class="list-group-item
+              @if (Request::is('useful-links*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Useful Links</a>
+              <a href="{{URL::to('contribute')}}" class="list-group-item
+              @if (Request::is('contribute*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Contribute</a>
+              <a href="{{URL::to('help-desk')}}" class="list-group-item
+              @if (Request::is('help-desk*'))
+                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+              @else
+                ">
+              @endif
+              Help Desk</a>
             </div>
           </div>
 
           <div class="col-md-9">
             <div class="main-content">
+            <noscript>
+              <div class="alert alert-danger">
+                <p><strong> This website requires JavaScript to be enabled on your browser</strong></p>
+                <p>Please enable javascript if you want to use this website</p>
+              </div>
+            </noscript>
               @yield('error')
               @yield('message')
           

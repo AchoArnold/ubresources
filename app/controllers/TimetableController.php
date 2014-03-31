@@ -9,11 +9,11 @@ class TimetableController extends \BaseController {
 	 */
 	public function index()
 	{
-		$department_list = Timetable::departments();
-		return $department_list;
-		
+		$department_array = Timetable::departments();
+
 		return View::make('timetables.index')
-		->with('title', 'Easily Verify Your timetable');
+		->with('title', 'Easily Verify Your timetable')
+		->with('form_list', $department_array);
 	}
 
 	/**
@@ -21,10 +21,14 @@ class TimetableController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function create()
+	public function handle_form()
 	{
-		//
+		$faculty_id = Input::get('faculty');
+		$department_id = Input::get('department');
+		$level = Input::get('level');
+		return Redirect::to('timetables/'.$faculty_id.'/'.$department_id.'/'.$level);
 	}
+
 
 	/**
 	 * Store a newly created resource in storage.
@@ -42,8 +46,24 @@ class TimetableController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show()
+	public function show($faculty_id, $department_id, $level)
 	{
+
+		$timetable_entries = Timetable::timetable_array($department_id, $level );
+		if ($timetable_entries == NULL){
+			return 404;
+		}
+		$meta_data = Timetable::meta_data( $faculty_id, $department_id );
+		if($meta_data == NULL)
+		{
+			return 404;
+		}
+
+		return View::make('timetables.show')
+		->with('title', "Timetable for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $level)
+		->with('timetable', $timetable_entries)
+		->with('meta_data', $meta_data)
+		->with('level', $level);
 	}
 
 	/**
