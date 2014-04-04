@@ -2,12 +2,15 @@
 
 class CourseTableSeeder extends Seeder{
 	public function run(){
+		$id = 35;
 		DB::table('courses')->insert(array(
-			array('id'=>1, 'department_id'=>'1', 'name' => 'Linear Algebra', 'short_name' =>'CEF201', 'created_at' => '2014-03-26 09:37:30', 'updated_at' =>'2014-03-26 09:37:30'),
-			array('id'=>2, 'department_id'=>'3', 'name' => 'Programming', 'short_name' =>'CEF207', 'created_at' => '2014-03-26 09:37:30', 'updated_at' =>'2014-03-26 09:37:30'),
-			array('id'=>3, 'department_id'=>'1', 'name' => 'Probability', 'short_name' =>'CEF301', 'created_at' => '2014-03-26 09:37:30', 'updated_at' =>'2014-03-26 09:37:30'),
-			array('id'=>4, 'department_id'=>'2', 'name' => 'Database Management System', 'short_name' =>'CEF309', 'created_at' => '2014-03-26 09:37:30', 'updated_at' =>'2014-03-26 09:37:30'),
-			array('id'=>5, 'department_id'=>'1', 'name' => 'Analysis', 'short_name' =>'CEF204', 'created_at' => '2014-03-26 09:37:30', 'updated_at' =>'2014-03-26 09:37:30')
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Use of English I', 'short_name' => 'ENG101', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05'),
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Civics and Ethics','short_name' => 'CVE100', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05'),
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Use of English II','short_name' => 'ENG102', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05'),
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Sports','short_name' => 'SPT100', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05'),
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Functional French I','short_name' => 'FRE101', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05'),
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Functional French II','short_name' => 'FRE102', 'created_at'=>'2014-04-01 11:35:05', 'updated_at' => '2014-04-01 11:35:05')
 		));
 	}
 }

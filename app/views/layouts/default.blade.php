@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    	<title>{{ $title }}</title>
+    	<title>{{ $title }} | UB Resources</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
       @yield('head')
     	<!-- CSS are placed here -->
@@ -123,6 +123,7 @@
                 <p>Please enable javascript if you want to use this website</p>
               </div>
             </noscript>
+            
               @yield('error')
               @yield('message')
           

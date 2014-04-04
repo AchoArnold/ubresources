@@ -10,7 +10,8 @@
 @stop
 
 @section('error')
-   <div class="alert alert-danger">
+   <div class="alert alert-danger fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
        <strong>Sorry!</strong> We only have timetables for the faculty of Engineering and Technology. Please do check later for other timetables OR help us by submitting your timetable {{HTML::link('contribute/timetables','here')}}
    </div>
 @stop

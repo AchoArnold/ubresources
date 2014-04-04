@@ -27,17 +27,37 @@ Route::post('gist/{uri}', 'CommentsController@create');
 
 Route::get('useful-links', 'LinksController@show');
 
+
 Route::get('timetables', 'TimetableController@index');
 
 Route::post('timetables', 'TimetableController@handle_form');
 
 Route::get('timetables/{faculty_id}/{department_id}/{level}', 'TimetableController@show');
 
-Route::get('gpa-calculator', 'GpaCalcController@show');
 
-Route::get('past-questions', 'PastQuestionsController@show');
+Route::get('past-questions', 'PastQuestionController@index');
 
-Route::get('course-outline', 'CourseOutlineController@show');
+Route::post('past-questions', 'PastQuestionController@handle_form');
+
+Route::get('past-questions/{faculty_id}/{department_id}/{level}', 'PastQuestionController@show');
+
+Route::post('past-questions/{faculty_id}/{department_id}/{level}', 'PastQuestionController@download');
+
+
+
+Route::get('gpa-calculator', 'GpaCalcController@index');
+
+Route::post('gpa-calculator', 'GpaCalcController@handle_form');
+
+Route::get('gpa-calculator/{faculty_id}/{department_id}/{level}', 'GpaCalcController@show');
+
+
+Route::get('course-outline', 'CourseOutlineController@index');
+
+Route::post('course-outline', 'CourseOutlineController@handle_form');
+
+Route::get('course-outline/{faculty_id}/{department_id}/{level}', 'CourseOutlineController@show');
+
 
 Route::get('contribute','ContributionController@show');
 

@@ -1,6 +1,6 @@
 @section('spec-form')
 	<h2>Please specify your details below</h2>
-	{{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => 'timetables/'))}}
+	{{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::segment(1) ))}}
 		<div class="form-group">
 			{{Form::label('Faculty:')}}
 			<select  name="faculty"class="form-control" id="faculty" onchange="fill_department(this.value)"></select>

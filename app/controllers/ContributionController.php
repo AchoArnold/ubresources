@@ -48,25 +48,25 @@ class ContributionController extends \BaseController {
 	public function contributePastQuestion()
 	{
 		return View::make('contribute.single')
-		->with('title', 'Easily submit past question papers here')
+		->with('title', 'Easily submit your past question papers here')
 		->with('tab', 'past questions')
-		->with('link', 'http://www.github.com');
+		->with('link', 'https://github.com/najela/ubresources');
 	}
 
 	public function contributeTimetable()
 	{
 		return View::make('contribute.single')
-		->with('title', 'Easily submit past timetables papers here')
+		->with('title', 'Easily submit your timetable to us here')
 		->with('tab', 'timetables')
-		->with('link', 'http://www.github.com');
+		->with('link', 'https://github.com/najela/ubresources');
 	}
 
 	public function contributeCourseOutline()
 	{
 		return View::make('contribute.single')
-		->with('title', 'Easily submit past course-outline here')
+		->with('title', 'Easily submit your course outline here')
 		->with('tab', 'course outlines')
-		->with('link', 'http://www.github.com');
+		->with('link', 'https://github.com/najela/ubresources');
 	}
 
 	public function contributeError()

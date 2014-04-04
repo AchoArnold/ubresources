@@ -12,7 +12,8 @@
 
 @if( Session::has('message') )
 	@section('message')
-		<div class="alert alert-success">
+		<div class="alert alert-danger fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 	   <p>
 	   	@if(is_array(Session::get('message')))
 				@foreach(Session::get('message') as $messages)
@@ -30,7 +31,8 @@
 
 @if(Session::has('error'))
 	@section('error')
-		 <div class="alert alert-danger">
+		 <div class="alert alert-danger fade in">
+      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
        <p>
 			@if(is_array(Session::get('error')))
 				@foreach(Session::get('error') as $errors)

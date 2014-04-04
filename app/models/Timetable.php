@@ -2,7 +2,6 @@
 
 class Timetable extends Eloquent
 {
-
 	public static function departments()
 	{
 		$lists = DB::table('timetables')

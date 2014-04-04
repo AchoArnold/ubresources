@@ -9,47 +9,41 @@ class GpaCalcController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
-	}
+		$department_array = CourseOutline::departments();
 
-	/**
-	 * Show the form for creating a new resource.
-	 *
-	 * @return Response
-	 */
-	public function create()
-	{
-		//
-	}
-
-	/**
-	 * Store a newly created resource in storage.
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
-	 * Display the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show()
-	{
 		return View::make('gpa-calc.index')
-		->with('title', 'Simple and Efficient GPA calculator');
+		->with('title', 'Fast and efficient GPA calculator for the University of Buea')
+		->with('form_list', $department_array);
 	}
 
-	/**
-	 * Show the form for editing the specified resource.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
+
+	public function handle_form()
+	{
+		$faculty_id = Input::get('faculty');
+		$department_id = Input::get('department');
+		$level = Input::get('level');
+		return Redirect::to('gpa-calculator/'.$faculty_id.'/'.$department_id.'/'.$level);
+	}
+	
+	public function show($faculty_id, $department_id, $level)
+	{
+
+		$course_outline_entries = CourseOutline::course_outline_array($department_id, $level );
+		if ($course_outline_entries == NULL){
+			return 404;
+		}
+		$meta_data = CourseOutline::meta_data( $faculty_id, $department_id );
+		if($meta_data == NULL)
+		{
+			return 404;
+		}
+
+		return View::make('gpa-calc.show')
+		->with('title', "Gpa calculator for ".strtolower($meta_data->faculty_name). " department of".strtolower($meta_data->department_name)." level ". $level)
+		->with('course_outline', $course_outline_entries)
+		->with('meta_data', $meta_data);
+	}
+
 	public function edit($id)
 	{
 		//

@@ -17,10 +17,11 @@ class CreatePastQuestionsTable extends Migration {
 			$table->increments('id');
 			$table->integer('department_id');
 			$table->integer('level');
-			$table->char('course_code',5);
-			$table->boolean('type');
+			$table->integer('semester');
+			$table->integer('course_code');
+			$table->integer('type');
 			$table->date('date');
-			$table->string('link');
+			$table->string('file_path');
 			$table->timestamps();
 		});
 	}
