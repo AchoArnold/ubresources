@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', 'HomeController@showWelcome');
+Route::get('/', 'HomeController@index');
 
 Route::get('about', 'AboutController@showPage');
 
@@ -59,14 +59,12 @@ Route::post('course-outline', 'CourseOutlineController@handle_form');
 Route::get('course-outline/{faculty_id}/{department_id}/{level}', 'CourseOutlineController@show');
 
 
-Route::get('contribute','ContributionController@show');
+Route::get('contribute','ContributionController@index');
 
-Route::get('contribute/past-questions', 'ContributionController@contributePastQuestion');
+Route::get('contribute/{id}', 'ContributionController@show');
 
-Route::get('contribute/timetables', 'ContributionController@contributeTimetable');
-
-Route::get('contribute/course-outlines', 'ContributionController@contributeCourseOutline');
-
-Route::get('contribute/errors', 'ContributionController@contributeError');
 
 Route::get('help-desk', 'HelpDeskController@show');
+
+
+Route::get('search', 'SearchController@index');

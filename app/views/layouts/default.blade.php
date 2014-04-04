@@ -3,6 +3,7 @@
   <head>
     	<title>{{ $title }} | UB Resources</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+       <meta content="UB, Buea, University, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
       @yield('head')
     	<!-- CSS are placed here -->
    	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
@@ -31,12 +32,12 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <div class="navbar-left">
-            <form class="navbar-form" role="search">
+            {{Form::open( array('method' => 'GET', 'class' =>'navbar-form', 'url' => 'search' ))}}
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search...">
+                {{Form::text('q',NULL, array('class' => 'form-control','maxlength' => '20', 'placeholder' => 'Search this site for..', 'oninput' => "toggle_button(this, 'post-query')"))}}
               </div>
-              <button type="submit" class="btn  btn-info"><span class="glyphicon glyphicon-search"></span></button>
-            </form>
+              <button type="submit" id="post-query" class="btn  btn-info" disabled><span class="glyphicon glyphicon-search"></span></button>
+            {{Form::close()}}
             <div>
               </div><!-- /.navbar-collapse -->
             </div>
@@ -155,6 +156,7 @@
       
 
       <!-- Scripts are placed here -->
+        {{ HTML::script('/assets/js/comments.js')}}
         {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
         {{ HTML::script('assets/js/vendor/bootstrap.js') }}
     </body>

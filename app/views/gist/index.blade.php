@@ -13,15 +13,12 @@
 	@foreach($gists as $gist)
 		<article class="gist-post">
 	   <h3>{{HTML::link('gist/'.$gist->gist_uri, $gist->title)}}</h3>
-	   <p class="post-date">Posted 
-			@if ($gist->created_at->diffInDays() > 30)
-		    		on {{$gist->created_at->toFormattedDateString()}}
-			@else
-				   {{$gist->created_at->diffForHumans()}}
-			@endif
+	   <p class="post-date">
+	   	{{ExCarbon::niceDate("Posted", $gist->created_at)}}
 	   </p>
-	   <p>{{substr($gist->content, 0,350)}}
-	   		[{{HTML::link('gist/'.$gist->gist_uri,'Read more')}}]
+	   <p>
+	   	{{substr($gist->content, 0,strpos($gist->content, '. ', 150))}}
+	   	[{{HTML::link('gist/'.$gist->gist_uri,'Read more')}}]
 	   </p>
 	   <div class="social-buttons">
 	     <ul>

@@ -43,10 +43,6 @@ text-align: center;
   width:100%;
 }
 
-.temp
-{
-  border:red 2px solid;
-}
 .bs-header p {
 font-weight: 300;
 line-height: 1.5;
@@ -319,6 +315,10 @@ font-size: 35px;
 
 h3{
   text-align: center;
+}
+
+.search-panel{
+  background-color: #dff0d8;
 }
 
 .table .credit-total{

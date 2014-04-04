@@ -15,9 +15,10 @@ class HomeController extends BaseController {
 	|
 	*/
 
-	public function showWelcome()
+	public function index()
 	{
-		return View::make('welcome')->with('title', 'Welcome to UB Resources');
+		return View::make('welcome')
+		->with('title', 'UB Resources provides timetables, past questions, Gpa Calculator, news, and course outlines for students in the University of Buea');
 	}
 
 }

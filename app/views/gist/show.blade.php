@@ -2,7 +2,6 @@
    
 @section('head')
 	<meta name="description" content="Get updated with the latest news and events happening at the university of Buea">
-	{{HTML::script('assets/js/comments.js')}}
 @stop
 @section('header')
     <h1>Gist</h1>
@@ -12,7 +11,7 @@
 
 @if( Session::has('message') )
 	@section('message')
-		<div class="alert alert-danger fade in">
+		<div class="alert alert-success fade in">
       <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
 	   <p>
 	   	@if(is_array(Session::get('message')))
@@ -105,7 +104,7 @@
 			  		<div class="panel-body">
 			  			{{Form::open( array('method' => 'post', 'url' => 'gist/'.$gist->gist_uri))}}
 			  			<div class="form-group">
-			  				{{Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'onkeyup' => 'toggle_button(this)'))}}
+			  				{{HTML::decode(Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'oninput' => "toggle_button(this, 'post-comment')")))}}
 			  			</div>
 			  			<div class="form-group">
 			    			<div class="text-right">

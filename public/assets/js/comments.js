@@ -16,21 +16,21 @@ function  confirm_delete(event){
  * 
  * @param   textarea		The input area whose value determines if the button is disabled or not
  */
-function toggle_button(textarea) {
-	var string = textarea.value;
+function toggle_button(input, button_id) {
+	var string = input.value;
 	if ( string.length > 1 && (/[^\s]/.test(string)))
 	{
 		if( (string.length - (string.split( new RegExp( "\\s", "gi" ) ).length-1) ) > 1)
 		{
-			document.getElementById('post-comment').disabled = false;
+			document.getElementById(button_id).disabled = false;
 		}
 		else{
-			document.getElementById('post-comment').disabled = true;
+			document.getElementById(button_id).disabled = true;
 		}
 	}
 	else
 	{
-		document.getElementById('post-comment').disabled = true;
+		document.getElementById(button_id).disabled = true;
 	}
 	
 }
