@@ -35,6 +35,26 @@
       </ul>
     </div>
 
+	@if(Session::has('error'))
+          <div class="alert alert-danger fade in">
+          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+           <p>
+    			@foreach (Session::get('error')->all() as $error)
+                          <div>{{ $error }}</div>
+                  @endforeach
+          </p>
+       </div>
+	@endif
+
+	@if (Session::has('message'))
+  			<div class="alert alert-success fade in">
+      		<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+         	<strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
+				{{Session::get('message')}}
+ 			</div>
+ 	@endif
+
+
   @unless($tab == 'errors')
 		<h3>Instructions</h3>
 		  <ul>
@@ -49,17 +69,21 @@
 		</ul>
 		
   @else
-  		<form class="error_form" method="post" action="../cgi/error.php">
-        <div class="form-group">
-          <label>Email address <small>(Optional)</small></label>
-          <input type="email"  name="Your_Email"  for="Your_Email" class="form-control"   placeholder="Enter email">
-        </div>
-        <div class="form-group">
-          <label>Description</label>
-          <textarea class="form-control"  for="Your_Message" name="Your_Message" rows="7" required placeholder="Enter your message here" required></textarea>
-        </div>
-        <button type="sumit" class="btn col-md-3 col-md-offset-3 btn-success"> Sumit message</button>
-      </form>
+	<div class="error-form">
+        {{Form::open( array('method' => 'post', 'url' => Request::url()))}}
+    	   <div class="form-group">
+    	    {{Form::label('Email Address (optional)')}}
+    	    {{Form::email('email',null, array('class'=>'form-control', 'placeholder' => 'Enter your email address here', 'maxlength' => '32'))}}
+    	  </div>
+    	  <div class="form-group">
+      	{{Form::label('Description')}}
+      	{{HTML::decode(Form::textarea('description', null, array('class' => 'form-control', 'placeholder' => 'Please enter your message briefly', 'maxlength' => '500', 'required' => 'true', 'size'=>'30x7', 'oninput'=> "toggle_button(this,'submit-message')")))}}
+    	  </div>
+          <div class="text-center">
+    	    {{Form::submit('Submit message', array('id'=>'submit-message','disabled'=>'true', 'class' => 'btn btn-success'))}}
+          </div>
+	 {{Form::close()}}
+  	</div>
   @endif
 
   @unless($tab == 'errors')
@@ -68,30 +92,33 @@
           <div class="modal-content">
             <div class="modal-header">
               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-              <h4 class="modal-title">Please submit your file here</h4>
+              <h3 class="modal-title text-center">Please submit your {{$tab}}  here</h3>
             </div>
             <div class="modal-body">
-              <form role="form" onsubmit="validate()" name="upload_form">
-                <div class="form-group">
-                  <label for="exampleInputEmail1">Full Name <small>*</small></label>
-                  <input type="name" class="form-control" placeholder="Your name here">
+              {{Form::open(array('id'=>'upload_form',  'files'=> true,'onsubmit' => 'validate_upload(event)','method' => 'post', 'url' => Request::url()))}}
+                <div class="form-group  has-feedback">
+                  {{Form::label('Full Name (required)', null, array('class' => 'control-label'))}}
+                  {{Form::text('name',null, array('pattern'=>'[a-z A-Z]+','class'=>'form-control', 'placeholder' => 'Your full name goes here', 'maxlength' => '32', 'required' => 'true'))}}
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Email address <small><em>(optional)</em></small></label>
-                  <input type="email" class="form-control" placeholder="Enter email">
+                <div class="form-group has-feedback">
+                  {{Form::label('Email Address (optional)', null, array('class' => 'control-label'))}}
+                  {{Form::email('email',null, array('class'=>'form-control', 'placeholder' => 'Enter your email address here', 'maxlength' => '32'))}}
                 </div>
-                <div class="form-group">
-                  <label for="exampleInputFile">Select File to Upload</label>
-                  <input type="file" required>
-                  <p class="help-block"><em>Chose the file you wish to submit to us</em></p>
+                <div class="form-group has-feedback">
+                  {{Form::label('Select file to upload (required)', null, array('class' => 'control-label'))}}
+                  {{Form::file('upload_file', array('class'=>'form-control', 'data-max-size' =>"5120", 'required' => 'true'))}}
+                  <p class="help-block">Please read instructions before submitting the file</p>
                 </div>
                 <div class="checkbox">
                   <label>
-                    <input type="checkbox"  checked required> I agree to the <a href="http://www.gnu.org/copyleft/fdl.html">terms and conditions</a>
+                    {{Form::checkbox('terms',null,true,array('id'=>'terms'))}}
+                    I agree to the <a href="http://www.gnu.org/copyleft/fdl.html">terms and conditions</a>
                   </label>
                 </div>
-                <button type="submit" class="btn btn-success">Upload</button>
-              </form>
+                <div class="text-center">
+                  <button type="submit" class="btn btn-primary">Upload File<span class="glyphicon glyphicon-upload"></span></button>
+                </div>
+              {{Form::close()}}
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>

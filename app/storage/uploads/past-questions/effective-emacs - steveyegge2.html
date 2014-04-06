@@ -1,0 +1,581 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0057)https://sites.google.com/site/steveyegge2/effective-emacs -->
+<html xmlns="http://www.w3.org/1999/xhtml" itemscope="" itemtype="http://schema.org/WebPage"><script async="" src="./effective-emacs - steveyegge2_files/analytics.js"></script><script type="text/javascript">window["_gaUserPrefs"] = { ioo : function() { return true; } }</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { var b=window,e="chrome",g="tick",h="wtsrt_",l="tbsd_",m="tbnd_",n="start",p="_wtsrt",q="_tbnd",r="CSI/";(function(){function k(a){this.t={};this.tick=function(a,d,c){this.t[a]=[void 0!=c?c:(new Date).getTime(),d];if(void 0==c)try{b.console.timeStamp(r+a)}catch(f){}};this[g](n,null,a)}var a;b.performance&&(a=b.performance.timing);var s=a?new k(a.responseStart):new k;b.jstiming={Timer:k,load:s};if(a){var d=a.navigationStart,f=a.responseStart;0<d&&f>=d&&(b.jstiming.srt=f-d)}if(a){var c=b.jstiming.load;0<d&&f>=d&&(c[g](p,void 0,d),c[g](h,p,f),c[g](l,h))}try{a=null,b[e]&&b[e].csi&&(a=Math.floor(b[e].csi().pageT),
+c&&0<d&&(c[g](q,void 0,b[e].csi().startE),c[g](m,q,d))),null==a&&b.gtbExternal&&(a=b.gtbExternal.pageT()),null==a&&b.external&&(a=b.external.pageT,c&&0<d&&(c[g](q,void 0,b.external.startE),c[g](m,q,d))),a&&(b.jstiming.pt=a)}catch(t){}})(); })()
+</script>
+<link rel="shortcut icon" type="image/x-icon" href="https://www.google.com/images/icons/product/sites-16.ico">
+<link rel="apple-touch-icon" href="https://ssl.gstatic.com/sites/p/9fdddf/system/app/images/apple-touch-icon.png" type="image/png">
+<script type="text/javascript">/* Copyright 2008 Google. */ (function() { var d=window,e="length",h="",k="__duration__",l="function";function m(c){return document.getElementById(c)}d.byId=m;function n(c){return c.replace(/^\s+|\s+$/g,h)}d.trim=n;var p=[],q=0;d.JOT_addListener=function(c,a,b){var f=new String(q++);c={eventName:c,handler:a,compId:b,key:f};p.push(c);return f};d.JOT_removeListenerByKey=function(c){for(var a=0;a<p[e];a++)if(p[a].key==c){p.splice(a,1);break}};d.JOT_removeAllListenersForName=function(c){for(var a=0;a<p[e];a++)p[a].eventName==c&&p.splice(a,1)};
+d.JOT_postEvent=function(c,a,b){var f={eventName:c,eventSrc:a||{},payload:b||{}};if(d.JOT_fullyLoaded)for(a=p[e],b=0;b<a&&b<p[e];b++){var g=p[b];g&&g.eventName==c&&(f.listenerCompId=g.compId||h,(g=typeof g.handler==l?g.handler:d[g.handler])&&g(f))}else d.JOT_delayedEvents.push({eventName:c,eventSrc:a,payload:b})};d.JOT_delayedEvents=[];d.JOT_fullyLoaded=!1;
+d.JOT_formatRelativeToNow=function(c,a){var b=((new Date).getTime()-c)/6E4;if(1440<=b||0>b)return null;var f=0;60<=b&&(b/=60,f=2);2<=b&&f++;return a?d.JOT_siteRelTimeStrs[f].replace(k,Math.floor(b)):d.JOT_userRelTimeStrs[f].replace(k,Math.floor(b))}; })()
+</script>
+<script>
+
+
+var webspace = {"scottyUrl":"/_/upload","isConsumer":true,"canPublishScriptToAnyone":true,"serverFlags":{"cajaBaseUrl":"//www.gstatic.com/caja","cajaDebugMode":false},"sharingUrlPrefix":"/_/sharing","csiReportUri":"https://gg.google.com/csi","sharingPolicy":"OPENED","analyticsAccountId":"","baseUri":"/site/steveyegge2","name":"steveyegge2","domain":"defaultdomain","features":{"horizontalNavLayout":true,"asyncPermanentDelete":false,"ritzSupport":true,"folderEmbed":true,"moreBackgroundTweaks":true,"flipFolderUrls":true,"animateNavigation":true,"driveInFileCabinet":true,"skiThemeIsDefault":true,"pdfEmbedSupport":false,"animateToc":true,"siteChromeSidebarWidgetsEditDialog":true,"canonicalLinkTagInHead":true,"analyticsTrackingForCorp":false,"driveImageEmbed":true,"siteChromeSystemFooterDialog":true,"plusOneButtonOptions":true,"plusOneButton":true,"adSenseDeprecate":true,"photoAlbumsInOnePick":true,"docosHideNotificationSettings":true,"helpBox":false,"siteNotice":true,"skiTheme":true,"siteChromeDialogsToolbar":true,"ritzChartSupport":true,"plusBadge":false,"siteChromeHorizontalNavigationDialog":true,"youTubeEmbedSize":true,"adSenseDeprecateMsg":true,"htmlEmbed":true,"plusPost":true,"photoAlbumsGPlusUrlSupport":true,"siteChromeHeaderDialog":true,"fileCabinetOptions":true,"sitesLoveFixes":true},"adsensePublisherId":null,"gvizVersion":1,"siteTitle":"steveyegge2","pageSharingId":"jotspot_page","plusPageId":"","onepickBaseUrl":"https://docs.google.com","siteNoticeRevision":null,"termsUrl":"http://sites.google.com/site/sites/system/app/pages/meta/terms","enableAnalytics":false,"isPublic":true,"siteNoticeMessage":null,"plusPageUrl":"","homePath":"/","sharingId":"jotspot","isAdsenseEnabled":true,"adsensePromoClickedOrSiteIneligible":true,"isStartPageEnabled":false,"domainAnalyticsAccountId":""};
+
+
+
+webspace.gadgets = {"baseUri":"/site/steveyegge2/system/app/pages/gadgets"};
+
+
+webspace.user = {"uid":"","renderMobile":false,"primaryEmail":"guest","sessionIndex":"","namespaceUser":false,"displayNameOrEmail":"guest","namespace":"","hasAdminAccess":false,"guest_":true,"keyboardShortcuts":true,"domain":"","hasWriteAccess":false,"dasherUser":false,"userName":"guest"};
+
+webspace.page = {"canDeleteWebspace":null,"locale":"en","state":"","wuid":"wuid:gx:96889bbb38efcb5","pageInheritsPermissions":null,"timeZone":"America/Los_Angeles","properties":{},"type":"text","canChangePath":true,"parentWuid":null,"revision":1,"title":"effective-emacs","isRtlLocale":false,"bidiEnabled":false,"siteLocale":"en","name":"effective-emacs","path":"/effective-emacs","isSiteRtlLocale":false,"parentPath":null};
+webspace.page.breadcrumbs = [{"title":"effective-emacs","dir":"ltr","path":"/site/steveyegge2/effective-emacs","deleted":false}];
+
+
+webspace.editorResources = {
+  text: [
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/js/codemirror.js',
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/app/css/codemirror_css.css',
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/js/trog_edit__en.js',
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/app/css/trogedit.css',
+    '/site/steveyegge2/_/rsrc/1395041708000/system/app/css/editor.css',
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/app/css/codeeditor.css',
+    '/site/steveyegge2/_/rsrc/1395041708000/system/app/css/camelot/editor-jfk.css'
+  ],
+  sitelayout: [
+    'https://ssl.gstatic.com/sites/p/9fdddf/system/app/css/sitelayouteditor.css'
+  ]
+};
+
+var JOT_clearDotPath = 'https://ssl.gstatic.com/sites/p/9fdddf/system/app/images/cleardot.gif';
+
+
+var JOT_userRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+
+webspace.siteTemplateId = false;
+
+
+webspace.page.currentTemplate = {"title":"Web Page","path":"/system/app/pagetemplates/text"};
+
+
+
+var JOT_siteRelTimeStrs = ["a minute ago","__duration__ minutes ago","an hour ago","__duration__ hours ago"];
+
+</script>
+<script type="text/javascript">
+                window.jstiming.load.tick('scl');
+              </script>
+<meta name="title" content="effective-emacs - steveyegge2">
+<meta itemprop="name" content="effective-emacs - steveyegge2">
+<meta property="og:title" content="effective-emacs - steveyegge2">
+<style type="text/css">
+</style>
+<link rel="stylesheet" type="text/css" href="./effective-emacs - steveyegge2_files/standard-css-microlite-ltr-ltr.css">
+<link rel="stylesheet" type="text/css" href="./effective-emacs - steveyegge2_files/overlay.css">
+<link rel="stylesheet" type="text/css" href="./effective-emacs - steveyegge2_files/allthemes-view.css">
+<!--[if IE]>
+          <link rel="stylesheet" type="text/css" href="/site/steveyegge2/system/app/css/camelot/allthemes%2die.css" />
+        <![endif]-->
+<title>effective-emacs - steveyegge2</title>
+<script type="text/javascript">
+                window.jstiming.load.tick('cl');
+              </script>
+<script src="./effective-emacs - steveyegge2_files/ga.js"></script></head>
+<body xmlns="http://www.google.com/ns/jotspot" id="body" class=" en            ">
+<script src="./effective-emacs - steveyegge2_files/caja.js"> </script>
+<script src="./effective-emacs - steveyegge2_files/jot_caja.js"> </script>
+<div id="sites-page-toolbar" class="sites-header-divider">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-status" class="sites-status" style="display:none;"><div id="sites-notice" class="sites-notice" role="status" aria-live="assertive"> </div></div>
+</div>
+<div id="sites-chrome-everything-scrollbar">
+<div id="sites-chrome-everything">
+<div id="sites-chrome-page-wrapper" style="direction: ltr">
+<div id="sites-chrome-page-wrapper-inside">
+<div xmlns="http://www.w3.org/1999/xhtml" id="sites-chrome-header-wrapper" style="">
+<table id="sites-chrome-header" class="sites-layout-hbox" cellspacing="0" style="">
+<tbody><tr class="sites-header-primary-row" id="sites-chrome-userheader">
+<td id="sites-header-title" class=""><div class="sites-header-cell-buffer-wrapper"><h2></h2></div></td><td class="sites-layout-searchbox "></td>
+</tr>
+<tr class="sites-header-secondary-row" id="sites-chrome-horizontal-nav">
+<td colspan="2" id="sites-chrome-header-horizontal-nav-container">
+</td>
+</tr>
+</tbody></table> 
+</div> 
+<div id="sites-chrome-main-wrapper">
+<div id="sites-chrome-main-wrapper-inside">
+<table id="sites-chrome-main" class="sites-layout-hbox" cellspacing="0" cellpadding="{scmCellpadding}" border="0">
+<tbody><tr>
+<td id="sites-chrome-sidebar-left" class="sites-layout-sidebar-left" style="display: none; width: 150px">
+</td>
+<td id="sites-canvas-wrapper">
+<div id="sites-canvas">
+<div id="goog-ws-editor-toolbar-container"> </div>
+<div xmlns="http://www.w3.org/1999/xhtml" id="title-crumbs" style="display: none;">
+</div>
+<h3 xmlns="http://www.w3.org/1999/xhtml" id="sites-page-title-header" style="display: none;" align="left">
+<span id="sites-page-title" dir="ltr">effective-emacs</span>
+</h3>
+<div id="sites-canvas-main" class="sites-canvas-main">
+<div id="sites-canvas-main-content">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-layout-name-one-column-hf sites-layout-vbox"><div class="sites-layout-tile sites-tile-name-header"><p>Effective Emacs&nbsp;</p><br><a href="https://sites.google.com/site/steveyegge2/blog-rants">Stevey's Drunken Blog Rants™</a></div><div class="sites-layout-tile sites-tile-name-content-1"><h3><a name="TOC-10-Specific-Ways-to-Improve-Your-Productivity-With-Emacs"></a>10 Specific Ways to Improve Your Productivity With Emacs</h3>
+<p>Emacs is the world's best text editor. It's not just the best for editing program source; it's the best for <em>any</em> kind of text-editing. Mastering Emacs will make you more effective at writing and editing email, documentation drafts, blogs, HTML pages, XML files, and virtually everything else that requires any typing. </p>
+<p> The tips in this little document are geared towards Emacs power-users. You should be familiar with the basics of launching and editing with Emacs, and you should already know the essentials of copying stuff into your .emacs file, and debugging things (or finding a friendly Emacs Wizard) when something goes wrong. </p>
+<p> Not all the tips are customizations to Emacs; some of them are changes to your desktop environment to make it work more seamlessly with Emacs. </p>
+<p> The key to understanding Emacs is that it's all about <em>efficiency</em>, which includes economy of motion. Any trained musician will tell you that economy of motion is critical to becoming a world-class virtuoso. Any unnecessary motion is wasted energy and yields sloppy results. </p>
+<p> Using the mouse is almost always the worst possible violation of economy of motion, because you have to pick your hand up and fumble around with it. The mouse is a clumsy instrument, and Emacs gurus consider it a cache miss when they have to resort to using it. </p>
+<p> Compared to Emacs Wizards, graphical-IDE users are the equivalent of amateur musicians, pawing at their instrument with a sort of desperation. An IDE has blinking lights and pretty dialogs that you can't interact with properly (see <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item6">Item 6</a>), and gives newbies a nice comfortable sense of control. But that control is extremely crude, and all serious programmers prefer something that gives them more power. </p>
+<p> IDEs also offer Refactoring tools, which are all the rage, because they help you automatically fix your screwed-up code. This is fine, as far as it goes, but I'll tell you a secret: Refactoring tools don't understand English. They won't help you one bit when you're doing something that the tools weren't designed to handle. Refactoring tools are cookie-cutter solutions; Emacs offers you a level of fine-grained control over your environment that makes you the equal of <em>any</em> editing challenge. </p>
+<p> However, as I often point out, this has to be seen to be believed, and even if you believe it, you need to make a serious, lifelong commitment to Emacs in order to master it. Mastering it involves learning Lisp and customizing Emacs to the finest degree imaginable. This simply serves to increase your hunger for more control and more automation, so even if you've mastered Emacs, you're never really finished extending it. </p>
+<p> So it's not an editor for the faint of heart, and this blog is targeted at people who have already made the commitment, and want to improve their mastery of this elegant, timeless piece of software. </p>
+<p> The rest of you: I think your Eclipse just finished launching, so you can get back to work now. </p>
+<h3><a name="item1">Item 1: Swap Caps-Lock and Control</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="1196910596" name="1196910596" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(9).html"></iframe></div></div></div>
+<p>On Windows and Mac keyboards, the Ctrl key is awkwardly located in the far lower-left position on the keyboard. The Ctrl key is critical to using Emacs at all times, so you'll never become an Emacs virtuoso unless you move it to an easier position. That position should be on Home Row, so Caps Lock is the best choice. That's the location of the Control key on most Unix workstation keyboards, for precisely that reason. </p>
+<p> To do this on Windows 2000 or XP requires some registry hacking. From the Start menu, choose Run and enter "regedit". In the left-side tree view, click down to: </p>
+<p> HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Keyboard Layout </p>
+<p> Click on the KeyboardLayout entry to give it the focus. Make sure it has the focus and not one of its children. Then from the Edit menu, choose New Binary Value, and name it <font color="royalblue">Scancode Map</font>. It should show as type REG_BINARY. </p>
+<p> Then select the new Scancode Map entry you just created, and from the Edit menu (whose contents should have changed), choose Modify Binary Data. In the dialog box called Edit Binary Value, enter the following data: </p>
+<p> </p>
+<pre> 0000: 00 00 00 00 00 00 00 00<br> 0008: 03 00 00 00 3A 00 1D 00<br> 0010: 1D 00 3A 00 00 00 00 00<br></pre>
+<p> Select OK to close the dialog, then exit the Registry Editor. The caps and ctrl keys should be swapped as soon as you log out and back in again. It may require a reboot. </p>
+<p> On Linux in X-Windows, you use the xmodmap utility. Create a file in your home directory called .xmodmap if it doesn't already exist, and put in the following lines: </p>
+<p> </p>
+<pre> !<br> ! Swap Caps_Lock and Control_L<br> !<br> remove Lock = Caps_Lock<br> remove Control = Control_L<br> keysym Control_L = Caps_Lock<br> keysym Caps_Lock = Control_L<br> add Lock = Caps_Lock<br> add Control = Control_L<br></pre>
+<p> Save it, and add the line <code>xmodmap ~/.xmodmap</code> into your ~/.bash_profile. </p>
+<p> On Mac OS X (Panther and Jaguar) you need to install a modified keyboard driver, which is a little scary, but it seems to work. Here's a <a href="http://www.macosxhints.com/article.php?story=20031102032521826" rel="nofollow">discussion</a> of the driver. Alternately, if you're not using a Mac laptop, there appears to be an XML file you can edit as root; it's <a href="http://www.eecs.wsu.edu/~schneidj/mac-os-x-10.3.html#swap" rel="nofollow">described here</a>. </p>
+<p> <a href="http://www.manicai.net/comp/swap-caps-ctrl.html" rel="nofollow">This URL</a> has some information on doing it on other systems.</p>
+<h3><a name="item2">Item 2: Invoke M-x without the Alt key</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="334686413" name="334686413" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(3).html"></iframe></div></div></div>
+<p>Alt-x is one of the most frequently typed Emacs key combos, and it involves scrunching your left hand up. Anything you're going to do thousands of times should be streamlined, so you want to be able to start a M-x sequence with the Ctrl key (once you've completed <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item1">Item 1</a>!) </p>
+<p> There's another very important reason to get in the habit of using a Ctrl sequence: the Alt key is unreliable and nonstandard across platforms. In particular, when you're logged in to a remote host via telnet or ssh, Alt-x may or may not work, depending on the system type and the terminal configuration. Rather than mess with the headache of learning to configure every system you work on to know about the Alt key, it's easier to use a key sequence that always works. </p>
+<p> The key sequence I use is Ctrl-x Ctrl-m. Note that when you invoke a 2-key sequence with the same modifier key, you can just hold down the modifier key, then press the 2 keys. So with this key sequence, invoking M-x involves pressing and holding Ctrl, typing x, then typing m. </p>
+<p> To enable the Ctrl-x Ctrl-m sequence add the following lines to your .emacs file: <font size="+1"></font></p><pre><font size="+1">(global-set-key <font color="#4169e1">"\C-x\C-m"</font> 'execute-extended-command)<br>(global-set-key <font color="#4169e1">"\C-c\C-m"</font> 'execute-extended-command)<br></font></pre><p></p>
+<p> I add the second line so that Ctrl-c Ctrl-m will also invoke it, which makes the key sequence even more forgiving. If I miss Ctrl-x and hit Ctrl-c accidentally, it still works. Neither of these key sequences is bound by default in Emacs, so you're not biffing any other useful shortcuts by doing this. </p>
+<p> You should practice this key sequence until you get used to it, and then you'll almost never need to use Alt-x again. (You'll still use the Alt key for other commands, which I'll cover later.) </p>
+<p> Incidentally, if you want to fine-tune this tip to extraordinary levels, then you probably don't want to use your ring-finger for typing the x-key when you hit Ctrl-x. I use my left index finger, since I'm used to it that way, but you're probably better off using your left middle finger. The reason is that your hand isn't technically on home row when your left pinkie is jammed down on the Caps-Lock key that you've turned into Ctrl. The point is to use whatever requires the least amount of stretching, followed by the least amount of finger motion. You should experiment until you find what's most comfortable for you. </p>
+<h3><a name="item3"></a>Item 3: Prefer backward-kill-word over Backspace</h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="735028365" name="735028365" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(6).html"></iframe></div></div></div>
+<p>Emacs Wizards try to avoid hitting the backspace key, because it's just remote enough from home-row to be annoying. We make typing mistakes all the time, but if you type faster than about 50 wpm, it's more economical to kill the entire word and re-type it than to painstakingly backspace to your error. </p>
+<p> Here's what you add to your .emacs file: </p>
+<p> <font size="+1"></font></p><pre><font size="+1">(global-set-key <font color="#4169e1">"\C-w"</font> 'backward-kill-word)<br>(global-set-key <font color="#4169e1">"\C-x\C-k"</font> 'kill-region)<br>(global-set-key <font color="#4169e1">"\C-c\C-k"</font> 'kill-region)<br></font></pre><p></p>
+<p> Note that because Ctrl-w was already bound to kill-region, a very important command, you need to re-bind something else to kill-region. I chose Ctrl-x Ctrl-k (and its sloppiness-forgiving companion, Ctrl-c Ctrl-k), primarily because that's the way they did it at my old company, which was filled with wise Emacs Wizards who taught me a lot of what I know. Rebinding Ctrl-x Ctrl-k means it's no longer available for edit-kbd-macro, but you'll use that infrequently enough that it's not something you'll miss having a shortcut for. </p>
+<p> As an added benefit, many Unix command shells provide Emacs-like command-line editing keys, and Ctrl-w is usually the default binding for backward-kill-word. So your usage will be consistent in shells. </p>
+<p> The faster you type, the more valuable this tip becomes. You'll gradually develop a "feel" for the fastest way to back up and correct various kinds of typing mistakes. In general, here's how my fingers decide these days: </p>
+<p> </p>
+<ol>
+<li> If I've mis-typed a character or two in a fairly long word, and my cursor is still located right after the typo, then I'll use the backspace key. 
+<p> </p>
+</li>
+<li> If the typo is somewhere in the last 15 to 20 characters or so, then I'll usually backward-kill-word to kill backward over the typo, and re-type the words. 
+<p> </p>
+</li>
+<li> If the typo is further back than that, but still on the same line, I'll use Alt-B to skip the cursor back to the word with the typo, and Ctrl-b to move it within the word to get to the typo. 
+<p> </p>
+</li>
+</ol>
+<p> For mistakes further away, I'll use Fast Navigation to get there: <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item4">Item 4</a> covers at least part of this technique. </p>
+<p> One thing you'll need to be very careful of if you use Ctrl-w for backward-kill-word: Ctrl-w is hardwired to kill the window in many Windows applications. Do not pass go, do not collect $200, and in browser windows, <em>do not save the contents of your form fields</em>. That means if you're typing out something into an HTML form field, and you accidentally make a typo and hit Ctrl-w, kapow! All your work will be lost instantly for you by Good Ole Microsoft Windows. I know of no way to override this horrid behavior. If you know, please tell me. </p>
+<h3><a name="item4">Item 4: Use incremental search for Navigation</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="499036454" name="499036454" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(7).html"></iframe></div></div></div>
+<p>Moving the cursor around efficiently is one of the keys to becoming an Emacs Wizard. IDE users spend most of their time fumbling around with the mouse. They wouldn't dream of doing it any other way, but they don't realize how inefficient their motions are. In the hands of a Master, Emacs becomes the most powerful and efficient text-editing tool on the planet, in large part because it allows you to do almost everything <em>without</em> using the mouse. </p>
+<p> Emacs Wizards always have their Emacs sessions as tall as possible, filling the screen vertically, because vertical screen space is such a premium when you're viewing a document. When you can view a fair number of lines of text on screen at once, using incremental search is often much faster than any other way of precisely positioning the cursor. </p>
+<p> Get in the habit of using Ctrl-r (isearch-backward) and Ctrl-s (isearch-forward) for moving around in the document. Whenever you need to jump the cursor backward or forward more than about 5 lines, and you can see the target location, you should be using i-search. </p>
+<p> To do it effectively, you don't necessarily need to search for the exact word where you want to put the cursor. Let your eye defocus slightly and take in the whole paragraph or region around the target point, and choose a word that looks reasonably unique or easy to type. Then i-search for it to navigate to it. You may need to hit Ctrl-r or Ctrl-s repeatedly if your anchor word turns out not to be unique. But Emacs will highlight all the matches, so if there are more than a couple of them, Ctrl-g out of the search and choose another anchor word. </p>
+<p> It's difficult to overemphasize how powerful this technique is, once you've mastered it. Mastering it simply requires that you do it repeatedly until your fingers do it "automatically". Emacs eventually becomes like an extension of your body, and you'll be performing hundreds of different keystrokes and mini-techniques like this one without thinking about them. It's comparable to the hundreds of subtle techniques you acquire for driving a car well. </p>
+<h3><a name="item5">Item 5: Use Temp Buffers</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="1417084816" name="1417084816" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(8).html"></iframe></div></div></div>
+<p>One of the most powerful things about Emacs is its ability to swiftly generate a new buffer that isn't associated with a file or process. Once you get used to using this technique, you'll sorely miss the functionality in other editors and applications. </p>
+<p> To create a temp buffer, just switch to it! Ctrl-x b invokes the command switch-to-buffer, and you just type in adsflj or whatever comes out of drumming on the keyboard. Instantly you've got yourself a scratchpad, where you can take notes, dump temporary results, or use it in any way that's convenient for the problem at hand. </p>
+<p> If you plan on keeping multiple temp buffers around, you might give them more memorable names, such as foo, bar, baz, and buh. </p>
+<p> If you want to see your temp buffer side-by-side with another buffer, you can split the screen horizontally or vertically. See <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item6">Item 6</a>. </p>
+<p> Because your temp buffers aren't associated with a file, you can kill them just as quickly as you created them using Ctrl-x k, the kill-buffer command. </p>
+<p> If you decide you want to save the contents of a temp buffer somewhere, just switch to the buffer and Ctrl-x Ctrl-w to invoke the write-file command. It will prompt you for a filename, and after saving, you can kill the buffer safely and revisit the file contents later. </p>
+<h3><a name="item6">Item 6: Master the buffer and window commands</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="703829849" name="703829849" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(5).html"></iframe></div></div></div>
+<p>You'll frequently want to do some editing task and have multiple windows open. Emacs uses slightly different terminology from most other applications. A "buffer" is a logical space that contains some text, possibly tied to a file or process. A "window" is a visible region on screen displaying exactly one buffer (or part of it). A "frame" is what you call a "window" in OS-lingo: a standalone window with its own title bar and so on. </p>
+<p> The most important commands to master are: </p>
+<ul>
+<li><span style="color:rgb(0,102,0)"><span style="font-weight:bold"> Ctrl-x 2</span>:</span>&nbsp; <span style="font-family:courier new,monospace">split-window-vertically</span> -- splits your current window into two equal-height windows showing the same buffer (until you change one of them to show something else.) 
+<p> </p>
+</li>
+<li><span style="color:rgb(0,102,0);font-weight:bold"> Ctrl-x 3</span>:&nbsp; <span style="font-family:courier new,monospace">split-window-horizontally</span> -- most people don't use this as often, but it's occasionally useful. Splits the window into a left-side and a right-side. 
+<p> </p>
+</li>
+<li><span style="font-weight:bold;color:rgb(0,102,0)"> Ctrl-x +</span>:&nbsp; <span style="font-family:courier new,monospace">balance-windows</span> -- makes all visible windows approximately equal height. This is useful if you've just done Ctrl-x 2 twice in a row, because you'll have two 1/4-height windows and one 1/2-height window. Ctrl-x + makes them all the same height. 
+<p> </p>
+</li>
+<li><span style="color:rgb(0,102,0);font-weight:bold"> Ctrl-x o</span>:&nbsp;&nbsp; <span style="font-family:courier new,monospace">other-window</span> -- moves the cursor into the next window in the window list, which usually means moving it to the window below the current one, or wrapping back up to the top. 
+<p> </p>
+</li>
+<li><span style="color:rgb(0,102,0);font-weight:bold"> Ctrl-x 1</span>:&nbsp; <span style="font-family:courier new,monospace">delete-other-windows</span> -- makes the currently focused window fill the entire frame; the others go away. Note that the buffers they were visiting stay around in the buffer-list, so it's always perfectly safe to execute this command. 
+<p> </p>
+</li>
+<li><span style="color:rgb(0,102,0);font-weight:bold"> Ctrl-x Ctrl-b</span>: <span style="font-family:courier new,monospace">list-buffers</span> -- shows a list of all the buffers you have open, in a nicely formatted buffer called "*Buffer List*". This buffer's mode has many convenience keys for manipulating the buffer list. For instance, typing "d" while the cursor is on one of the entries will flag that buffer for deletion, "x" will kill the buffer, and so on. Use <span style="font-family:courier new,monospace">M-x describe-bindings</span> to view all the Buffer-menu key bindings. 
+<p> </p>
+</li>
+</ul>
+<p> </p>
+<p></p>
+<h4><a name="TOC-Dialog-Boxes:-The-Root-of-All-Evil"></a>Dialog Boxes: The Root of All Evil</h4>
+<p>Emacs is an incredibly powerful editor, but a few design choices in particular really stand out as being the biggest individual contributors. One of them is the fact that Emacs has no dialog boxes. This was actually a requirement in order to give Emacs its full functionality while running in a text-only terminal window. But by happy accident, it's also one of the key features that helps make Emacs so insanely powerful. </p>
+<p> Dialog boxes <em>suck</em>. For starters, they always have focus issues, and often cause poorly-designed applications to lock up or fail to refresh while the dialog is open. And dialog boxes never seem to play along with any customizations to your video mode. For example, if you set up a dual-monitor display using 2 cards, the application dialogs in Windows will tend to pop up in the wrong window, making the whole experience a really annoying pain in the ass. </p>
+<p> Dialogs sometimes come up in unpredictable places even on single-monitor machines. And even in well-designed applications like the Microsoft Office suite, modal dialogs can still wind up buried behind a bunch of other windows on your screen, which makes the application seem like it's totally unresponsive until you find the rogue dialog and bring it to the front. </p>
+<p> For some strange reason, dialog boxes are often non-resizable. It's the opposite for application windows: those are almost always resizable, and app designers usually take great pains to make the UI rearrange to fill the space nicely if you resize the window. But with dialogs, the default seems to be non-resizable, possibly because on most OSes, dialogs are a screwed-up hack that was added on long after the window manager was designed without dialogs in mind. (Guess how I know this.) Hell, they're even a mess in Java Swing. </p>
+<p> And don't get me started on the buttons. We've had dialog boxes in GUIs for at least 25 years, but people still can't agree on a standard set of buttons for them, or even a standard place to put the buttons. Some dialogs put them in the title bar, some on the bottom, some on the right side. And it's rarely 100% clear what will happen if you use the Window controls in the title bar to close a dialog, bypassing its button choices. The whole experience is a giant crap sandwich, and everyone knows it intuitively, but it's just how everyone assumes things have to be. </p>
+<p> But the problem with dialog boxes goes even deeper than the focus, sizing and positioning problems. Dialogs are never, ever full peers of the rest of the application UI. If you define any keyboard macros (not just in Emacs -- in any app, such as Excel or Word), they won't work in dialog boxes. If the dialog has a scrollable widget, you have no options for navigating other than by using the scrollbar. </p>
+<p> To illustrate, fire up Internet Explorer and choose Internet Options from the Tools menu. Go to the Advanced tab. There they are: all your pathetic global customization options for IE. If you want to find a particular option, you have to scroll slowly, looking for it. You can't use Edit/Find because the dialog is, of course, modal. And the dialog is, of course, also non-resizable. Most dialogs are like this. </p>
+<p> </p>
+<p></p>
+<h4><a name="TOC-Buffers-to-the-Rescue"></a>Buffers to the Rescue</h4>
+<p>In Emacs, all output goes into buffers, and all buffers are first-class citizens. All your favorite navigation shortcuts are available in all buffers, including i-search. You can select and copy text out of any buffer, and there is no such thing as a "modal" buffer, so you can keep the output around as long as you like, while continuing to work in other windows. It doesn't even have to be visible; the "dialog" output stays in the buffer list until you dismiss it. </p>
+<p> There is nothing else quite like the Emacs buffer experience in all of application-dom. Once you realize how consistent and powerful this model is, all other applications become slightly distasteful, because you <em>know</em> their UI is just getting in your way. </p>
+<p> Once you learn to master those buffers and windows, and sling them around with ease, you'll be on your way to Emacs Wizardhood. </p>
+<h3><a name="item7">Item 7: Lose the UI</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="1284924786" name="1284924786" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(1).html"></iframe></div></div></div>
+<p>You don't need a menu bar. It's just a crutch placed there for disoriented newbies. You also don't need a toolbar with big happy icons, nor do you need a scrollbar. All of these things are for losers, and they are just taking up precious screen real-estate. Turn them all off with the following code in your .emacs file: </p>
+<p> </p>
+<pre>(if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))<br>(if (fboundp 'tool-bar-mode) (tool-bar-mode -1))<br>(if (fboundp 'menu-bar-mode) (menu-bar-mode -1))</pre>
+<p> You won't miss any of it. We'll cover how to find your way around in the next tip. </p>
+<p> <font color="red">(Notes added Jan 2nd, 2006)</font> I recently saw a comment from a person who hated this entire essay because of tip #7. The person expressed a great deal of disgruntlement, evidently being quite attached to his or her mouse and menus, and took affront to being called a "disoriented newbie". The person went on to claim that using the mouse has been proven "faster" by countless studies. So I figure I should elaborate a bit. The remainder of this tip is All New, thanks to that disgruntled reader's blog. </p>
+<p> </p>
+<p> First I should observe that I often wish Emacs had a richer rendering engine, enabling it to do GUI and graphics on par with other desktop applications. It may never happen; my blog-rant <a href="http://steve.yegge.googlepages.com/the-emacs-problem.html">The Emacs Problem</a> talks about this a bit. But I'd love to see it. I bring this up as evidence that I'm not a thoughtless anti-GUI person. </p>
+<h4><a name="TOC-Scrollbar:-optional"></a>Scrollbar: optional</h4>
+<p> I usually turn off the scrollbar in Emacs because there are keystrokes that can achieve the same effect. However, scrollbars have the advantage of providing analog feedback as to how far into the buffer you are, and how long it is. The digital feedback provided by the %-indicator in the status area isn't as easy to read -- countless studies <em>have</em> proven that. It's why the U.S. Navy uses analog gauges in their reactor plants, for instance. It's too easy to glance at a digital (i.e. numeric) gauge and misread it. </p>
+<p> So I have no real problem with scrollbars, if you're more comfortable with them. Just be aware that they'll tempt you to reach for the mouse, but for certain operations (e.g. jumping to the beginning or end of the buffer), it's much faster to use the keyboard. No user studies are necessary to justify this claim, either. Some simple timing experiments should convince even the most skeptical reader.</p>
+<h4><a name="TOC-Keyboard-wins-for-navigation"></a>Keyboard wins for navigation</h4>
+<p> Let's say we want to put a row of 80 hyphens at the very beginning and very end of a long buffer, and you're currently in the middle of the buffer. It's slightly contrived, but I've done it when putting together a "cut here" excerpt containing the buffer contents. Using the keyboard, I'm done in under 3 seconds, ready to move on to the next task. The key sequence I had to type was "<code>C-x t C-u 8 0 - RET C-x e C-u 8 0 -</code>", or 13 key presses.</p>
+<p> There's simply no way you could do this reliably in 3 seconds with the mouse, since you'd have to make 2 complete round-trips to the mouse, to grab the scroll button (aka "thumb" or "elevator") and drag it to the top or bottom, then return to the keyboard to type out the text. A quick trial took me close to 15 seconds. Scrolling to the top does NOT move the cursor to the first character, so you also have to carefully position the cursor there.</p>
+<p> Sure, you could practice it a bit, and maybe get it down to 10 seconds, but why bother? If you're going to do that exact operation frequently, you should write a macro for it. </p>
+<h4><a name="TOC-Mouse-use-case-1-of-1:-region-selections"></a>Mouse use case #1 of 1: region selections</h4>
+<p> There are clearly some operations that will be faster with the mouse. Interacting with your window system outside Emacs is usually faster with the mouse, as is interacting with other applications that don't have Emacs-like keyboard navigation. But inside Emacs, I can only think of one thing that's faster with the mouse: region selection, particularly if you're selecting a rectangle.</p>
+<p> Sometimes region selection with the keyboard is faster: for instance, setting the mark and holding down Ctrl-n to start selecting lines, or Ctrl-f to grow the selection by a character at a time. But the keyboard repeat rate, which is set in hardware, can feel annoyingly slow. I can see about 100 lines of text in a buffer window on my display, and selecting those lines with the keyboard (assuming I'm starting with the point somewhere in the middle) takes about 5 seconds. Selecting them with the mouse and returning to home row takes about 4 seconds. So when I just need to select lines in the visible area, the mouse usually isn't worth it. </p>
+<p> However, if I need to select a region that's taller than my window size (by drag-selecting), or I need to select a region whose beginning and end columns both fall mid-line somewhere, then the mouse is the most reliably fast approach, and I'll use it happily. </p>
+<p> Using the mouse for selections isn't turning off the UI, though, so it's only slightly related to this tip. The point is that I actually do timing experiments like this once in a while. My opinions about the GUI in Emacs are backed by 20 years of this kind of experimentation. And I'm recommending that you turn off the menus. Really.</p>
+<h4><a name="TOC-Menus:-lose-em-"></a>Menus: lose 'em!</h4>
+<p> Menus are fine for exploration, for learning more about Emacs's capabilities. Unfortunately they can easily lull you into thinking the cover everything Emacs can do. However, many Emacs packages don't have any menu support -- it's only the super-meticulous package designer who goes to the effort of adding menu support. So if you're using the menus for browsing and exploring Emacs, you're missing out on a lot of functionality. </p>
+<p> Another problem with menus is related to my rant about dialogs earlier: they don't scale well. If you want to provide the user with 1500 choices, putting them in a menu will tax the windowing system to the limits of its ability. Doing it in an Emacs buffer is trivial, and gives you a lot more real-estate in which to do nice layouts and groupings of the choices. Type <code>M-x list-colors-display</code> or <code>M-x list-faces-display</code> to see some examples of what I mean. </p>
+<p> Another (huge) problem with menus is that they're not searchable, and they don't do auto-completion. You can easily find yourself digging way down some submenu heirarchy, thinking you're getting close, but you're actually barking down the wrong tree. They're nowhere near as flexible an exploration mechanism as searchable help -- this is every bit as true in Microsoft applications as it is in Emacs. </p>
+<p> And finally, once you've memorized a menu action, you always have to go back to the menu (and possibly submenus) to perform it. The more often you do the action, the more time you've wasted compared to using a keyboard shortcut. </p>
+<p> So I think Emacs menus are no good. They don't show you everything Emacs can do; they don't suggest alternatives when you can't find what you want; they're not capable of scaling to thousands of choices (so they're not a very good general-purpose UI mechanism, compared to something like a tree view), and they're slow to access even when you know how to use them. </p>
+<p> In short: &nbsp;turn off those menus! And as for big shiny buttons, well, gosh. Anything important enough for a button is important enough for a fast keyboard shortcut. </p>
+<h3><a name="item8">Item 8: Learn the most important help functions</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="143464045" name="143464045" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(4).html"></iframe></div></div></div>
+<p>To find out all the keyboard shortcuts that are defined for the current buffer, type M-x describe-bindings. It shows you a list of keys and the commands that they're mapped to. </p>
+<p> If you move the cursor to one of the commands in this list, and hit Enter, it'll show you the Help for that command. </p>
+<p> To find out what a particular key does, use M-x describe-key, and then type the key sequence you're interested in. It goes directly to the Help for that key, if the key is currently bound to a command. </p>
+<p> If you're interested in finding a command, and you have a guess as to the name but you aren't sure exactly what it's called, use M-x apropos, followed by a regular expression (see <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item9">Item 9</a>) to use for matching command names. All Emacs commands (as well as functions variables, and property lists) are kept in global tables that can be searched with M-x apropos. </p>
+<p> If, for instance, you're looking for a function that sends a buffer all the way to the back of the list, you could type M-x apropos-command buffer, which shows about 200 available commands with the word "buffer" in the command name. Near the top is a command, bury-buffer, whose documentation says: </p>
+<p> <font size="+1"></font></p><pre><font size="+1"><font color="#b22222" size="4">bury-buffer</font><font size="4">	</font><font color="#006400" size="4">	 M-x bury-buffer RET</font> <font color="#0000cd" size="4">Command:</font><font size="4"> Put BUFFER at the end of the list of all buffers.</font><br></font></pre> <p></p>
+<p> Et voila. Just the command you were looking for. You can easily winnow the search through large lists by specifying a more restrictive regexp. </p>
+<p> Perhaps the most important Help function is M-x info, which brings up Emacs's interactive, menu-driven Info engine. You should learn to use Info. It has thousands of pages of documentation, and it's hyperlinked (in its own custom way that predates the Web, unfortunately), so it's much easier to navigate than, say, man pages. Once you've mastered the navigation keys in Info, it's faster than navigating HTML help with a browser, even for local static files, in part because of Info's ability to perform searches across multiple info files, and in part because Emacs simply has better navigation capabilities than any web browser. </p>
+<h3><a name="item9">Item 9: Master Emacs's regular expressions</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="840156348" name="840156348" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr(2).html"></iframe></div></div></div>
+<p>The best way to do this is to get yourself the Friedl Book, <u>Mastering Regular Expressions</u>. It's worth it. Every programmer should have a copy, no matter what language or editor you're using. </p>
+<p> Emacs's regular expressions have some idiosyncracies that everyone dislikes, but they're not insurmountable, and once you've learned them, it opens up new horizons in editing power. </p>
+<p> Two important regexp-related commands are isearch-forward-regexp and isearch-backward-regexp. These are by default bound to ESC C-r and ESC C-s, respectively. Those keys are lame, though. Any sequence that requires hitting the actual Escape key is lame, and Alt-Ctrl-s on my Compaq machine is invisible to Emacs; it brings up a system diagnostics dialog. </p>
+<p> I have the isearch-*-regexp commands bound to Alt-r and Alt-s, since I use them so much. Alt-s isn't normally bound. The default Emacs binding for Alt-r is the command move-to-window-line, which you won't need, because you'll use <a href="https://sites.google.com/site/steveyegge2/effective-emacs#item4">Item 4</a> for moving around within the window. </p>
+<p> Some modes insist on re-binding Alt-r and Alt-s, which is annoying, and I have a bunch of per-mode hacks to re-bind them, but I don't have all modes covered. If someone can suggest a way to bind Alt-r and Alt-s in such a way that they can't be overridden by any modes, please let me know -- I'd be muchly appreciative. </p>
+<p> The next two important regexp-related commands are replace-regexp and query-replace-regexp. They function identically, prompting for a regular expression and a replacement string, but query-replace-regexp prompts you to type y or n for each possible replacement. </p>
+<p> I use query-replace-regexp so frequently that I have an alias for it: </p>
+<p> <font size="+1"></font></p><pre><font size="+1">(<font color="#0000cd">defalias</font> '<font color="#b22222">qrr</font> 'query-replace-regexp)<br></font></pre> <p></p>
+<p> That way I can type M-x qrr to invoke the function. </p>
+<p> Other useful commands that take regexps are M-x list-matching-lines, which shows you all the lines in a buffer that match some regexp, and M-x apropos, which shows you all commands whose names match a given regexp. </p>
+<p> The most Frequently Asked Question about Emacs regexps is: "How do I insert a newline into a regexp or the replacement string?" Hitting the Enter key simply tells the command that you're done entering the regexp, and it starts doing the replacements. (This is a very good reason for preferring query-replace-regexp over replace-regexp until you're 100% confident that your regexps are right on the first try. I'm still not there yet.) </p>
+<p> The answer is that you need to insert a ^J character, which Emacs uses to represent newlines in functions and commands. At the point in the regexp or replacement where you need to insert a newline, hit Ctrl-q followed by Ctrl-j. Ctrl-q is Emacs's "quote" command: rather than executing the following keystroke, Emacs will insert the key into the current buffer or the minibuffer. </p>
+<p> Some other useful things to know about Emacs regular expressions: </p>
+<p> </p>
+<ul>
+<li> You need to double-escape ("\\") regexp metacharacters in strings in elisp code, but you single-escape them when entering regexps at the minibuffer. 
+<p> </p>
+</li>
+<li> Emacs code does so much matching of parens that Emacs regexps reverse the paren character and metacharacter. In an Emacs regexp, "(" and ")" match actual parens, while "\(" and "\)" create matching groups. 
+<p> </p>
+</li>
+<li> In the replacement string, use \1, \2, etc. for inserting match-groups from the regexp. 
+<p> </p>
+</li>
+<li> If you enter in a regexp and it doesn't work, undo the result if the command actually changed anything. Then type the command again, and when it prompts you, use the arrow keys to scroll up and down to find your regexp and replacement string, and modify them in place. This can save you a <em>lot</em> of typing and frustration. 
+<p> </p>
+</li>
+<li> You can yank text into the middle of a regexp you're typing out with most regexp commands, but NOT in the isearch-*-regexp commands. Yank does weird things in those. I'd love to know how to fix this. 
+<p> </p>
+</li>
+</ul>
+<p> Mastering regular expressions and the commands that use them is one of the most important components of becoming an Emacs Wizard. </p>
+<h3><a name="item10">Item 10: Master the fine-grained text manipulation commands</a></h3>
+<div class="sites-embed-align-left-wrapping-off"><div class="sites-embed-border-off sites-embed" style="width:400px;"><div class="sites-embed-content sites-embed-type-ggs-gadget"><iframe width="400" height="300" scrolling="no" frameborder="0" id="1188304072" name="1188304072" allowtransparency="true" class="igm" src="./effective-emacs - steveyegge2_files/ifr.html"></iframe></div></div></div>
+<p>Emacs provides many small but useful commands for doing surgery on text. They add up to laserlike efficiency. </p>
+<p> For starters, don't be tempted to re-bind Ctrl-k to a function that kills the whole line including the newline. I know that's the way kill-line works in all other editors. But it's clumsy and coarse compared to the way kill-line works by default. The default behavior, which kills the text to the end of the line but doesn't kill the newline, gives you finer-grained control, and leads to more efficient text surgery on the whole. Trust me: all Emacs users use other applications that only support the fat-fingered kill-whole-line version, so they've had plenty of opportunity to use both approaches. There's a reason the default is the way it is. </p>
+<h4><a name="TOC-Keyboard-Macros"></a>Keyboard Macros</h4>
+<p>I believe I can state without the slightest hint of exaggeration that Emacs keyboard macros are the coolest thing in the entire universe. They are, in a sense, as fine-grained and special-purpose as it gets, because you create them on the fly to solve specific editing problems. Whenever you find you need to make a specific, patterned change more than, say, 10 to 15 times, create a keyboard macro. It's really easy to do. </p>
+<p> First it helps to do a trial run on the macro. Once you've done that, put your cursor at at the beginning of the first place to change, and use Ctrl-x ( to start recording the macro. Make your edits, and make sure to put the cursor in the corresponding place on the next line (or several lines down, as appropriate), so the macro will execute exactly the same pattern every time. To stop recording, type Ctrl-x ), and to invoke the macro, use Ctrl-x e (call-last-kbd-macro). </p>
+<p> It's something of an art to define a robust macro -- you learn to use anchors like beginning-of-line and end-of line to make sure the macro is in a stable point before adding another action to it. </p>
+<p> And incremental-search is useful for skipping forward to the next place to invoke the macro: if you use isearch <em>within</em> the macro, to find the place to start, then each invocation of the macro later will automatically perform the search each time. Very convenient. </p>
+<p> And it's OK to make minor navigational mistakes while recording the macro. Just move the cursor back to where it should be and keep recording. The mistake will be replayed every time you execute the macro, but it'll happen so fast you'll be unlikely to notice. </p>
+<p> The trick to getting good at macros is to be persistent: make sure you get the macro working, and don't give up, even if it means spending more time fiddling with the macro than making the edits manually. The next time around it'll be easier, and eventually they'll become second nature. Keyboard macros are one of the most powerful features of Emacs, and they can make your life much easier. </p>
+<p> One last tip for keyboard macros: typically you'll play them dozens or even hundreds of times in a file, or across multiple files. You should bind call-last-kbd-macro to a single keystroke, such as the F5 key. You'll usually be "babysitting" the job, pressing the key over and over, watching the changes as you make them to ensure you don't hork something unintentionally. So it's fine to have it bound to a "faraway" key like F5. You can set it up like so: </p>
+<p> </p>
+<pre>(global-set-key [f5] 'call-last-kbd-macro)</pre>
+<p> </p>
+<p></p>
+<h4><a name="TOC-Transpose--functions"></a>Transpose-* functions</h4>
+<p>Finally you'll find the transpose-* commands <em>surprisingly</em> useful once you get used to them, even though they look like gimmicks. Probably the most useful is transpose-words. You'd be amazed at how often you find yourself using this command, which is bound to Alt-t. It has two uses: swapping two adjacent words, and dragging a single word forward or backward in a sentence. </p>
+<p> The transpose-words function is aware of mode-specific syntax and word boundaries, so, for instance, putting the cursor between these two words: </p>
+<p> </p>
+<pre>([this])-is</pre>
+<p> and hitting Alt-t will result in: </p>
+<pre>([is])-this</pre>
+<p> You can transpose words across hyphens, HTML tags, and basically all punctuation. It's a pretty handy feature when you need it. </p>
+<p> When you transpose 2 words, e.g. "dog food", the leftmost word swaps with the rightmost (assuming the cursor is somewhere between the beginning of the first word and the end of the second one), resulting in "food dog". But the cursor moves so that it's still to the right of the word that moved to the right. So if you apply it repeatedly, the word moves along the sentence to the right. I don't think there's a built-in way to make a "drag-word-left", but it would be easy to write a short function to do it. The corresponding Eclipse plug-in would be 5,000 lines of code in 60 source files and would take nine days to write and debug. </p>
+<p> You can also transpose chars, lines, sentences, and paragraphs. These are all useful as you perform editing operations on your raw text and even your source code. Experiment with them and try to remember that they're there, and eventually they'll also become second-nature. </p>
+<p> </p>
+<p></p>
+<h3><a name="other">Tune in next time...</a></h3>
+<p>At some point I'll have collected and documented 50 tips, at which point Scott Meyers can just eat his heart out. I made a valiant effort to do them all in one sitting, but I gave up just now and changed this blog's heading from "50 Specific Ways..." to "10 Specific Ways..." At least I did it this entry all in one sitting of a little over 2 hours. An Eclipse user would have spent that much time digging through the manuals, looking for a refactoring tool that can write blogs. Fat chance. </p>
+<p> For upcoming tips, a few that come to mind as being particularly useful are: </p>
+<ol>
+<li> fill-paragraph (Alt-p) -- intelligently line-wraps your text for you: an absolute must, and it works inside source-code comments. 
+<p> </p>
+</li>
+<li> gnuserv: automatically open certain document types (including View Source in your browser) in Emacs. 
+<p> </p>
+</li>
+<li> M-x Dired: a powerful way to manage your files and directories. It can do things that NO other tool can do (at least that I'm aware of), including renaming arbitrary groups of files from one regexp to another. 
+<p> </p>
+</li>
+<li> whitespace-manipulation commands: C-x C-o (delete-blank-lines), delete-trailing-whitespace, tabify and untabify, indent-region, and so on. 
+<p> </p>
+</li>
+<li> nxml-mode: the ONLY way to fly when you're editing XML. Authored by XML guru James Clark; it knocks the socks off any IDE-based XML editor out there today. 
+<p> </p>
+</li>
+<li> picture-mode: the best way to draw ascii art, and useful in a surprising number of situations. 
+<p> </p>
+</li>
+<li> minibuffer management: mastering recursive edits, learning how to abort from various situations, command completions, and other command-entry trickery. 
+<p> </p>
+</li>
+<li> effortless navigation: re-bind a few keys so that you can move the cursor in any direction, by chars or words, by holding down Alt and just pressing various letter keys. 
+<p> </p>
+</li>
+<li> region management: choosing a non-disgusting color for the highlighted region, covering region-related commands. 
+<p> </p>
+</li>
+<li> rectangle commands: yet another incredibly important set of related commands with no analogues in other editors. Once again, you'll wonder how you lived without them. 
+<p> </p>
+</li>
+<li> emacs shells: tips and tricks for getting the most out of a bash command shell running as an Emacs subprocess. 
+<p> </p>
+</li>
+<li> align-regexp: my new favorite command. just learned it recently, and I use it almost every day. 
+<p> </p>
+</li>
+<li> frame initialization: put Emacs exactly where you want it, every time it starts up, by auto-detecting the screen dimensions and computing where it should be. 
+<p> </p>
+</li>
+<li> using the goal column: things every Emacs power-user should know. 
+<p> </p>
+</li>
+<li> setting the fill column: how to get the most out of fill-region and fill-paragraph. 
+<p> </p>
+</li>
+<li> optimizing OS settings, such as speeding up your keyboard repeat rate, choosing an ideal Emacs font, and so on. 
+<p> </p>
+</li>
+<li> browsing and editing archives: tar, gzip, zip, jar, etc. Most people have no idea this feature exists, and it's nothing short of amazing. 
+<p> </p>
+</li>
+<li> advanced keybinding: learn the syntax for binding function keys, home/end, and other oddball keys. Learn how to make keybindings local to a particular buffer or mode. 
+<p> </p>
+</li>
+<li> mastering the kill ring, including using Derek Upham's fancy new mode for viewing its contents. 
+<p> </p>
+</li>
+<li> mastering Info: customizing your Info dir, finding and adding in new Info files, and advanced navigation and bookmarking. 
+<p> </p>
+</li>
+<li> using M-x customize: learn how this beast works, and how to use it or avoid it as needed. 
+<p> </p>
+</li>
+<li> utility apps: M-x calendar, M-x calc, and others. 
+<p> </p>
+</li>
+</ol>
+<p> The list goes on and on... ah, well, I'll get around to them someday. </p>
+<p> And with that, it's a wrap! I'm heading to bed. </p>
+<p> </p>
+<p><em> published Jan 23, 2005<br> last update, Mar 12, 2006<br> </em> </p>
+<hr>
+<p> </p>
+<center><b>Comments</b></center>
+<p></p>
+<hr>
+<p>Some random comments: </p>
+<p> To yank at the i-search prompt, use M-y instead of C-y. The emacs info node on Incremental Search talks about the rebinding of C-y, C-w, etc at the i-search prompt. </p>
+<p> To repeat execution of the last kbd macro, after hitting C-xe to run it once, keep hitting just the 'e' key for repeated execution. </p>
+<p> Zap-to-char (M-z) is incredibly useful if you need to change myDatafileHandler to myStreamHandler and point is at D (the first char to change). Simple M-z e to zap the "Datafile" part and type in the replacement. This is not orthogonal to the backward-kill-word (bound to C-backspace for me since that works in windows browser windows as well as everything else) so there's a feel needed for which is optimal when, which for me mostly depends on where point is already. <br> </p>
+<p> <em>Posted by: Ami F. at January 23, 2005 07:12 PM</em> </p>
+<p> </p>
+<hr>
+<p> "Swap Caps-Lock and Control": Or you could just get yourself a keyboard that's already swapped, or that lets you swap them in hardware. The Happy Hacking Keyboard is an example of the former. I like the <a href="http://cvtinc.com/products/keyboards/stellar.htm" rel="nofollow">Avant Stellar</a> keyboard for the latter. </p>
+<p> "Binding Alt-r and Alt-s": Try setting up a minor mode with the definitions you want. Then stick that keymap on the *front* of MINOR-MODE-MAP-ALIST. </p>
+<p> Other tips: </p>
+<p> Use `iswitchb' mode. It's faster for switching between buffers, and it provides more feedback. </p>
+<p> Use P4 mode. But be sure to download a more recent version than what we have installed. </p>
+<p> Emacs' integration with X11 selections is written to work well with xterm's sucky default policies. That means it works badly with modern apps and badly over slow network connections (say, a VPN from home). I have written a new set of commands to make Emacs talk to the clipboard, and they make life much easier. <br> </p>
+<p> <em>Posted by: Derek U. at January 24, 2005 07:37 PM</em> </p>
+<p> </p>
+<hr>
+<p> Doing the swapping of control/cap-lock key can be done in \\HKEY_CURRENT_USER\Keyboard Layout instead of under \\HKEY_LOCAL_MACHINE. </p>
+<p> <em>Posted by: Chris W. at January 27, 2005 07:52 AM</em> </p>
+<p> I disagree with your agressive rebinding of keys. I used to rebind almost all my emacs keys so they would be more familiar to a windows user (Ctrl+C does copy, Ctrl+V is paste, etc). However, I found myself at a loss when I tried using my neighbor's computer with the default emacs installed. </p>
+<p> Always learn default emacs keybindings first, then over-write them as you find appropriate. For example, I rebound Ctrl+J to be the goto-line macro. By default, Ctrl+J enters a newline. F7 is not bound to anything by default, so I made that bound to the compile macro (that keybinding actually comes from Visual Studio). That is about the extent of the keybindings I need/use. And, if I have to use a non-customized emacs, I can still get work done. </p>
+<p> Cheers, <br> -Brian<br> </p>
+<p> <em>Posted by: Brian M. at January 27, 2005 10:29 PM</em> </p>
+<p> </p>
+<hr>
+<p> To not pursue aggressive editor and keyboard customizations because other people stick to the standard is a bogus argument, in my opinion. Firstly, how often do you really use a terminal other than your own? And even then, how often do you write just scads of code there? When I do this, it's usually for just a couple of quick edits. So, why optimize for that 1% of time when you're not at your own setup? Secondly, if it does annoy me enough to care, I can always just load my rc file remotely. I use vim and have my .vimrc hardlinked into my /workplace directory so I can just say vim -u /net/ericw/workplace/.vimrc if I really need my magic. I'm certain the same can be done in emacs. </p>
+<p> Customization is one of the main selling points of powerful editors, and our wrists are two of our most valuable assets as developers, so I don't understand why people eschew customization just because they fear that small percentage of the time when they won't have it. </p>
+<p> </p>
+<p> <em>Posted by: Eric W. at January 28, 2005 07:34 PM</em> </p>
+<p> </p>
+<hr>
+<p> Brian, I'm afraid I'm with Eric on this one. </p>
+<p> I have friends who have nonstandard keyboards, in some cases to avoid repetitive-stress injury. I can't type at their workstations. I have this little secret, though, that works like a charm. I say: "uh, you type." </p>
+<p> OK, not much of a secret, but it's gotten me by. </p>
+<p> Everyone customizes their environment. Some SDEs use fonts so small I actually can't read them. Some use custom window managers with non-CUA hotkeys and behavior. People use Windows, Linux, MacOS. There are different Unix shells with different default keybindings and aliases. Should we tell everyone they have to use plain-vanilla Windows installations with no customizations? </p>
+<p> You're effectively arguing that we should all reduce ourselves to the least common denominator of productivity. This argument has been debunked in other domains (e.g. should we make people with good vision wear blur-inducing glasses, so nobody feels like they're at a natural disadvantage?), and it doesn't hold water in ours either. </p>
+<p> You're welcome to use the default bindings yourself, of course. But I wouldn't get on a bandwagon that tries to discourage people from getting better at their jobs. It's a slippery slope that I think you want to avoid. </p>
+<p> Anyway, we now issue laptops with wireless iVPNs, so you can even bring your environment with you. It's just not an issue anymore. <br> </p>
+<p> <em>Posted by: Steve Yegge at January 28, 2005 09:30 PM</em></p>
+<p> </p>
+<hr>
+<p> I just want to know the tips you allude to in number (8) of your "Tune in next time..." section. How do you do the up/down/left/right browsing? I've been trying to train myself to use C-n, C-p, C-f, C-b and friends, but its awkward, and it isn't getting easier. Also, can I plllleeeeasssseee see your .emacs file :) <br> </p>
+<p> <em>Posted by: Charles G. at February 18, 2005 01:47 AM</em> </p>
+<p> </p>
+<hr> <em></em>
+<p><em> On March 4 2006, Luke Gorrie wrote: </em></p>
+<p> Howdy, </p>
+<p> I know it's bad form to comment on a blog entry without having read it thoroughly but I will take a chance because your eternal salavation is at stake. </p>
+<p> I use C-h for backspace in Emacs and move `help-command' elsewhere: </p>
+<pre> (global-set-key "\C-h" 'backward-delete-char-untabify)<br> (define-key isearch-mode-map "\C-h" 'isearch-delete-char)<br> (global-set-key [(hyper h)] 'help-command)</pre>
+<p> and this also works in the shell along with C-m, C-j, C-i, etc. </p>
+<p> Offered for your consideration. :-) </p>
+<p></p>
+<hr>
+<p> <em></em></p>
+<p><em> On March 5 2006, Anupam Kapoor wrote: </em></p>
+<pre>hi,<br>regarding tip #7, imho, its better to just disable it via Xresources,<br>rather than loading it all up and making it invisible (as you have<br>shown) via:<br><br>,----<br>| ! better to turn this off here than in .emacs<br>| ! where it has already been loaded.<br>| emacs.menuBar: off<br>| emacs.toolBar: off<br>|<br>| ! no scrollbars fur me<br>| emacs.verticalScrollBars: off<br>`----<br><br>kind regards<br>anupam<br></pre>
+<p></p>
+<hr>
+<p> <em></em></p>
+<p><em> On March 9 2006, Scott Anderson wrote: </em></p>
+<pre>Steve,<br><br>Great article.<br><br>Reading section 7, I became amused by the person who claimed that<br>"countless studies" (or whatever) had proven that the mouse was<br>faster.<br><br>I'm guessing he never studied GOMS, which is a method of decomposing<br>UIs into their basic operations and then performing objective<br>complexity and time analysis.<br><br>A quick typist can hit about 10 keys per second, or .1s per key. To<br>use a mouse there are four movements involved: move from the keyboard<br>to the mouse, move the cursor to a location, perform some operation at<br>the location, then move the hand back to the keyboard.<br><br>Moving the hand takes about .4s. Moving the mouse cursor on the screen<br>takes .5s. So without even doing anything, you've used 1.3 seconds. A<br>mouse click takes .1 seconds, and if you're dragging something, you<br>measure the click down, the drag, and the release, adding up to<br>another .7 seconds.<br><br>So let's say I want to highlight a line for copy:<br><br>mouse:<br>.4 move to mouse<br>.5 move cursor to first character<br>.1 depress button<br>.5 drag to highlight (and this is optimistic, depending on how good<br> you are with finicky targets like highlighting)<br>.1 release button<br>.4 move to keyboard<br>.2 copy (alt-w, ctrl-c, whatever. count control keys as a separate keypress)<br><br>2.2 seconds to perform.<br><br>kb scenario 1: best case: already at beginning of line<br>.2 mark (ctrl-space)<br>.2 end-of-line (ctrl-e)<br>.2 copy<br><br>.6 seconds to perform, or nearly 4 times as fast.<br><br>kb scenario 2: worst case: requires navigation: 30 lines down, line<br>starts with "Reading"<br>.9s move to start of line (ctrl-r readi ctrl-r)<br>.2 mark (ctrl-space)<br>.2 end-of-line (ctrl-e)<br>.2 copy<br><br>1.5s, still faster<br><br><br>As it turns out, the only thing a mouse is really good for is<br>something involving a gross motor movement, like moving a window or<br>the like. Unless you're a crappy typist.<br><br>Anyway, good article, and I'm looking forward to reading the rest of<br>them.<br><br>Regards,<br>-scott<br></pre></div><div class="sites-layout-tile sites-tile-name-footer"><table width="100%">
+<tbody><tr>
+<td width="100%">
+<a href="https://sites.google.com/site/steveyegge2/blog-rants">Back to Stevey's Drunken Blog Rants™</a>
+</td>
+<td align="right">
+<img src="./effective-emacs - steveyegge2_files/stevey-email.png" alt="image of my email address, steve dot yegge at ye olde gmail">
+</td>
+</tr></tbody></table>
+<p>
+</p></div></div>
+</div> 
+</div> 
+<div id="sites-canvas-bottom-panel">
+</div>
+</div> 
+</td> 
+</tr>
+</tbody></table> 
+</div> 
+</div> 
+<div id="sites-chrome-footer-wrapper">
+<div id="sites-chrome-footer-wrapper-inside">
+<div id="sites-chrome-footer">
+</div>
+</div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-adminfooter-container">
+<div xmlns="http://www.w3.org/1999/xhtml" class="sites-adminfooter"><p><a class="sites-system-link" href="https://www.google.com/a/UniversalLogin?service=jotspot&continue=https://sites.google.com/site/steveyegge2/effective-emacs">Sign in</a>|<a class="sites-system-link" href="https://sites.google.com/site/steveyegge2/system/app/pages/recentChanges">Recent Site Activity</a>|<a class="sites-system-link" href="https://sites.google.com/site/steveyegge2/system/app/pages/reportAbuse" target="_blank">Report Abuse</a>|<a class="sites-system-link" href="javascript:;" onclick="window.open(webspace.printUrl)">Print Page</a>|<span class="sites-system-link">Powered By</span> <b class="powered-by"><a href="http://sites.google.com/">Google Sites</a></b></p></div>
+</div>
+</div> 
+</div> 
+<div id="sites-chrome-onebar-footer">
+</div>
+
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('sjl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" src="./effective-emacs - steveyegge2_files/jot_min_view__en.js"></script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    window.jstiming.load.tick('jl');
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+    
+        sites.core.Analytics.createTracker();
+        sites.core.Analytics.trackPageview();
+      
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+      gsites.HoverPopupMenu.createSiteDropdownMenus('sites-header-nav-dropdown', false);
+    </script>
+<script xmlns="http://www.w3.org/1999/xhtml">
+                    window.onload = function() {
+                      if (false) {
+                        JOT_setMobilePreview();
+                      }
+                      var loadTimer = window.jstiming.load;
+                      loadTimer.tick("ol");
+                      loadTimer["name"] = "load," + webspace.page.type + ",user_page";
+                      window.jstiming.report(loadTimer, {}, 'https://gg.google.com/csi');
+                    }
+                  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+        JOT_insertAnalyticsCode(false);
+      </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    var maestroRunner = new gsites.pages.view.SitesMaestroRunner(
+        webspace, "en");
+    maestroRunner.initListeners();
+    maestroRunner.installEditRender();
+  </script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript" defer="true">
+  //<![CDATA[
+    // Decorate any fastUI buttons on the page with a class of 'goog-button'.
+    if (webspace.user.hasWriteAccess) {
+      JOT_decorateButtons();
+    }
+
+    // Fires delayed events.
+    (function() {
+      JOT_fullyLoaded = true;
+      var delayedEvents = JOT_delayedEvents;
+      for (var x = 0; x < delayedEvents.length; x++) {
+        var event = delayedEvents[x];
+        JOT_postEvent(event.eventName, event.eventSrc, event.payload);
+      }
+      JOT_delayedEvents = null;
+      JOT_postEvent('pageLoaded');
+    })();
+ //]]>
+</script>
+<script xmlns="http://www.w3.org/1999/xhtml" type="text/javascript">
+    JOT_postEvent('decorateGvizCharts');
+  </script>
+<script type="text/javascript">
+          if (webspace.features.siteNotice) {
+            JOT_setupNoticeManager();
+          }
+        </script>
+<script type="text/javascript">
+              JOT_postEvent('renderPlus', null, 'sites-chrome-main');
+            </script>
+<div id="server-timer-div" style="display:none"> </div>
+<script type="text/javascript">
+          window.jstiming.load.tick('render');
+          JOT_postEvent('usercontentrendered', this);
+        </script>
+
+
+</body></html>

@@ -6,12 +6,12 @@
 
 @section('header')
     <h1>Search</h1>
-          <p>Easily search this website for any content you need</p>
+          <p>Easily search this website for  news, timetables, past questions, and course outlines</p>
 @stop
 
 @section('content')
 	@if(isset($query))
-		<h4>Search results for: "{{$query}}"</h4>
+		<h4>Search results for: <code>"{{$query}}"</code></h4>
 		@if(is_array($gists) && $gists != NULL)
 			<ul>
 			@foreach($gists as $gist)
@@ -29,13 +29,13 @@
 			@else
 				<div class="alert alert-danger fade in">
 		      	<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			   	<p><strong>Sorry!</strong> There is no content in this site is related to <em>{{$query}}</em></p>
+			   	<p><strong>Sorry!</strong> There is no content in this site is related to <code>"{{$query}}"</code></p>
 		 		</div>
 		@endif
 		@else
 				<div class="panel search-panel panel-success">
 					<div class="panel-heading">
-			    		<h3>Search this site for news, timetables, past questions, and course outlines</h3>
+			    		<h3 class="text-center">Search this site for news, timetables, past questions, <br/>and course outlines</h3>
 			  		</div>
 			  		<div class="panel-body">
 			  			{{Form::open( array('method' => 'GET', 'class' =>'nav bar-form', 'url' => 'search' ))}}

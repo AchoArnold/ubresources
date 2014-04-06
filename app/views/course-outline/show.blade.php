@@ -10,7 +10,7 @@
 @stop
 
 @section('content')
-	<h3>Course outline for  {{$meta_data->faculty_name}} department of {{$meta_data->department_name}} level {{$level}}</h3>
+	<h3  class="text-center">Course outline for  {{$meta_data->faculty_name}} department of {{$meta_data->department_name}} level {{$level}}</h3>
    			<section>
 	             <fieldset>
 	               <legend>First Semester <small>(Major Courses)</small></legend>

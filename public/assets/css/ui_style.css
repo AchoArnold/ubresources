@@ -235,7 +235,7 @@ Copyright
   border-bottom: #5bc0de solid 2px;
 }
 
-.error_form{
+.error-form{
   padding-top:30px;
   display:block;
   width:80%;
@@ -313,7 +313,7 @@ font-size: 35px;
   text-align: center;
 }
 
-h3{
+.text-center{
   text-align: center;
 }
 
@@ -336,6 +336,15 @@ h3{
   font-size: 60px;
   line-height: 1;
   }
+}
+
+.text-right .glyphicon-search{
+  margin-right: 5px;
+}
+
+.text-center .glyphicon-upload,
+.glyphicon-download{
+  margin-left: 5px;
 }
 
 @media screen and (min-width: 992px) {

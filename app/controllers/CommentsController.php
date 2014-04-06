@@ -19,9 +19,9 @@ class CommentsController extends \BaseController {
 	 */
 	public function create($uri)
 	{
-		 $v = Comment::validate(Input::all());
+		 $validate = Comment::validate(Input::all());
 
-        if ( $v->passes() ) {
+        if ( $validate->passes() ) {
 			$comment = new Comment;
 			$comment->content = String::makeLinks( HTML::entities(Input::get('content')) );
 			$comment->author_id ='1';
@@ -36,7 +36,7 @@ class CommentsController extends \BaseController {
 		}
 		else{
 			return Redirect::back()
-			->with('error', $v->messages()->get('content'));
+			->with('error', $validate->messages()->get('content'));
 		}
 	}
 

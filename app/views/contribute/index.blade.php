@@ -15,7 +15,13 @@
 @section('content')
 	<h2>Here's how you can help</h2>
    <h3>Web Content</h3>
-   <p>You can help us by submitting {{HTML::link('contribute/timetables','timetables')}}, {{HTML::link('contribute/past-questions','past questions')}} and {{HTML::link('contribute/course-outlines','course outlines')}} not yet present on this website. You can also review {{HTML::link('timetables','timetables')}}, {{HTML::link('course-outline','course outlines')}} and {{HTML::link('past-questions','past questions')}}  for mistakes </p>
+   <p>You can help us by :-</p>
+   <ul>
+   <li>Submitting {{HTML::link('contribute/past-questions','past questions')}},  {{HTML::link('contribute/timetables','timetables')}} and {{HTML::link('contribute/course-outlines','course outlines')}} not yet present on this website.
+   </li>
+   <li>You can also review {{HTML::link('timetables','timetables')}}, {{HTML::link('course-outline','course outlines')}} and {{HTML::link('past-questions','past questions')}}  for {{HTML::link('contribute/errors', 'any errors')}}
+   </li>
+   </ul>
    <h3>Feature Request</h3>
    <p>You can suggest features not yet present but which can help make this site better by enriching its web content making it more interactive and accessible for all!<br />To submit this feature requests, send an e-mail to our development team at {{HTML::mailto('support@ubresources.com')}}</p>
    </p>
@@ -27,7 +33,6 @@
      <li>Recommending our facebook page <br/></li>
      <li>Tweeting about us </li>
      <li>Giving us a +1 on google plus<br/></li>
-     <li>Adding a Link to Us on your website</li>
      <li>Or any other creative means you can think of!</li>
    </ul>
    </p>

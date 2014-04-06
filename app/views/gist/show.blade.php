@@ -104,7 +104,7 @@
 			  		<div class="panel-body">
 			  			{{Form::open( array('method' => 'post', 'url' => 'gist/'.$gist->gist_uri))}}
 			  			<div class="form-group">
-			  				{{HTML::decode(Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'oninput' => "toggle_button(this, 'post-comment')")))}}
+			  				{{Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'oninput' => "toggle_button(this, 'post-comment')"))}}
 			  			</div>
 			  			<div class="form-group">
 			    			<div class="text-right">

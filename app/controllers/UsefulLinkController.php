@@ -1,6 +1,6 @@
 <?php
 
-class LinksController extends \BaseController {
+class UsefulLinkController extends \BaseController {
 
 	/**
 	 * Display a listing of the resource.
@@ -9,7 +9,10 @@ class LinksController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		$articles =  UsefulLink::articles();
+		return View::make('links.index')
+		->with('title', 'Useful links to external resources which facilitate learning')
+		->with('articles', $articles);
 	}
 
 	/**
@@ -40,8 +43,7 @@ class LinksController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('links.index')
-		->with('title', 'Useful links to external resources');
+		
 	}
 
 	/**

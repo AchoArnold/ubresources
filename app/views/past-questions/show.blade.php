@@ -10,12 +10,12 @@
 @stop
 
 @section('content')
-	<h3>Past questions for  {{$meta_data[0]->faculty_name}} department of {{$meta_data[0]->department_name}} level {{$level}}</h3>
+	<h3 class="text-center">Past questions for  {{$meta_data[0]->faculty_name}} department of {{$meta_data[0]->department_name}} level {{$level}}</h3>
    <div class="alert alert-info">
       <p><strong>NOTE:</strong> These files have been compressed so as to  reduce size and optimize bandwidth.</p>
    </div>
    <section class="course-table">
-   	{{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
+   	{{Form::open(array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
         {{ Form::hidden('semester', '1') }}
        <div calass="form-group">
        	{{Form::label('First Semester Courses:')}}
@@ -29,7 +29,7 @@
          </select>
          <br />
          <div class="text-right">
-         <button type="submit" class="btn btn-primary">Download <span class="glyphicon glyphicon-arrow-down"></span></button>
+         <button type="submit" class="btn btn-primary">Download <span class="glyphicon glyphicon-download"></span></button>
          </div>
        </div>
      {{Form::close()}}
@@ -47,7 +47,7 @@
          	</select>
          	<br />
          <div class="text-right">
-         <button type="submit" class="btn btn-primary">Download<span class="glyphicon glyphicon-arrow-down"></span></button>
+         <button type="submit" class="btn btn-primary">Download<span class="glyphicon glyphicon-download"></span></button>
          </div>
         </div>
     	{{Form::close()}}

@@ -13,7 +13,7 @@
 
 Route::get('/', 'HomeController@index');
 
-Route::get('about', 'AboutController@showPage');
+Route::get('about', 'AboutController@index');
 
 Route::get('disclaimer', 'DisclaimerController@show');
 
@@ -25,7 +25,7 @@ Route::get('gist/{comment}/delete', 'CommentsController@destroy');
 
 Route::post('gist/{uri}', 'CommentsController@create');
 
-Route::get('useful-links', 'LinksController@show');
+Route::get('useful-links', 'UsefulLinkController@index');
 
 
 Route::get('timetables', 'TimetableController@index');
@@ -63,8 +63,12 @@ Route::get('contribute','ContributionController@index');
 
 Route::get('contribute/{id}', 'ContributionController@show');
 
+Route::post('contribute/{id}', 'ContributionController@create');
 
-Route::get('help-desk', 'HelpDeskController@show');
+
+Route::get('help-desk', 'HelpDeskController@index');
+
+Route::post('help-desk', 'HelpDeskController@store');
 
 
 Route::get('search', 'SearchController@index');

@@ -1,7 +1,7 @@
 @extends('../layouts/default')
-   
+
 @section('head')
-	<meta name="description" content="Submit your enquiries/problems to the UBresources dev team">
+	<meta name="description" content="Submit your inquiries or problems to the UBresources developement team">
 @stop
 @section('header')
    <h1>Help Desk</h1>
@@ -9,32 +9,49 @@
 @stop
 
 @section('content')
+      @if(Session::has('error'))
+          <div class="alert alert-danger fade in">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+               <p>
+              @foreach (Session::get('error')->all() as $error)
+                      <div>{{ $error }}</div>
+                @endforeach
+              </p>
+          </div>
+       @endif
+
+      @if (Session::has('message'))
+            <div class="alert alert-success fade in">
+              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+              <strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
+            {{Session::get('message')}}
+          </div>
+      @endif
+
 	<div class="panel panel-success">
               <div class="panel-heading"><h2>Talk To us</h2></div>
               <div class="panel-body">
-                <form class="error_form" name="freecontactform" method="post" action="../cgi/freecontactformprocess.php">
+                {{Form::open(array('method' =>'POST', 'url' => Request::path() ))}}
                   <div class="form-group">
-                    <label for="Full_Name">Full Name<span class="required_star" > * </span></label>
-                    <input type="text"  class="form-control" name="Full_Name" id="Full_Name" maxlength="80" required placeholder="(required)" pattern="[a-zA-Z]+">
+                    {{Form::label('Full Name (required)', null, array('class' => 'control-label'))}}
+                    {{Form::text('name',null, array('pattern'=>'[a-z A-Z]+','class'=>'form-control', 'placeholder' => 'Your full name goes here', 'maxlength' => '32', 'required' => 'true'))}}
                   </div>
                   <div class="form-group">
-                    <label for="Email_Address">Email Address<span class="required_star"> * </span>
-                    </label>
-                    <input type="email" class="form-control"
-			   name="Email_Address" id="Email_Address"
-			   maxlength="100" placeholder="(required)" required>
+                    {{Form::label('Email Address (required)')}}
+                    {{Form::email('email',null, array('class'=>'form-control', 'placeholder' => 'Enter your email address here', 'maxlength' => '32',  'required' => 'true'))}}
                   </div>
                   <div class="form-group">
-                    <label for="Telephone_Number">Telephone Number</label>
-                    <input type="tel" class="form-control" name="Telephone_Number" id="Telephone_Number" maxlength="100" placeholder="(optional)">
+                    {{Form::label('Telephone (optional)', null, array('class' => 'control-label'))}}
+                    {{Form::text('telephone',null, array('pattern'=>'[0-9]+','class'=>'form-control', 'placeholder' => 'Please enter your telephone number', 'maxlength' => '15'))}}
                   </div>
                   <div class="form-group">
-                    <label for="Your_Message">Enquiry<span class="required_star"> * </span>
-                    </label>
-                    <textarea  class="form-control" rows="7" name="Your_Message" id="Your_Message" placeholder="Leave your message here" required></textarea>
+                    {{Form::label('Message (required)')}}
+                    {{HTML::decode(Form::textarea('message', null, array('class' => 'form-control', 'placeholder' => 'Please enter your message briefly', 'maxlength' => '500','required' => 'true', 'size'=>'30x7', 'oninput'=> "toggle_button(this,'submit-message')")))}}
                   </div>
-                  <button type="submit" class="btn btn-success">Submit Message</button>	
-                </form>
+                  <div class="text-center">
+                      {{Form::submit('Submit message', array('id'=>'submit-message','disabled'=>'true', 'class' => 'btn btn-success'))}}
+                  </div>
+               {{Form::close()}}
               </div>
             </div>
           </div>

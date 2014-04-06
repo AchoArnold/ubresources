@@ -9,7 +9,8 @@ class HelpDeskController extends \BaseController {
 	 */
 	public function index()
 	{
-		//
+		return View::make('help-desk.index')
+		->with('title', 'Ask us anything you need help with');
 	}
 
 	/**
@@ -29,7 +30,45 @@ class HelpDeskController extends \BaseController {
 	 */
 	public function store()
 	{
-		//
+		if(Input::all())
+		{
+			$validate = HelpDesk::validate(Input::all());
+
+       	if ( $validate->passes() )
+       	{
+       		$content = new HelpDesk;
+       		$content->name = Input::get('name');
+       		$content->email = Input::get('email');
+       		$content->telephone = Input::get('telephone');
+       		$content->content = Input::get('message');
+				if($content->save())
+				{
+					Mail::later(200,'shared.email', array('email'=>Input::get('email'),'name' => Input::get('name'), 'telephone' =>Input::get('telephone'), 'mail_content' => Input::get('message')), function($message) {
+		   			$message->to('arnold@archlinux.info', 'Web Master')->subject('UB Resources | Help Desk');
+					});
+
+					return Redirect::back()
+					->with('message', 'Your message has been received successfully, we will respond to it as soon as possible!');
+				}
+				else
+				{
+					return Redirect::back()
+					->withInput()
+					->with('error', 'We are currently having problems with our server. Please send your message a little later');
+				}
+			}
+			else
+			{
+				return Redirect::back()
+				->withInput()
+				->with('error', $validate->messages());
+			}
+		}
+		else
+		{
+			return View::make('shared.404');
+		}
+
 	}
 
 	/**
@@ -40,8 +79,7 @@ class HelpDeskController extends \BaseController {
 	 */
 	public function show()
 	{
-		return View::make('help-desk.index')
-		->with('title', 'Help Desk  at UBresources');
+		
 	}
 
 	/**
