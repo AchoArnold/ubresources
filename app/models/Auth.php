@@ -1,12 +1,12 @@
 <?php
 
-class PastQuestion extends Eloquent
+class User extends Eloquent
 {
 	public static function departments()
 	{
-		$lists = DB::table('past_questions')
+		$lists = DB::table('timetables')
 			->select('level', 'department_id','departments.name AS department_name', 'faculty_id', 'faculties.name AS faculty_name')
-    		->join('departments', 'departments.id', '=', 'past_questions.department_id')
+    		->join('departments', 'departments.id', '=', 'timetables.department_id')
     		->join('faculties', 'faculties.id', '=', 'departments.faculty_id')
          ->distinct()
     		->get();
@@ -45,7 +45,7 @@ class PastQuestion extends Eloquent
                 		break;
          	      }
             	}
-
+     
             	// If department was not found
             	if($k == count($data[$j][2]))
             	{
@@ -71,15 +71,14 @@ class PastQuestion extends Eloquent
       return $data;
     }
 
-    public static function past_question_array($department_id, $level)
+    public static function timetable_array($department_id, $level)
     {
-      $lists = DB::table('past_questions')
-      	->select('level', 'short_name', 'name','semester', 'course_id')
-      	->join('courses', 'courses.id', '=', 'past_questions.course_id')
+      $lists = DB::table('timetables')
+      	->select('level', 'day', 'start_at','end_at', 'venue', 'short_name')
+      	->join('courses', 'courses.id', '=', 'timetables.course_id')
       	->where('level', '=', $level)
-      	->where('past_questions.department_id', '=', $department_id)
-      	->orderBy('semester', 'asc')
-            ->distinct()
+      	->where('timetables.department_id', '=', $department_id)
+      	->orderBy('day', 'asc')
       	->get();
 
       return $lists;
@@ -88,37 +87,11 @@ class PastQuestion extends Eloquent
     public static function meta_data($faculty_id, $department_id)
     {
       $meta = DB::table('faculties')
-      			->select('faculties.name as faculty_name', 'departments.name as department_name')
-      			->join('departments','departments.faculty_id', '=', 'faculties.id')
+      						->select('faculties.name as faculty_name', 'departments.name as department_name')
+      						->join('departments','departments.faculty_id', '=', 'faculties.id')
                         ->where('faculties.id', '=', $faculty_id)
                         ->where('departments.id', '=', $department_id)
                         ->get();
       return $meta;
-    }
-
-    public static function compress($faculty_id,$department_id,$level, $semester, $course_id)
-    {
-      $questions = DB::table('past_questions')
-        ->select('courses.short_name')
-        ->join('courses', 'courses.id', '=', 'past_questions.course_id')
-        ->where('courses.id', '=', $course_id)
-        ->where('past_questions.id', '=', $department_id)
-        ->where('semester', '=', $semester)
-        ->where('level', '=', $level)
-        ->first();
-
-      if ($questions  == NULL )
-        return NULL;
-
-      $zip_file = new ZipArchive();
-      $zip_folder = public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;
-      $zip_name = storage_path().'/past_questions/'.$questions->short_name.'past_questions.zip';
-
-      $zip_file ->open($zip_name, ZIPARCHIVE::CREATE);
-      Compress::zipFolder($zip_folder, $zip_file);
-
-      if ($zip_file->close())
-        return $zip_name;
-      return NULL;
     }
 }

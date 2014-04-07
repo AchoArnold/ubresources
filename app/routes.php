@@ -72,3 +72,15 @@ Route::post('help-desk', 'HelpDeskController@store');
 
 
 Route::get('search', 'SearchController@index');
+
+
+Route::get('join', 'AuthController@create');
+
+Route::get('login', 'AuthController@login');
+
+Route::get('logout', 'AuthController@logout');
+
+Route::post('join', 'AuthController@strore');
+
+Route::post('login', 'AuthController@post_login');
+

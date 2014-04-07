@@ -83,6 +83,6 @@ require app_path().'/filters.php';
 ## To give a universal 404 request
 /*
 App::missing(function($exception){
-	return Response::make("Page not found", 404);
+	return Response::view('shared.404',array('title'=>"Error: Request cannot be processed!"),404);
 });
 */

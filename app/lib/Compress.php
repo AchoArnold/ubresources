@@ -18,22 +18,22 @@
     	{
        	if ($f != "." && $f != "..")
         	{
-            if (is_file($folder . $f))
-            {
-                // if we find a file, store it
-                // if we have a subfolder, store it there
-                if ($subfolder != null)
-                    $zipFile->addFile($folder . $f, $subfolder . $f);
-                else
-                    $zipFile->addFile($folder . $f);
-            }
-            elseif (is_dir($folder . $f))
-            {
-               // if we find a folder, create a folder in the zip
-               $zipFile->addEmptyDir($f);
-               // and call the function again
-              Compress::zipFolder($folder . $f, $zipFile, $f);
-            }
+              if (is_file($folder . $f))
+              {
+                  // if we find a file, store it
+                  // if we have a subfolder, store it there
+                  if ($subfolder != null)
+                      $zipFile->addFile($folder . $f, $subfolder . $f);
+                  else
+                      $zipFile->addFile($folder . $f);
+              }
+              elseif (is_dir($folder . $f))
+              {
+                 // if we find a folder, create a folder in the zip
+                 $zipFile->addEmptyDir($f);
+                 // and call the function again
+                Compress::zipFolder($folder . $f, $zipFile, $f);
+              }
         	}
    	}
 	}

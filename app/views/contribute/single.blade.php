@@ -20,16 +20,16 @@
 @section('content')
     <div>
       <ul class="nav nav-tabs nav-justified">
-       <li <?php if($tab == 'past questions') echo "class='active'" ?>>
+       <li @if($tab == 'past questions')class='active'@endif>
        		{{HTML::link('contribute/past-questions', 'Past Questions')}}
        	</li>
-       <li <?php if($tab == 'timetables') echo "class='active'" ?>>
+       <li @if($tab == 'timetables')class='active'@endif>
        		{{HTML::link('contribute/timetables', 'Timetables' )}}
        	</li>
-       <li <?php if($tab == 'course outlines') echo "class='active'" ?>>
+       <li @if($tab == 'course outlines')class='active'@endif>
        		{{HTML::link('contribute/course-outlines', 'Course Outline')}}
        	</li>
-       <li <?php if($tab == 'errors') echo "class='active'" ?>>
+       <li @if($tab == 'errors')class='active'@endif>
        		{{HTML::link('contribute/errors', 'Errors and Suggestions')}}
        	</li>
       </ul>
@@ -40,7 +40,9 @@
           <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
            <p>
     			@foreach (Session::get('error')->all() as $error)
-                          <div>{{ $error }}</div>
+                          <div>
+                            {{ $error }}
+                          </div>
                   @endforeach
           </p>
        </div>

@@ -33,10 +33,11 @@ class PastQuestionController extends \BaseController {
 	{
 		$course_id = Input::get('course_id');
 		$semester = Input::get('semester');
+		//return public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;
 		$zip_file = PastQuestion::compress($faculty_id,$department_id,$level, $semester, $course_id);
-
 		if($zip_file == NULL){
-			return 404;
+			return Redirect::back()
+			->with('error', 'Sorry, your request cannot be processed at the moment. Please try again later');
 		}
 
 		return Response::download($zip_file);
@@ -53,7 +54,7 @@ class PastQuestionController extends \BaseController {
 
 		$past_question_entries = PastQuestion::past_question_array($department_id, $level );
 		if ($past_question_entries == NULL){
-			return 404;
+			return Response::view('shared.404',array('title'=>"Error: Request cannot be processed!"),404);
 		}
 		$meta_data = PastQuestion::meta_data( $faculty_id, $department_id );
 		if($meta_data == NULL)

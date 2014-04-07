@@ -41,9 +41,31 @@
             <div>
               </div><!-- /.navbar-collapse -->
             </div>
+
+                @if(Auth::check())
+                  <ul class="nav navbar-nav navbar-right auth">
+                    <li class="dropdown ">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="http://gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="Nice Image" class="img-circle">
+                        <strong>{{{Auth::user()->username}}}</strong><b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu">
+                        <li>{{link_to('logout?_token='.csrf_token(), 'Log Out')}}</li>
+                      </ul>
+                    </li>
+                  </ul>
+                @else
+                  <div class="nav navbar-form navbar-right">
+                    <div>
+                      {{HTML::link('login', 'Login', array('class' => 'btn btn-success '))}}
+                      {{HTML::link('join', 'Sign up', array('class' => 'btn btn-default '))}}
+                    </div>
+                  </div>
+                @endif
           </div>
         </nav>
       </header>
+
       <!-- Docs page layout -->
       <section class="bs-header" id="content">
         <div class="container">

@@ -7,7 +7,7 @@
 @stop
 @section('header')
    <h1>Past Questions</h1>
-   <p>Easily obtain past Exam and CA Question papers.<br /> Select your preferred question paper and download it compressed zip format.
+   <p>Easily obtain past Exam and CA Question papers.<br /> Select your preferred question paper and download it in compressed zip format.
    </p>
 @stop
 
