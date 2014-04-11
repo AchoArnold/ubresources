@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
 @include('../shared/spec-form')
 
 @section('head')

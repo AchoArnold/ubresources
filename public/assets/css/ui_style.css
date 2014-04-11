@@ -1,19 +1,5 @@
-/*-- Icon Fonts --*/
-.icon-facebook{
-color:greenyellodw;
-font-size:40px;
-}
-.icon-twitter{
-color:greenyellow;
-font-size: 40px;
-}
-.icon-facebook:hover,
- .foundicon-facebook:focus {
-color:  #3B5998;
-}
-.icon-twitter:hover,
-.foundicon-twitter:focus {
-color:  #33ccff;
+.glyphicon{
+  margin-left:5px;
 }
 
 /*-- Topography --*/
@@ -158,9 +144,11 @@ padding:1px;
 
 .gist-post{
     border-bottom:#b7b7b7 dashed 1px;
+   padding-bottom: 34px;
 }
 
-.gist-post h3{
+.gist-post h3,
+.nice-header{
   color: #5bc0de;  
   font-family: Redressed, Georgia;
   font-size: 35px;
@@ -176,9 +164,7 @@ padding:1px;
 
 .social-buttons{
   display:block;
-  width:270px;
   height:30px;
-  margin:0 auto;
 }
 
 .social-buttons ul{
@@ -201,10 +187,9 @@ padding:1px;
 Copyright
 ---------------------- */
 .copyright {
-  background: #3F3F3F;
+  background-color: #3F3F3F;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
   margin-top: 20px;
   padding-top: 10px
 }
@@ -213,16 +198,20 @@ Copyright
   text-decoration: none;
 }
 
-.copyright a span{
-  color:white;
-}
-
-
 .copyright a:hover,
 .copyright a:focus
 {
   color:#5bc0de;
   border-bottom: #5bc0de solid 2px;
+}
+
+.copyright .list-inline li img{
+  height:30px;
+}
+
+.copyright .list-inline .icon a:hover
+{
+  border-bottom: none;
 }
 
 .error-form{
@@ -355,6 +344,7 @@ font-size: 35px;
   font-size: 17px;
   padding-top: 6px;
   font-weight: bold;
+  text-align: left;
   padding-bottom: 0;
 }
 
@@ -366,6 +356,35 @@ font-size: 35px;
 .navbar-default .auth .dropdown-menu li a:hover{
   background-color: #eaebec;
 }
+
+.profile-image{
+  display:block;
+  float:left;
+}
+.profile-info{
+  margin-left:30px;
+  margin-top: 50px;
+  display: block;
+  float:left;
+}
+
+.account-nav .list-group-item{
+  text-transform: none;
+}
+
+
+.comment-panel
+{
+  padding-bottom: 3px;
+}
+
+
+
+
+
+
+
+
 
 
 

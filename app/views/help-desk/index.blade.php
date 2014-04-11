@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
 
 @section('head')
 	<meta name="description" content="Submit your inquiries or problems to the UBresources developement team">

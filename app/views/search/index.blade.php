@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
    
 @section('head')
 	<meta name="description" content="Search for news, timetables, past questions, and course outlines">

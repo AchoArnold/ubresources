@@ -24,8 +24,7 @@ class GistController extends \BaseController {
 	public function show($uri)
 	{
 		$gist =  Gist::whereGistUri($uri)->firstOrFail();
-		$comments = Comment::whereGistId($gist->id)->get();
-		
+		$comments = Comment::whereGistId($gist->id)->orderBy('updated_at', 'dsc')->get();
 		return View::make('gist.show')
 		->with('title', $gist->title .' | UBresources')
 		->with('gist', $gist)

@@ -9,7 +9,7 @@ class AuthController extends \BaseController {
 	 */
 	public function login()
 	{
-		return View::make('shared.login')
+		return View::make('account.login')
 		->with('title', 'Sign in to your UB Resoruces account');
 	}
 
@@ -20,7 +20,7 @@ class AuthController extends \BaseController {
 	 */
 	public function create()
 	{
-		return View::make('shared.join')
+		return View::make('account.create')
 		->with('title', 'Join the UB Resources vibrant community')
 		->with('tab', 'join');
 	}
@@ -39,7 +39,37 @@ class AuthController extends \BaseController {
 
 	public function store()
 	{
-		return 'post-join';
+		$validate = User::validate_join(Input::all());
+     	if ( $validate->passes() ){
+     		$username = User::whereUsername(Input::get('username'))->first();
+     		if($username)
+     		{
+     			return Redirect::back()
+     			->withInput()
+     			->with('error', 'Username "'.Input::get('username').'" already taken please chose another username');
+     		}
+
+     		$username = User::whereRecoveryEmail(Input::get('email'))->first();
+     		if($username)
+     		{
+     			return Redirect::back()
+     			->withInput()
+     			->with('error', 'Email "'.Input::get('email').'" has already been used please chose another email');
+     		}
+
+
+     		$user = new User;
+     		$user->username = Input::get('username');
+     		$user->password = Hash::make(Input::get('password'));
+     		$user->recovery_email = Input::get('email');
+     		if($user->save())
+     		{
+     			Auth::attempt(Input::only('username', 'password'));
+     			return Redirect::to('account/edit')
+     			->with('message', 'Successfully created profile');
+     		}
+     	}
+     	return '404';
 	}
 
 	public function post_login()
@@ -52,17 +82,17 @@ class AuthController extends \BaseController {
 		      ->with('message', 'You are now logged in');
 			}
 			else
-				return Redirect::intended('gist');
+				return Redirect::intended('/');
 		}
 		else
 		{
-			$temp = User::whereRecoveryEmail(Input::get('username'))->first();
-			if($temp)
+			$data = User::whereRecoveryEmail(Input::get('username'))->first();
+			if($data)
 			{
-				$auth_array = array('username' => $temp->username, 'password' => Input::get('password'));
+				$auth_array = array('username' => $data->username, 'password' => Input::get('password'));
 				if( Auth::attempt($auth_array) )
 				{
-					return Redirect::intended('gist');
+					return Redirect::intended('/');
 				}
 			}
 		}

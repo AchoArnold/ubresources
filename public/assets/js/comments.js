@@ -72,23 +72,120 @@ function validate_upload(event)
 				break;
 		}
 	}
-
+	remove_validate_alert(form.parentNode)
 	if ( MarkupHTML.length > 0)
 	{
+		event.preventDefault();
 	 	MarkupHTML += '</p>';
-	 	var formParent = form.parentNode;
-
-	  	if ( document.getElementById('validate_alert') )
-	  		formParent.removeChild(document.getElementById('validate_alert'));
-	 	
-	 	var newDiv = document.createElement("div"); 
-	  	newDiv.innerHTML = MarkupHTML;
-	  	newDiv.id='validate_alert';
-	  	newDiv.classList.add('alert');
-	  	newDiv.classList.add('alert-danger');
-
-	  	// add the newly created element and its content into the DOM 
-	  	formParent.insertBefore(newDiv, form);
-	  	event.preventDefault();
+	 	create_alert_div(form, MarkupHTML);
 	}
+}
+
+function validate_join(event)
+{
+	// For older browsers and IE
+	event = event || window.event;
+	var form  = document.getElementById('join_form');
+	var form_inputs = form.getElementsByTagName('input');
+	var MarkupHTML  = "";
+
+	for (index = 0; index < form_inputs.length; ++index)
+	{
+		var string = form_inputs[index].value;
+		switch(index) {
+			case 1:
+				var username = /\w+/;
+				if (!username.test(string) || string.length < 4 )
+					MarkupHTML += "- Invalid username specified<br/>";
+				break;
+
+			case 2:
+				var email = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+				if (!email.test(string))
+					MarkupHTML += "- Email entered is invalid<br/>"
+				break;
+
+			case 3:
+				if(string.length < 6)
+					MarkupHTML += "- Password must be greater than 6 characters<br/>";
+				else
+				{
+					var password = /[a-zA-Z0-9]+/;
+					if ( !password.test(string)  || string.length < 6)
+						MarkupHTML += "- Invalid password entered<br/>";
+				}
+				break;
+
+			case 4:
+				if(string != form_inputs[index-1].value)
+					MarkupHTML += "- Sorry the two passwords don't match<br/>";
+				break;
+			case 5:
+				if( form_inputs[index].checked == false )
+					MarkupHTML += "- 	Please agree to our terms and conditions<br/>";
+				break;
+		}
+	}
+	remove_validate_alert(form.parentNode)
+	if ( MarkupHTML.length > 0)
+	{
+		event.preventDefault();
+	 	create_alert_div(form, MarkupHTML);
+	}
+}
+
+function validate_change_password(event)
+{
+	// For older browsers and IE
+	event = event || window.event;
+	var form  = document.getElementById('change_password');
+	var form_inputs = form.getElementsByTagName('input');
+	var MarkupHTML  = "";
+	for (index = 0; index < form_inputs.length; ++index)
+	{
+		switch(index)
+		{
+			case 2:
+				if(form_inputs[index].value.length < 6)
+					MarkupHTML += "- Password must be greater than 6 characters<br/>";
+				else
+				{
+					var password = /[a-zA-Z0-9]+/;
+					if ( !password.test(form_inputs[index].value)  || form_inputs[index].value.length < 6)
+						MarkupHTML += "- Invalid password entered<br/>";
+				}
+				break;
+			case 3:
+				if(form_inputs[index].value != form_inputs[index-1].value)
+					MarkupHTML += "- Sorry the two passwords don't match<br/>";
+				break;
+		}
+	}
+	remove_validate_alert(form.parentNode)
+	if ( MarkupHTML.length > 0)
+	{
+		event.preventDefault();
+	 	create_alert_div(form, MarkupHTML);
+	}
+}
+
+
+
+function create_alert_div(sibling, contentHTML)
+{
+	var nodeParent = sibling.parentNode;
+ 	var newDiv = document.createElement("div");
+  	newDiv.innerHTML = contentHTML;
+  	newDiv.id='validate_alert';
+  	newDiv.classList.add('alert');
+  	newDiv.classList.add('alert-danger');
+
+  	// add the newly created element and its content into the DOM 
+  	nodeParent.insertBefore(newDiv, sibling);
+}
+
+function remove_validate_alert(parent)
+{
+	if ( document.getElementById('validate_alert') )
+  		parent.removeChild(document.getElementById('validate_alert'));
 }

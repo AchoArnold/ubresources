@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
    
 @section('head')
 	<meta name="description" content="Links to some external sites which provide top notch resources">

@@ -7,7 +7,6 @@
       @yield('head')
     	<!-- CSS are placed here -->
    	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
-    	{{ HTML::style('assets/css/vendor/rondo_fonts.min.css') }}
      	{{ HTML::style('assets/css/ui_style.css') }}
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -50,7 +49,9 @@
                         <strong>{{{Auth::user()->username}}}</strong><b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
-                        <li>{{link_to('logout?_token='.csrf_token(), 'Log Out')}}</li>
+                        <li>{{HTML::link('account/edit/', 'Edit Profile')}}</li>
+                        <li class="divider"></li>
+                        <li>{{link_to('account/logout?_token='.csrf_token(), 'Log Out')}}</li>
                       </ul>
                     </li>
                   </ul>
@@ -77,65 +78,7 @@
       </section>
       <section class="container">
         <section class="row">
-          <div class="col-md-3">
-            <div class="list-group side-nav">
-              <a href="{{URL::to('gist')}}" class="list-group-item
-              @if (Request::is('gist*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Gist</a>
-              <a href="{{URL::to('timetables')}}" class="list-group-item
-              @if (Request::is('timetable*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Timetables</a>
-              <a href="{{URL::to('past-questions')}}" class="list-group-item
-              @if (Request::is('past-questions*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Past Questions</a>
-              <a href="{{URL::to('gpa-calculator')}}" class="list-group-item
-              @if (Request::is('gpa-calculator*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              GPA Calculator</a>
-              <a href="{{URL::to('course-outline')}}" class="list-group-item
-              @if (Request::is('course-outline*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Course Outline</a>
-              <a href="{{URL::to('useful-links')}}" class="list-group-item
-              @if (Request::is('useful-links*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Useful Links</a>
-              <a href="{{URL::to('contribute')}}" class="list-group-item
-              @if (Request::is('contribute*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Contribute</a>
-              <a href="{{URL::to('help-desk')}}" class="list-group-item
-              @if (Request::is('help-desk*'))
-                active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-              @else
-                ">
-              @endif
-              Help Desk</a>
-            </div>
+              @yield('side-nav')
           </div>
 
           <div class="col-md-9">
@@ -161,18 +104,25 @@
       <footer class="copyright">
       <div class="container">
         <div class="row">
-            <div class="col-md-4">
-              <p>&copy; {{ date('Y') }} UB Resources</p>
+          <div class="col-md-6">
+            <div class="text-left">
+            <ul class="list-inline">
+              <li>&copy; {{ date('Y') }} UB Resources</li>
+              <li class="icon"><a href="https://www.facebook.com/ubresources">{{HTML::image('assets/images/facebook.png','Facebook image')}}</a></li>
+                <li class="icon"><a href="https://twitter.com/UBresources">{{HTML::image('assets/images/twitter.png','Twitter logo')}}</a></li>
+              </ul>
             </div>
-            <div class="navbar-right">
+          </div>
+          <div class="col-md-6">
+            <div class="text-right">
               <ul class="list-inline">
                 <li>{{ HTML:: link('contribute/errors', 'Report Error') }}</li>
                 <li>{{ HTML:: link('about', 'About Us') }}</li>
                 <li>{{ HTML:: link('disclaimer', 'Disclaimer') }}</li>
               </ul>
             </div>
+            </div>
           </div>
-        </div>
         </div>
       </footer>
       

@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'AboutController' => $baseDir . '/app/controllers/AboutController.php',
+    'AccountController' => $baseDir . '/app/controllers/AccountController.php',
     'AddGistUrlToGistsTable' => $baseDir . '/app/database/migrations/2014_03_24_082602_add_gist_url_to_gists_table.php',
     'AlterTimetablesTableAddVenueChangeCourseCode' => $baseDir . '/app/database/migrations/2014_03_26_110037_alter_timetables_table_add_venue_change_course_code.php',
     'AuthController' => $baseDir . '/app/controllers/AuthController.php',
@@ -50,6 +51,7 @@ return array(
     'CreateGistsTable' => $baseDir . '/app/database/migrations/2014_03_20_192843_create_gists_table.php',
     'CreateHelpDesksTable' => $baseDir . '/app/database/migrations/2014_03_20_184648_create_help_desks_table.php',
     'CreatePastQuestionsTable' => $baseDir . '/app/database/migrations/2014_03_20_103044_create_past_questions_table.php',
+    'CreateProfileTable' => $baseDir . '/app/database/migrations/2014_04_11_093314_create_profile_table.php',
     'CreateTimetablesTable' => $baseDir . '/app/database/migrations/2014_03_20_144908_create_timetables_table.php',
     'CreateUsefulLinksTable' => $baseDir . '/app/database/migrations/2014_03_20_143224_create_useful_links_table.php',
     'CreateUsers' => $baseDir . '/app/database/migrations/2014_04_07_203329_create_users.php',
@@ -951,6 +953,7 @@ return array(
     'Predis\\Session\\SessionHandler' => $vendorDir . '/predis/predis/lib/Predis/Session/SessionHandler.php',
     'Predis\\Transaction\\AbortedMultiExecException' => $vendorDir . '/predis/predis/lib/Predis/Transaction/AbortedMultiExecException.php',
     'Predis\\Transaction\\MultiExecContext' => $vendorDir . '/predis/predis/lib/Predis/Transaction/MultiExecContext.php',
+    'Profile' => $baseDir . '/app/models/Profile.php',
     'Psr\\Log\\AbstractLogger' => $vendorDir . '/psr/log/Psr/Log/AbstractLogger.php',
     'Psr\\Log\\InvalidArgumentException' => $vendorDir . '/psr/log/Psr/Log/InvalidArgumentException.php',
     'Psr\\Log\\LogLevel' => $vendorDir . '/psr/log/Psr/Log/LogLevel.php',
@@ -1460,6 +1463,7 @@ return array(
     'UsefulLinkController' => $baseDir . '/app/controllers/UsefulLinkController.php',
     'UsefulLinkTableSeeder' => $baseDir . '/app/database/seeds/UsefulLinkTableSeeder.php',
     'User' => $baseDir . '/app/models/User.php',
+    'UserTableSeeder' => $baseDir . '/app/database/seeds/UserTableSeeder.php',
     'Whoops\\Exception\\ErrorException' => $vendorDir . '/filp/whoops/src/Whoops/Exception/ErrorException.php',
     'Whoops\\Exception\\Frame' => $vendorDir . '/filp/whoops/src/Whoops/Exception/Frame.php',
     'Whoops\\Exception\\FrameCollection' => $vendorDir . '/filp/whoops/src/Whoops/Exception/FrameCollection.php',

@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
 
 @section('head')
 	<meta name="description" content="Timetable for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">

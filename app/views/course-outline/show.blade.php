@@ -1,4 +1,5 @@
-@extends('../layouts/default')
+@extends('/layouts/default')
+@include('layouts/side-nav')
 
 @section('head')
 	<meta name="description" content="Course Outline for  {{strtolower($meta_data->faculty_name)}} department of {{strtolower($meta_data->department_name)}} level {{$level}}">

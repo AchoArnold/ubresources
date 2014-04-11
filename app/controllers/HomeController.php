@@ -17,6 +17,8 @@ class HomeController extends BaseController {
 
 	public function index()
 	{
+		if( Auth::check())
+			return Redirect::to('gist');
 		return View::make('welcome')
 		->with('title', 'UB Resources provides timetables, past questions, Gpa Calculator, news, and course outlines for students in the University of Buea');
 	}

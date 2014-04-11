@@ -56,3 +56,18 @@ function fill_level( department_id )
 
 	document.getElementById('level').innerHTML = markupHTML;
 }
+
+function select_profile()
+{
+	select_list = document.getElementsByTagName('select');
+	for (var i = 0; i < select_list.length; i++) 
+	{
+		for(var j = 0; j < select_list[i].length; j ++)
+	   {
+	   	if(select_list[i][j].value == user_profile[i])
+	   		select_list[i][j].selected = true;
+		}
+	}
+	//alert(select_list.length)
+	//alert(user_profile['faculty'])
+}

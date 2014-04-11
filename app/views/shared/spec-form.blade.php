@@ -1,5 +1,5 @@
 @section('spec-form')
-	<h2>Please specify your details below</h2>
+	<h2 class="nice-header text-center">Please specify your details below</h2>
 	{{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::segment(1) ))}}
 		<div class="form-group">
 			{{Form::label('Faculty:')}}
