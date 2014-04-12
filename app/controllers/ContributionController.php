@@ -128,20 +128,20 @@ class ContributionController extends \BaseController {
 			return View::make('contribute.single')
 			->with('title', 'Easily submit your timetable to us here')
 			->with('tab', 'timetables')
-			->with('link', 'https://github.com/najela/ubresources');
+			->with('link', 'http://goo.gl/iXpqTQ');
 		}
 		elseif ($id == 'past-questions')
 		{
 			return View::make('contribute.single')
 			->with('title', 'Easily submit your past question papers here')
 			->with('tab', 'past questions')
-			->with('link', 'https://github.com/najela/ubresources');
+			->with('link', 'http://goo.gl/iXpqTQ');
 		}
 		elseif ( $id == 'course-outlines') {
 			return View::make('contribute.single')
 			->with('title', 'Easily submit your course outline here')
 			->with('tab', 'course outlines')
-			->with('link', 'https://github.com/najela/ubresources');
+			->with('link', 'http://goo.gl/iXpqTQ');
 		}
 
 		elseif ($id == 'errors') {

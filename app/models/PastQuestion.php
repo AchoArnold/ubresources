@@ -102,13 +102,14 @@ class PastQuestion extends Eloquent
         ->select('courses.short_name')
         ->join('courses', 'courses.id', '=', 'past_questions.course_id')
         ->where('courses.id', '=', $course_id)
-        ->where('past_questions.id', '=', $department_id)
+        ->where('past_questions.department_id', '=', $department_id)
         ->where('semester', '=', $semester)
         ->where('level', '=', $level)
         ->first();
 
       if ($questions  == NULL )
-        return NULL;
+        return 'hello';
+        //return NULL;
 
       $zip_file = new ZipArchive();
       $zip_folder = public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;

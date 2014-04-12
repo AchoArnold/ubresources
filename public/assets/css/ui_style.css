@@ -144,7 +144,10 @@ padding:1px;
 
 .gist-post{
     border-bottom:#b7b7b7 dashed 1px;
-   padding-bottom: 34px;
+}
+
+.single-post{
+  padding-bottom: 34px;
 }
 
 .gist-post h3,
@@ -208,6 +211,7 @@ Copyright
 .copyright .list-inline li img{
   height:30px;
 }
+
 
 .copyright .list-inline .icon a:hover
 {
@@ -372,7 +376,6 @@ font-size: 35px;
   text-transform: none;
 }
 
-
 .comment-panel
 {
   padding-bottom: 3px;
@@ -390,9 +393,18 @@ font-size: 35px;
 
 
 
-
 /* Media Queries  */
 @media screen and (min-width: 768px) {
+  .navbar-search
+{
+  margin-left:40px;
+}
+
+.navbar-form .form-control{
+  width:400px;
+}
+
+
   .bs-header {
   font-size: 21px;
   text-align: left;

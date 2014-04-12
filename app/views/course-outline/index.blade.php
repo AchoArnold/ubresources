@@ -8,7 +8,7 @@
 
 @section('header')
    <h1>Course Outline</h1>
-      <p>An overview of the courses taken at the {{HTML::link('http://www.ubuea.net','University of Buea')}}. You can download a copy or read the online version here.
+      <p>An overview of the courses taken at the {{HTML::link('http://www.ubuea.net','University of Buea')}}.<br/> You can print a copy or read the online version here.
    </p>
 @stop
 

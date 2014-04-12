@@ -20,7 +20,7 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 
-	<article class="gist-post">
+	<article class="gist-post single-post">
    <h3>{{$gist->title}}</h3>
    <p class="post-date">{{ExCarbon::niceDate("Posted", $gist->created_at)}}
    </p>
@@ -112,7 +112,7 @@
 		<section class="old-comments">
 			@foreach($comments as $comment)
 				<div class="col-md-1">
-				  	<img src="http://gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50" alt="profile picture" width="50">
+				  	<img src="http://gravatar.com/avatar/{{md5(User::find($comment->author_id)->recovery_email)}}?s=50" alt="profile picture" width="50">
 				</div>
 				<div class="col-md-11">
 					<div class="panel panel-default">

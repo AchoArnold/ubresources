@@ -4,6 +4,7 @@
     	<title>{{ $title }} | UB Resources</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta content="UB, Buea, University, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
+       <link rel="icon" href="{{URL::to('assets/images/favicon.ico')}}" type="image/x-icon">
       @yield('head')
     	<!-- CSS are placed here -->
    	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
@@ -26,14 +27,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">UB Resources</a>
+          <a class="navbar-left" href="/">{{HTML::image('assets/images/LOGO.png','UBresources logo')}}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <div class="navbar-left">
+          <div class="navbar-left navbar-search">
             {{Form::open( array('method' => 'GET', 'class' =>'navbar-form', 'url' => 'search' ))}}
               <div class="form-group">
-                {{Form::text('q',NULL, array('class' => 'form-control','maxlength' => '20', 'placeholder' => 'Search this site for..', 'oninput' => "toggle_button(this, 'post-query')"))}}
+                {{Form::text('q',NULL, array('class' => 'form-control','maxlength' => '20', 'placeholder' => 'I want to search this site for..', 'oninput' => "toggle_button(this, 'post-query')"))}}
               </div>
               <button type="submit" id="post-query" class="btn  btn-info" disabled><span class="glyphicon glyphicon-search"></span></button>
             {{Form::close()}}
