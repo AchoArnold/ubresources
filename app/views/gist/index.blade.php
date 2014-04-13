@@ -33,13 +33,13 @@
 	   <div class="social-buttons">
 	     <ul>
 	       <li>
-	       	<a href="{{URL::to($gist->gist_uri)}}" class="twitter-share-button" data-related="UBresources:Resources for students in the University of Buea" data-lang="en" data-count="horizontal" data-text="{{$gist->title}}" data-via="UBresources">Tweet this</a>
+	       	<a href="https://twitter.com/share" data-counturl="{{URL::to('gist/'.$gist->gist_uri)}}" class="twitter-share-button" data-related="UBresources: A web platform which provides resources for students in the university of Buea"  data-lang="en" data-count="horizontal" data-url="@if(Cache::has($gist->gist_uri)){{Cache::get($gist->gist_uri)}}@else Cache::forever($gist->gist_uri, Isgd::shorten(Request::url())){{Cache::get($gist->gist_uri)}}@endif" data-text="{{$gist->title}}" data-hashtags="Education" data-via="UBresources">Tweet this</a>
 	       </li>
 	       <li>
-					<div class="g-plusone" data-size="medium" data-href="{{URL::to($gist->gist_uri)}}"></div>
+					<div class="g-plusone" data-size="medium" data-href="{{URL::to('gist/'.$gist->gist_uri)}}"></div>
 	       </li>
 	       <li>
-					<div class="fb-share-button" data-href="{{$gist->title}}" data-type="button_count"></div>
+					<div class="fb-share-button" data-href="{{URL::to('gist/'.$gist->gist_uri)}}" data-type="button_count"></div>
 	       </li>
 	     </ul>
 	   </div>

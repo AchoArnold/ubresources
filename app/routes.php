@@ -75,13 +75,16 @@ Route::group(array('before'=>'csrf'), function(){
 
 Route::group(array('before'=>'guest'), function(){
 
-	Route::get('join', 'AuthController@create');
+	Route::get('join', 'AccountController@create');
 
-	Route::get('login', 'AuthController@login');
+	Route::get('login', 'AccountController@login');
 
-	Route::post('join', 'AuthController@store');
+	Route::group(array('before'=>'csrf'), function(){
 
-	Route::post('login', 'AuthController@post_login');
+		Route::post('join', 'AccountController@store');
+
+		Route::post('login', 'AccountController@post_login');
+	});
 });
 
 Route::group(array('before'=>'auth'), function(){
@@ -99,7 +102,7 @@ Route::group(array('before'=>'auth'), function(){
 		Route::post('account/edit', 'AccountController@update');
 
 		Route::post('account/password','AccountController@update_password');
-	});
 
-	Route::get('account/logout', 'AuthController@logout');
+		Route::get('account/logout', 'AccountController@logout');
+	});
 });

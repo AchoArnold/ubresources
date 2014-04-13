@@ -3,11 +3,11 @@
 @include('../shared/spec-form')
 
 @section('head')
-	<meta name="description" content="Links to some useful Material">
+	<meta name="description" content="Past question papers for exams and continious assesments taken in the university of Buea">
 @stop
 @section('header')
    <h1>Past Questions</h1>
-   <p>Easily obtain past Exam and CA Question papers.<br /> Select your preferred question paper and download it in compressed zip format.
+   <p>Easily obtain past Exam and CA Question papers.<br />Select your preferred question paper and download it easily.
    </p>
 @stop
 

@@ -3,9 +3,10 @@
 }
 
 /*-- Topography --*/
-body { 
+body {
+  font-family: 'Open Sans', 'Comic Sans MS', 'Arial'  ;
   font-size: 15px;
-  padding-top:50px; 
+  padding-top:50px;
 }
 
 .navbar-default{
@@ -144,6 +145,8 @@ padding:1px;
 
 .gist-post{
     border-bottom:#b7b7b7 dashed 1px;
+    font-family: 'Open Sans';
+    font-size: 16px;
 }
 
 .single-post{
@@ -339,9 +342,11 @@ font-size: 35px;
 
 
 
-.navbar-default .auth .dropdown-toggle{
+.navbar-default .auth .dropdown-toggle,
+.navbar-default .navbar-nav > li > a{
   color: #fff;
 }
+
 
 .navbar-default .auth .dropdown-menu li a{
   height: 40px;

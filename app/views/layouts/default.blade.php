@@ -2,18 +2,20 @@
 <html>
   <head>
     	<title>{{ $title }} | UB Resources</title>
+      <link rel="icon" href="{{URL::to('assets/images/favicon.ico')}}" type="image/x-icon">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta content="UB, Buea, University, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
-       <link rel="icon" href="{{URL::to('assets/images/favicon.ico')}}" type="image/x-icon">
       @yield('head')
     	<!-- CSS are placed here -->
    	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
+      <!-- Fonts -->
+      {{HTML::style('http://fonts.googleapis.com/css?family=Open+Sans')}}
      	{{ HTML::style('assets/css/ui_style.css') }}
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      {{HTML::script('assets/js/vendor/html5shiv.min.js')}}
-      {{HTML::script('assets/js/vendor/respond.min.js')}}
-    <![endif]-->
+      <!--[if lt IE 9]>
+       {{HTML::script('assets/js/vendor/html5shiv.min.js')}}
+       {{HTML::script('assets/js/vendor/respond.min.js')}}
+      <![endif]-->
 
   </head>
   <body>
@@ -126,9 +128,11 @@
           </div>
         </div>
       </footer>
-      
 
       <!-- Scripts are placed here -->
+      @if(Request::getClientIp() != '127.0.0.1')
+        @include('layouts.ga_analytics')
+      @endif
         {{ HTML::script('/assets/js/comments.js')}}
         {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
         {{ HTML::script('assets/js/vendor/bootstrap.js') }}

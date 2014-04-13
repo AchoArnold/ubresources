@@ -1,9 +1,9 @@
-@extends('/layouts/default')
+@extends('layouts/default')
 @include('layouts/side-nav')
-@include('../shared/spec-form')
+@include('shared/spec-form')
 
 @section('head')
-	<meta name="description" content="Links to some useful Material">
+	<meta name="description" content="Easily obtain your course outlines for any Faculty and Department in the University of Buea">
 @stop
 
 @section('header')

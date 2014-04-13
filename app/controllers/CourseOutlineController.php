@@ -24,19 +24,12 @@ class CourseOutlineController extends \BaseController {
 		$level = Input::get('level');
 		return Redirect::to('course-outline/'.$faculty_id.'/'.$department_id.'/'.$level);
 	}
-	
+
 	public function show($faculty_id, $department_id, $level)
 	{
 
 		$course_outline_entries = CourseOutline::course_outline_array($department_id, $level );
-		if ($course_outline_entries == NULL){
-			return 404;
-		}
 		$meta_data = CourseOutline::meta_data( $faculty_id, $department_id );
-		if($meta_data == NULL)
-		{
-			return 404;
-		}
 
 		$total_credit[0] =0;
 		$total_credit[1] =0;
@@ -56,28 +49,6 @@ class CourseOutlineController extends \BaseController {
 		->with('meta_data', $meta_data)
 		->with('total_credit', $total_credit)
 		->with('level', $level);
-	}
-
-	/**
-	 * Update the specified resource in storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function update($id)
-	{
-		//
-	}
-
-	/**
-	 * Remove the specified resource from storage.
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function destroy($id)
-	{
-		//
 	}
 
 }

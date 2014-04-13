@@ -2,11 +2,11 @@
 @include('layouts/side-nav')
 
 @section('head')
-	<meta name="description" content="Timetable for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">
+	<meta name="description" content="Past Questions for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">
 @stop
 @section('header')
    <h1>Past Questions</h1>
-   <p>Easily obtain past Exam and CA Question papers.<br /> Select your preferred question paper and download it in compressed zip format.
+   <p>Easily obtain past Exam and CA Question papers.<br /> Select your preferred question paper and download it easily.
    </p>
 @stop
 

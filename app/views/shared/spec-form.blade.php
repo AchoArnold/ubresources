@@ -24,7 +24,7 @@
 
    <script>
       window.obj = {{ json_encode($form_list) }};
-      window.onload= function(){
+      	window.onload= function(){
       	fill_faculty();
       }
    </script>
