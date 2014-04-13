@@ -9,7 +9,7 @@
     	<!-- CSS are placed here -->
    	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
       <!-- Fonts -->
-      {{HTML::style('http://fonts.googleapis.com/css?family=Open+Sans')}}
+      {{HTML::style('//fonts.googleapis.com/css?family=Open+Sans')}}
      	{{ HTML::style('assets/css/ui_style.css') }}
       <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
