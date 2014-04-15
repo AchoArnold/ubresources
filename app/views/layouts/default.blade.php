@@ -132,11 +132,11 @@
       </footer>
 
       <!-- Scripts are placed here -->
+       {{ HTML::script('assets/js/comments.js')}}
       @if(Request::getClientIp() != '127.0.0.1')
         @include('layouts.ga_analytics')
         @include('layouts.scripts')
       @else
-        {{ HTML::script('assets/js/comments.js')}}
         {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
         {{ HTML::script('assets/js/vendor/bootstrap.js') }}
       @endif
