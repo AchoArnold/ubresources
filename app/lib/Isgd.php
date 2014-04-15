@@ -23,7 +23,7 @@ class Isgd {
         //$basepath = "http://is.gd/create.php?format=simple";
         $result = array();
         $result["errorCode"] = -1;
-        $result["shortURL"] = null;
+        $result["shortURL"] = $original_url;
         $result["errorMessage"] = null;
 
         //We need to set a context with ignore_errors on otherwise PHP doesn't fetch
@@ -42,14 +42,14 @@ class Isgd {
         if(!isset($http_response_header))
         {
             $result["errorMessage"] = "Local error: Failed to fetch API page";
-            return($original_url);
+            return($result);
         }
 
         //Hacky way of getting the HTTP status code from the response headers
         if (!preg_match("{[0-9]{3}}",$http_response_header[0],$httpStatus))
         {
             $result["errorMessage"] = "Local error: Failed to extract HTTP status from result request";
-            return($original_url);
+            return($result);
         }
 
         $errorCode = -1;
@@ -75,7 +75,7 @@ class Isgd {
         if($errorCode == -1)
         {
             $result["errorMessage"] = "Local error: Unexpected response code received from server";
-            return($original_url);
+            return($result);
         }
 
         $result["errorCode"] = $errorCode;
@@ -87,6 +87,6 @@ class Isgd {
             $result["errorMessage"] = $response;
         }
 
-        return($result["shortURL"]);
+        return($result);
     }
 }

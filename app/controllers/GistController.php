@@ -29,7 +29,7 @@ class GistController extends \BaseController {
 		{
 			$short_url = Isgd::shorten(Request::url());
 			if (!$short_url["errorMessage"])
-				Cache::forever($gist->gist_uri, Isgd::shorten(Request::url()));
+				Cache::forever($gist->gist_uri, $short_url["shortURL"]);
 		}
 
 		$comments = Comment::whereGistId($gist->id)->orderBy('updated_at', 'dsc')->get();

@@ -29,7 +29,7 @@
    <div class="social-buttons">
 	     <ul>
 	       <li>
-	       	<a href="https://twitter.com/share" data-counturl="{{Request::url()}}" class="twitter-share-button" data-related="UBresources: A web platform which provides resources for students in the university of Buea"  data-lang="en" data-count="vertical" data-url="{{Cache::get($gist->gist_uri)}}" data-text="{{$gist->title}}" data-hashtags="Education" data-via="UBresources">Tweet this</a>
+	       	<a href="https://twitter.com/share" data-counturl="{{Request::url()}}" class="twitter-share-button" data-related="UBresources: A web platform which provides resources for students in the university of Buea"  data-lang="en" data-count="vertical" data-url="@if(Cache::has($gist->gist_uri)){{Cache::get($gist->gist_uri)}}@else{{Request::url()}}@endif" data-text="{{$gist->title}}" data-hashtags="Education" data-via="UBresources">Tweet this</a>
 	       </li>
 	       <li>
 					<div class="g-plusone" data-size="tall" data-href="{{Request::url()}}"></div>
