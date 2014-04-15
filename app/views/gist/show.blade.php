@@ -85,7 +85,7 @@
 		@if(Auth::check())
 		<section class="new-comment">
 		   <div class="col-md-1">
-				  	<img src="http://gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50	" alt="profile picture" width="50">
+				  	<img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50	" alt="profile picture" width="50">
 			</div>
 			<div class="col-md-11">
 				<div class="panel panel-success comment-panel">

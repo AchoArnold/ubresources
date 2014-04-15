@@ -8,8 +8,8 @@ class Timetable extends Eloquent
 			->select('level', 'department_id','departments.name AS department_name', 'faculty_id', 'faculties.name AS faculty_name')
     		->join('departments', 'departments.id', '=', 'timetables.department_id')
     		->join('faculties', 'faculties.id', '=', 'departments.faculty_id')
-            ->distinct()
-            ->remember(500)
+         ->distinct()
+         ->remember(500)
     		->get();
 
       $i = 0;
@@ -80,7 +80,6 @@ class Timetable extends Eloquent
       	->where('level', '=', $level)
       	->where('timetables.department_id', '=', $department_id)
       	->orderBy('day', 'asc')
-            ->remember(500)
       	->get();
 
       return $lists;

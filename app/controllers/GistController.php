@@ -9,7 +9,7 @@ class GistController extends \BaseController {
 	 */
 	public function index()
 	{
-		$gists =  Gist::remember(240)->get();
+		$gists =  Gist::orderBy('created_at', 'dsc')->get();
 		return View::make('gist.index')
 		->with('title', 'Latest news in the University of Buea')
 		->with('gists', $gists);
@@ -26,7 +26,11 @@ class GistController extends \BaseController {
 		$gist =  Gist::whereGistUri($uri)->firstOrFail();
 
 		if(!Cache::has($gist->gist_uri))
-			Cache::forever($gist->gist_uri, Isgd::shorten(Request::url()));
+		{
+			$short_url = Isgd::shorten(Request::url());
+			if (!$short_url["errorMessage"])
+				Cache::forever($gist->gist_uri, Isgd::shorten(Request::url()));
+		}
 
 		$comments = Comment::whereGistId($gist->id)->orderBy('updated_at', 'dsc')->get();
 		return View::make('gist.show')

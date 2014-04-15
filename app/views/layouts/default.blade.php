@@ -7,14 +7,17 @@
        <meta content="UB, Buea, University, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
       @yield('head')
     	<!-- CSS are placed here -->
-   	{{ HTML::style('assets/css/vendor/bootstrap.css') }}
-      <!-- Fonts -->
-      {{HTML::style('//fonts.googleapis.com/css?family=Open+Sans')}}
-     	{{ HTML::style('assets/css/ui_style.css') }}
-      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      @if(Request::getClientIp() != '127.0.0.1')
+        @include('layouts/style')
+      @else
+   	  {{HTML::style('assets/css/vendor/bootstrap.css')}}
+      @endif
+
+     	{{HTML::style('assets/css/ui_style.css') }}
+      <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
-       {{HTML::script('assets/js/vendor/html5shiv.min.js')}}
-       {{HTML::script('assets/js/vendor/respond.min.js')}}
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 
   </head>
@@ -29,7 +32,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a class="navbar-left" href="/">{{HTML::image('assets/images/LOGO.png','UBresources logo')}}</a>
+          <a class="navbar-left" href="/">{{HTML::image('assets/images/logo.png','UBresources logo')}}</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
@@ -48,8 +51,8 @@
                   <ul class="nav navbar-nav navbar-right auth">
                     <li class="dropdown ">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="http://gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="Nice Image" class="img-circle">
-                        <strong>{{{Auth::user()->username}}}</strong><b class="caret"></b>
+                        <img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="Profile picture" class="img-circle">
+                        {{{Auth::user()->username}}}<b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
                         <li>{{HTML::link('account/edit/', 'Edit Profile')}}</li>
@@ -73,7 +76,7 @@
       <!-- Docs page layout -->
       <section class="bs-header" id="content">
         <div class="container">
-           
+
            <!-- Put the page header here -->
            @yield('header')
 
@@ -82,7 +85,6 @@
       <section class="container">
         <section class="row">
               @yield('side-nav')
-          </div>
 
           <div class="col-md-9">
             <div class="main-content">
@@ -92,18 +94,18 @@
                 <p>Please enable javascript if you want to use this website</p>
               </div>
             </noscript>
-            
+
               @yield('error')
               @yield('message')
-          
+
               <!-- Put the main page content here -->
               @yield('content')
-            
+
             </div>
           </div>
         </section>
       </section>
-      
+
       <footer class="copyright">
       <div class="container">
         <div class="row">
@@ -132,9 +134,11 @@
       <!-- Scripts are placed here -->
       @if(Request::getClientIp() != '127.0.0.1')
         @include('layouts.ga_analytics')
-      @endif
-        {{ HTML::script('/assets/js/comments.js')}}
+        @include('layouts.scripts')
+      @else
+        {{ HTML::script('assets/js/comments.js')}}
         {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
         {{ HTML::script('assets/js/vendor/bootstrap.js') }}
+      @endif
     </body>
   </html>

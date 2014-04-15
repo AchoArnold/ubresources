@@ -376,11 +376,12 @@ if ( ! function_exists('array_pull'))
 	 *
 	 * @param  array   $array
 	 * @param  string  $key
+	 * @param  mixed   $default
 	 * @return mixed
 	 */
-	function array_pull(&$array, $key)
+	function array_pull(&$array, $key, $default = null)
 	{
-		$value = array_get($array, $key);
+		$value = array_get($array, $key, $default);
 
 		array_forget($array, $key);
 
@@ -556,6 +557,8 @@ if ( ! function_exists('data_get'))
 	 * @param  string  $key
 	 * @param  mixed   $default
 	 * @return mixed
+	 *
+	 * @throws \InvalidArgumentException
 	 */
 	function data_get($target, $key, $default = null)
 	{

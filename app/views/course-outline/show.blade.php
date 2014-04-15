@@ -41,9 +41,7 @@
 			      			<tr>
 			      		@endforeach
 	                 <tr>
-	                   <td><strong>Total</strong></td>
-	                   <td></td>
-	                   <td></td>
+	                   <td colspan="3"><strong>Total</strong></td>
 	                   <td><strong>{{$total_credit[0]}}</strong></td>
 	                 </tr>
 	               </table>
@@ -78,9 +76,7 @@
 			      			<tr>
 			      		@endforeach
 	                 <tr>
-	                   <td><strong>Total</strong></td>
-	                   <td></td>
-	                   <td></td>
+	                   <td colspan="3"><strong>Total</strong></td>
 	                   <td><strong>{{$total_credit[1]}}</strong></td>
 	                 </tr>
 	               </table>

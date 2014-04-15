@@ -12,7 +12,7 @@ class Isgd {
         //If unsuccessful $result["errorMessage"] will give an explanation of why
         //and $result["errorCode"] will give a code indicating the type of error
 
-        //See http://v.gd/apishorteningreference.php#errcodes for an explanation of what the
+        //See http://is.gd/apishorteningreference.php#errcodes for an explanation of what the
         //error codes mean. In addition to that list this function can return an
         //error code of -1 meaning there was an internal error e.g. if it failed
         //to fetch the API page.
@@ -42,14 +42,14 @@ class Isgd {
         if(!isset($http_response_header))
         {
             $result["errorMessage"] = "Local error: Failed to fetch API page";
-            return($result);
+            return($original_url);
         }
 
         //Hacky way of getting the HTTP status code from the response headers
         if (!preg_match("{[0-9]{3}}",$http_response_header[0],$httpStatus))
         {
             $result["errorMessage"] = "Local error: Failed to extract HTTP status from result request";
-            return($result);
+            return($original_url);
         }
 
         $errorCode = -1;
