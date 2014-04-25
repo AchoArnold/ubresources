@@ -113,7 +113,7 @@ class PastQuestion extends Eloquent
 
       $zip_file = new ZipArchive();
       $zip_folder = public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;
-      $zip_name = storage_path().'/past_questions/'.$questions->short_name.'past_questions.zip';
+      $zip_name = storage_path().'/past_questions/'.$questions->short_name.'-past-questions.zip';
 
       $zip_file ->open($zip_name, ZIPARCHIVE::CREATE);
       Compress::zipFolder($zip_folder, $zip_file);
