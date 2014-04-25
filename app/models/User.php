@@ -51,9 +51,10 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 
 	public static function validate_join($input) {
       $rules = array(
-        'username' => 'Required|Min:4|Max:16|AlphaNum',
+        'username' => 'Required|Min:4|Max:16|alpha_dash|unique:users',
         'email'  => 'email|Required|Max:32',
-        'password' => 'Required|Min:6|Max:16'
+        'password' => 'Required|between:6,16|confirmed',
+        'password_confirmation' => 'Required'
       );
 
        return Validator::make($input, $rules);

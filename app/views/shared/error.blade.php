@@ -1,6 +1,6 @@
 @extends('/layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
   <meta name="description" content="Error: Request cannot be processed!">
 @stop

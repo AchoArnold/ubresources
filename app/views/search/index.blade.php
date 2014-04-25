@@ -1,6 +1,6 @@
 @extends('/layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
 	<meta name="description" content="Search for news, timetables, past questions, and course outlines">
 @stop
@@ -20,7 +20,7 @@
 				<article class="search-post">
 			   <h4>{{HTML::link('gist/'.$gist->gist_uri, $gist->title)}}</h4>
 			   <p>
-			   	{{substr($gist->content, 0,strpos($gist->content, '. ', 150))}}
+			   	{{ strtr(substr($gist->content, 0,strpos($gist->content, '. ', 150)), [$query => "<em>$query</em>"])}}
 			   	[{{HTML::link('gist/'.$gist->gist_uri,'Read more')}}]
 			   </p>
 			   </article>

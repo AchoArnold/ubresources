@@ -1,6 +1,6 @@
 @extends('/layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
 	<meta name="description" content="Sign in to your accound at UB Resources">
 @stop

@@ -41,8 +41,8 @@ class AccountController extends \BaseController {
      			->with('error', 'Username "'.Input::get('username').'" already taken please chose another username');
      		}
 
-     		$username = User::whereRecoveryEmail(Input::get('email'))->first();
-     		if($username)
+     		$email = User::whereRecoveryEmail(Input::get('email'))->first();
+     		if($email)
      		{
      			return Redirect::back()
      			->withInput()
@@ -61,6 +61,13 @@ class AccountController extends \BaseController {
      			->with('message', 'Successfully created profile');
      		}
      	}
+
+     	else
+		{
+			return Redirect::back()
+			->withInput()
+			->with('error', $validate->messages());
+		}
 	}
 
 	/**

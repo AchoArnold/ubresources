@@ -1,6 +1,6 @@
 @extends('/layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
 	<meta name="description" content="Get updated with what's happening in the university of Buea">
 @stop

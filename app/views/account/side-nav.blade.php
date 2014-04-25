@@ -15,7 +15,7 @@
       ">
     @endif
     Change Password</a>
-    <a href="{{URL::to('account/logout')}}" class="list-group-item
+    <a href="{{URL::to('account/logout?_token='.csrf_token())}}" class="list-group-item
     @if (Request::is('account/logout*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
     @else

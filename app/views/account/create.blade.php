@@ -49,7 +49,7 @@
             </div>
             <div class="form-group">
               {{Form::label('Confirm Password')}}
-              {{Form::password('password_confirm', array('class'=>'form-control', 'placeholder' => 'Confirm the above password', 'maxlength' => '32',  'required' => 'true'))}}
+              {{Form::password('password_confirmation', array('class'=>'form-control', 'placeholder' => 'Confirm the above password', 'maxlength' => '32',  'required' => 'true'))}}
             </div>
             <div class="checkbox">
               <label>
