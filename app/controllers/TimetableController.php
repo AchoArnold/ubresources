@@ -51,12 +51,12 @@ class TimetableController extends \BaseController {
 
 		$timetable_entries = Timetable::timetable_array($department_id, $level );
 		if ($timetable_entries == NULL){
-			return 404;
+			return  View::make('shared.404');
 		}
 		$meta_data = Timetable::meta_data( $faculty_id, $department_id );
 		if($meta_data == NULL)
 		{
-			return 404;
+			return  View::make('shared.404');
 		}
 
 		return View::make('timetables.show')

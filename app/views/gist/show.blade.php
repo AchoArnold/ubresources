@@ -96,7 +96,7 @@
 			  		<div class="panel-body comment-panel">
 			  			{{Form::open( array('method' => 'post', 'url' => 'gist/'.$gist->gist_uri))}}
 			  			<div class="form-group">
-			  				{{Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'oninput' => "toggle_button(this, 'post-comment')"))}}
+			  				{{HTML::decode(Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Your comment goes here', 'maxlength' => '500', 'size'=>'30x4', 'oninput' => "toggle_button(this, 'post-comment')")))}}
 			  			</div>
 			    			<div class="text-right">
 			      			{{Form::submit("Post Comment", array("class"=>"btn btn-success", 'id' => 'post-comment','disabled' => 'true'))}}
@@ -112,7 +112,7 @@
 		<section class="old-comments">
 			@foreach($comments as $comment)
 				<div class="col-md-1">
-				  	<img src="http://gravatar.com/avatar/{{md5(User::find($comment->author_id)->recovery_email)}}?s=50" alt="profile picture" width="50">
+				  	<img src="//gravatar.com/avatar/{{md5(User::find($comment->author_id)->recovery_email)}}?s=50" alt="profile picture" width="50">
 				</div>
 				<div class="col-md-11">
 					<div class="panel panel-default">

@@ -18,7 +18,7 @@ font-size: 17px;
 .bs-header {
 padding: 10px 15px 10px;
 border-bottom:2px solid rgb(240, 230, 242);
-background:rgb(242, 242, 242);
+background: url(/assets/images/pattern-gray.png);
 text-align: center;
 font-size: 16px;
 }
