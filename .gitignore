@@ -1,2 +1,3 @@
 /vendor/*
 /app/config
+public/assets/.sass-cache/public/assets/.sass-cache/*
