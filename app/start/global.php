@@ -79,8 +79,3 @@ App::down(function()
 */
 
 require app_path().'/filters.php';
-
-## To give a universal 404 request
-App::missing(function($exception){
-	return Response::make("The page you are looking for does not exist!!<br/>What were you thinking?", 404);
-});

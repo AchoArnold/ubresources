@@ -88,6 +88,26 @@
 
           <div class="col-md-9">
             <div class="main-content">
+            @section('content')
+                @if(Session::has('error'))
+                    <div class="alert alert-danger fade in">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                         <p>
+                        @foreach (Session::get('error')->all() as $error)
+                                <div>{{ $error }}</div>
+                          @endforeach
+                        </p>
+                    </div>
+                 @endif
+
+                @if (Session::has('message'))
+                      <div class="alert alert-success fade in">
+                        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                        <strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
+                      {{Session::get('message')}}
+                    </div>
+                @endif
+
             <noscript>
               <div class="alert alert-danger">
                 <p><strong> This website requires JavaScript to be enabled on your browser</strong></p>

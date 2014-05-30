@@ -17,10 +17,7 @@ Route::get('about', 'AboutController@index');
 
 Route::get('disclaimer', 'DisclaimerController@show');
 
-Route::get('gist', 'GistController@index');
-
-Route::get('gist/{uri}', 'GistController@show');
-
+Route::resource('gist', 'GistController');
 
 Route::get('useful-links', 'UsefulLinkController@index');
 

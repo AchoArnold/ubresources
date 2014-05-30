@@ -21,20 +21,25 @@ class CommentsController extends \BaseController {
 	{
 		 $validate = Comment::validate(Input::all());
 
-        if ( $validate->passes() && Auth::check()) {
+        if ( $validate->passes() && Auth::check())
+        {
 			$comment = new Comment;
 			$comment->content = String::makeLinks( HTML::entities(Input::get('content')) );
 			$comment->author_id = Auth::user()->id;
 			$comment->gist_id = Gist::whereGistUri($uri)->firstOrFail()->id;
-			if($comment->save()){
+			if($comment->save())
+			{
 				return Redirect::to('gist/'.$uri.'#comments')
 				->with('message', 'Comment posted successfully!');
-			}else{
+			}
+			else
+			{
 				return Redirect::back()
 				->with('error', 'Comment could not be posted!');
 			}
 		}
-		else{
+		else
+		{
 			return Redirect::back()
 			->with('error', $validate->messages()->get('content'));
 		}

@@ -1,14 +1,5 @@
 @extends('/layouts/default')
-@include('layouts/side-nav')
-
-@section('head')
-	<meta name="description" content="Get updated with what's happening in the university of Buea">
-@stop
-@section('header')
-    <h1>Gist</h1>
-          <p>Get updated with what's happening in the {{HTML::link('http://www.ubuea.cm','University Of Buea')}}</br>
-          no matter where you are!</p>
-@stop
+@include('gist/partials/_header')
 
 @section('content')
 <div id="fb-root"></div>
@@ -27,7 +18,11 @@
 	   	{{ExCarbon::niceDate("Posted", $gist->created_at)}}
 	   </p>
 	   <p>
-	   	{{substr($gist->content, 0,strpos($gist->content, '. ', 150))}}
+	   	@if(strlen($gist->content) > 200)
+	   		{{substr($gist->content, 0,strpos($gist->content, '. ', 150))}}
+	   	@else
+	   		{{$gist->content}}
+	   	@endif
 	   	[{{HTML::link('gist/'.$gist->gist_uri,'Read more')}}]
 	   </p>
 	   <div class="social-buttons">
