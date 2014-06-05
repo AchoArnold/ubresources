@@ -8,6 +8,7 @@ class GistController extends \BaseController {
    public function __construct()
    {
         $this->beforeFilter('auth', array('except' => ['index', 'show']));
+        $this->beforeFilter('csrf', array('on' => ['post', 'patch', 'delete']));
    }
 	/**
 	 * Display a listing of the resource.
