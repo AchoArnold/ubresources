@@ -10,21 +10,6 @@
 
 @section('content')
 <div class="sign-in col-md-9 col-md-push-6">
-	 @if(Session::has('error'))
-          <div class="alert alert-danger fade in">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-               <p>
-              @if(is_object(Session::get('error')))
-                @foreach (Session::get('error')->all() as $error)
-                      <p>{{ $error }}</p>
-                @endforeach
-              @else
-                  <span class="glyphicon glyphicon-remove"></span>{{Session::get('error')}}
-              @endif
-              </p>
-          </div>
-       @endif
-
       @if (Session::has('message'))
             <div class="alert alert-success fade in">
               <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>

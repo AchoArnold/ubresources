@@ -3,6 +3,13 @@
 class GistController extends \BaseController {
 
 	/**
+     * Instantiate a new UserController instance.
+     */
+   public function __construct()
+   {
+        $this->beforeFilter('auth', array('except' => ['index', 'show']));
+   }
+	/**
 	 * Display a listing of the resource.
 	 *
 	 * @return Response
@@ -41,15 +48,11 @@ class GistController extends \BaseController {
 
 	public function create()
 	{
-		if (Auth::user())
+		if(Auth::user()->is_admin())
 		{
-			if(Auth::user()->is_admin())
-			{
-				return View::make('gist.create')
-				->with('title', 'create a news article');
-			}
+			return View::make('gist.create')
+			->with('title', 'create a news article');
 		}
-
 		return View::make('shared.404')
 		->with('title', "Sorry Page cannot be found");
 	}
@@ -61,23 +64,29 @@ class GistController extends \BaseController {
 	 */
 	public function store()
 	{
-		$gist = new Gist;
-		$gist->author_id = Auth::user()->id;
-		$gist->title = Input::get('title');
-		$gist->content = Input::get('content');
-
-		if( Gist::whereGistUri(Str::slug($gist->title))->first() )
-			$gist->gist_uri = Str::slug($gist->title).'-'. date('Y-m-d');
-		else
-			$gist->gist_uri =  Str::slug($gist->title );
-
-		if($gist->save())
-			return Redirect::to('gist/'.$gist->uri)
-			->with('message', 'Gist created successfully!');
-		else
+		if(Auth::user()->is_admin())
 		{
-			return 'gist cannot be created';
+			$gist = new Gist;
+			$gist->author_id = Auth::user()->id;
+			$gist->title = Input::get('title');
+			$gist->content = Input::get('content');
+
+			if( Gist::whereGistUri(Str::slug($gist->title))->first() )
+				$gist->gist_uri = Str::slug($gist->title).'-'. date('Y-m-d');
+			else
+				$gist->gist_uri =  Str::slug($gist->title );
+
+			if($gist->save())
+				return Redirect::to('gist/'.$gist->uri)
+				->with('message', 'Gist created successfully!');
+			else
+			{
+				return Redirect::back()
+				->with('error','Sorry "gist" cannot be created at the moment');
+			}
 		}
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 
 	/**
@@ -88,10 +97,16 @@ class GistController extends \BaseController {
 	 */
 	public function edit($uri)
 	{
-		$gist = Gist::whereGistUri($uri)->firstOrFail();
-		return View::make('gist.edit')
-		->with('gist', $gist)
-		->with('title', "Edit ". $gist->title);
+		if (Auth::user()->is_admin())
+		{
+			$gist = Gist::whereGistUri($uri)->firstOrFail();
+			return View::make('gist.edit')
+			->with('gist', $gist)
+			->with('title', "Edit ". $gist->title);
+		}
+
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 
 	/**
@@ -102,16 +117,23 @@ class GistController extends \BaseController {
 	 */
 	public function update($uri)
 	{
-		$gist = Gist::whereGistUri($uri)->firstOrFail();
-		$gist->title = Input::get('title');
-		$gist->content = Input::get('content');
-		if($gist->save())
-			return Redirect::back()
-			->with('message', 'Gist Updated successfully!');
-		else
+		if(Auth::user()->is_admin())
 		{
-			return 'Gist Cannot Be Edited';
+			$gist = Gist::whereGistUri($uri)->firstOrFail();
+			$gist->title = Input::get('title');
+			$gist->content = Input::get('content');
+			if($gist->save())
+				return Redirect::back()
+				->with('message', 'Gist Updated successfully!');
+			else
+			{
+				return  Redirect::back()
+				->with('error', 'Sorry gist cannot be edited at the moment');
+			}
 		}
+
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 
 	/**
@@ -122,13 +144,19 @@ class GistController extends \BaseController {
 	 */
 	public function destroy($uri)
 	{
-		$gist = Gist::whereGistUri($uri)->firstOrFail();
-		if($gist->delete())
-			return Redirect::to('gist')
-			->with('message', 'Gist deleted successfully!');
-		else
+		if(Auth::user()->is_admin())
 		{
-			return 'Gist cannot be deleted';
+			$gist = Gist::whereGistUri($uri)->firstOrFail();
+			if($gist->delete())
+				return Redirect::to('gist')
+				->with('message', 'Gist deleted successfully!');
+			else
+			{
+				return Redirect::back()
+				->with('error', 'Sorry Gist cannot be deleted');
+			}
 		}
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 }

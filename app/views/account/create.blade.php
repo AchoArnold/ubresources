@@ -1,5 +1,4 @@
 @extends('/layouts/default')
-   
 @section('head')
 	<meta name="description" content="About Us at UBresources">
 @stop
@@ -9,30 +8,9 @@
 @stop
 
 @section('content')
-      @if (Session::has('message'))
-            <div class="alert alert-success fade in">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-              <strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
-            {{Session::get('message')}}
-          </div>
-      @endif
 <div class="col-md-9">
   <div class="panel panel-success active">
         <div class="panel-body">
-        @if(Session::has('error'))
-          <div class="alert alert-danger fade in" id="validate_alert">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          <p>
-          @if(!is_object(Session::get('error')))
-            {{Session::get('error')}}
-          @else
-            @foreach (Session::get('error')->all() as $error)
-                  <br>{{ $error }}</br>
-           @endforeach
-          @endif
-          </p>
-          </div>
-        @endif
          <h2 class="text-center nice-header">Join us at UB Resources</h2>
           {{Form::open(array('method' =>'POST','id' =>'join_form', 'onsubmit' => 'validate_join(event)',  'url' => Request::path() ))}}
           <div class="form-group">
