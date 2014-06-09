@@ -1,18 +1,17 @@
 @extends('/layouts/default')
-@include('layouts/side-nav')
+@include('timetables/partials/_header')
 
 @section('head')
-	<meta name="description" content="Timetable for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">
+  {{HTML::script('assets/js/timetable.js')}}
+  <meta name="description" content="Timetable for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">
 @stop
-@section('header')
-   <h1>Time Table</h1>
-    <p>This regularly updated timetable will help to ensure that you don't miss lectures</p>
-@stop
+
 
 @section('content')
 	<h3 class="text-center">Timetable  for  {{$meta_data[0]->faculty_name}} department of {{$meta_data[0]->department_name}} level {{$level}}</h3>
-   <table class="timetable table table-bordered">
-     <tr>
+   <table class="timetable table table-bordered" id="timetable-table">
+    <thead>
+      <tr>
        <th></th>
        <th>07:00 - 09:00</th>
        <th>09:00 - 11:00</th>
@@ -21,6 +20,8 @@
        <th>15:00 - 17:00</th>
        <th>17:00 - 19:00</th>
      </tr>
+    </thead>
+    <tbody>
      <tr>
        <th>Monday</th>
        <td>
@@ -337,5 +338,6 @@
        	@endforeach
        </td>
      </tr>
+     </tbody>
    </table>
 @stop

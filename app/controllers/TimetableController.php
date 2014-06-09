@@ -12,7 +12,7 @@ class TimetableController extends \BaseController {
 		$department_array = Timetable::departments();
 
 		return View::make('timetables.index')
-		->with('title', 'Easily Verify Your timetable')
+		->with('title', 'Timetable for students in the University Of Buea')
 		->with('form_list', $department_array);
 	}
 

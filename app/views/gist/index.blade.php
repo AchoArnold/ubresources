@@ -15,7 +15,7 @@
 		<article class="gist-post">
 	   <h3>{{HTML::link('gist/'.$gist->gist_uri, $gist->title)}}</h3>
 	   <p class="post-date">
-	   	{{ExCarbon::niceDate("Posted", $gist->created_at)}}
+	   	{{ExCarbon::niceDate("Posted", $gist->updated_at)}}
 	   </p>
 	   <p>
 	   	@if(strlen($gist->content) > 200)

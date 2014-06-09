@@ -1,8 +1,8 @@
 function  confirm_delete(event){
-	// For older browsers and IE 
+	// For older browsers and IE
 	event=event || window.event;
 	var res = window.confirm("Do you want to delete this comment?");
-	
+
 	if (res == true)
 		return true;
 	else{
@@ -13,7 +13,7 @@ function  confirm_delete(event){
 
 /**
  * This function toggles the 'Post Comment' button depending to the comment being entered
- * 
+ *
  * @param   textarea		The input area whose value determines if the button is disabled or not
  */
 function toggle_button(input, button_id) {
@@ -180,7 +180,7 @@ function create_alert_div(sibling, contentHTML)
   	newDiv.classList.add('alert');
   	newDiv.classList.add('alert-danger');
 
-  	// add the newly created element and its content into the DOM 
+  	// add the newly created element and its content into the DOM
   	nodeParent.insertBefore(newDiv, sibling);
 }
 

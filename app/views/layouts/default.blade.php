@@ -4,7 +4,7 @@
     	<title>{{ $title }} | UB Resources</title>
       <link rel="icon" href="{{URL::to('assets/images/favicon.ico')}}" type="image/x-icon">
     	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <meta content="UB, Buea, University, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
+       <meta content="UB, Buea, University, University of Buea, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
       @yield('head')
     	<!-- CSS are placed here -->
       @if(Request::getClientIp() != '127.0.0.1')
@@ -51,7 +51,7 @@
                   <ul class="nav navbar-nav navbar-right auth">
                     <li class="dropdown ">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="Profile picture" class="img-circle">
+                        <img src="/assets/images/image.jpg"  width="28" height="28" alt="Profile picture" class="img-circle">
                         {{{Auth::user()->username}}}<b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">

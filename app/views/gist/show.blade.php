@@ -13,7 +13,7 @@
 
 	<article class="gist-post single-post">
    <h3>{{$gist->title}}</h3>
-   <p class="post-date">{{ExCarbon::niceDate("Posted", $gist->created_at)}}
+   <p class="post-date">{{ExCarbon::niceDate("Posted", $gist->updated_at)}}
    </p>
    <p>{{$gist->content}}
    </p>
@@ -36,47 +36,10 @@
 		<div class="comment-heading">
 			<h3 class='nice-header'>Join the discussion</h4>
 		</div>
-		@if( Session::has('message') )
-			@section('message')
-				<div class="alert alert-success fade in">
-		      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-			   <p>
-			   	@if(is_array(Session::get('message')))
-						@foreach(Session::get('message') as $messages)
-							<strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
-							{{$messages}}<br/>
-						@endforeach
-					@else
-			   		<strong><span class="glyphicon glyphicon-ok-circle"></span></strong>
-			   		{{Session::get('message')}}
-					@endif
-			   </p>
-		 		</div>
-			@stop
-		@endif
-
-		@if(Session::has('error'))
-			@section('error')
-				 <div class="alert alert-danger fade in">
-		      <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-		       <p>
-					@if(is_array(Session::get('error')))
-						@foreach(Session::get('error') as $errors)
-							<strong><span class="glyphicon glyphicon-remove-circle"></span></strong>
-							{{$errors}}<br/>
-						@endforeach
-					@else
-			   		<strong><span class="glyphicon glyphicon-remove-circle"></span></strong>
-			   		{{Session::get('error')}}
-					@endif
-		      </p>
-		   </div>
-		  	@stop
-		@endif
 		@if(Auth::check())
 		<section class="new-comment">
 		   <div class="col-md-1">
-				  	<img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50	" alt="profile picture" width="50">
+				  	<img src="/assets/images/image.jpg" alt="profile picture" width="50" height="50">
 			</div>
 			<div class="col-md-11">
 				<div class="panel panel-success comment-panel">
@@ -103,14 +66,14 @@
 		<section class="old-comments">
 			@foreach($comments as $comment)
 				<div class="col-md-1">
-				  	<img src="//gravatar.com/avatar/{{md5(User::find($comment->author_id)->recovery_email)}}?s=50" alt="profile picture" width="50">
+				  	<img src="/assets/images/image.jpg" alt="profile picture" height="50" width="50">
 				</div>
 				<div class="col-md-11">
 					<div class="panel panel-default">
 						<div class="panel-heading">
 				    		<h4 class="panel-title">
 				    			<span class="glyphicon glyphicon-play"></span>
-				    			{{ExCarbon::niceDate("Commented", $comment->created_at)}}
+				    			{{ExCarbon::niceDate("Commented", $comment->updated_at)}}
 				    			@if(Auth::check() && (Auth::user()->id == $comment->author_id))
 				    				<a href="{{URL::to('gist/'.$comment->id.'/delete')}}" onclick="confirm_delete(event);"><span class="glyphicon glyphicon-remove"></span></a>
 				    			@endif

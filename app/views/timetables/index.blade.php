@@ -1,13 +1,9 @@
 @extends('/layouts/default')
-@include('layouts/side-nav')
+@include('timetables/partials/_header')
 @include('../shared/spec-form')
 
 @section('head')
-	<meta name="description" content="Links to some useful Material">
-@stop
-@section('header')
-   <h1>Time Table</h1>
-    <p>This regularly updated timetable will help to ensure that you don't miss lectures</p>
+	<meta name="description" content="Timetable for students in the University Of Buea showing the leture time for the all courses">
 @stop
 
 @section('error')
