@@ -39,7 +39,7 @@
 		@if(Auth::check())
 		<section class="new-comment">
 		   <div class="col-md-1">
-				  	<img src="/assets/images/image.jpg" alt="profile picture" width="50" height="50">
+				  	<img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50	" alt="profile picture" width="50">
 			</div>
 			<div class="col-md-11">
 				<div class="panel panel-success comment-panel">
@@ -66,7 +66,7 @@
 		<section class="old-comments">
 			@foreach($comments as $comment)
 				<div class="col-md-1">
-				  	<img src="/assets/images/image.jpg" alt="profile picture" height="50" width="50">
+				  	<img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=50	" alt="profile picture" width="50">
 				</div>
 				<div class="col-md-11">
 					<div class="panel panel-default">

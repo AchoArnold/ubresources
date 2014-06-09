@@ -51,7 +51,7 @@
                   <ul class="nav navbar-nav navbar-right auth">
                     <li class="dropdown ">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/assets/images/image.jpg"  width="28" height="28" alt="Profile picture" class="img-circle">
+                        <img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="profile picture" width="28" height="28">
                         {{{Auth::user()->username}}}<b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
