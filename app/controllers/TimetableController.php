@@ -59,6 +59,7 @@ class TimetableController extends \BaseController {
 			return  View::make('shared.404');
 		}
 
+		//return Response::json($timetable_entries);
 		return View::make('timetables.show')
 		->with('title', "Timetable for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $level)
 		->with('timetable', $timetable_entries)
