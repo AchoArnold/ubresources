@@ -1,16 +1,23 @@
 UB Resources
 =========
 
-##Install.
-- I have used the postgresql database. the  sql dump of the database can be found in the '/dev-stuff' folder
+##General information
+*	Url : Still to be bought
+*	To contribute, have a look at [CONTRIBUTING.md](https://github.com/najela/ubresources/blob/master/CONTRIBUTING.md)
 
-- The configuration can be changed by changing the entries in the 'app/config/databases.php' file.
+<pre>
+ - [ ] To do.
+ - [X] done.
+</pre>
 
-- To use the website, just 'cd' into this directory and type
-			'php artisan serve'
+<h4>TO DO</h4>
+* Core Application
+- [ ] Create a means of uploading pictures to my drop box account
+- [ ] Use the dropbox uploader from github.com
+- [ ] Create accounts for each user
+- [ ] Users should be awarded points for each question they upload first
+- [ ] Automatically convert the pictures to question files
+- [ ] Use google calender to edit and create calender by course delegates and stuff
 
-- I have created a test admin user with credentials
-			username:	'admin'
-			password: 	'admin123'
-
-- You can create any number of ordinary users
+<h4>TO DO (Version 1.2) </h4>
+- [ ] create a fully functional blog -- Using wordpress
