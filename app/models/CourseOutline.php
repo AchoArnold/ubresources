@@ -9,7 +9,6 @@ class CourseOutline extends Eloquent
       		->join('departments', 'departments.id', '=', 'course_outlines.department_id')
       		->join('faculties', 'faculties.id', '=', 'departments.faculty_id')
                   ->distinct()
-                  ->remember(1440)
       		->get();
 
       $i = 0;
@@ -81,7 +80,6 @@ class CourseOutline extends Eloquent
       	->where('course_outlines.department_id', '=', $department_id)
       	->orderBy('status', 'asc')
             ->distinct()
-            ->remember(1440)
       	->get();
 
       return $lists;
@@ -94,7 +92,6 @@ class CourseOutline extends Eloquent
       			->join('departments','departments.faculty_id', '=', 'faculties.id')
                         ->where('faculties.id', '=', $faculty_id)
                         ->where('departments.id', '=', $department_id)
-                        ->remember(1440)
                         ->first();
       return $meta;
     }
