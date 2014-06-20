@@ -9,13 +9,13 @@
 
 @section('content')
 	<h3 class="text-center">Timetable  for  {{$meta_data[0]->faculty_name}} department of {{$meta_data[0]->department_name}} level {{$level}}</h3>
-      <div id="timetable-section">
+      <div id="timetable-section" class="js-spinner">
 
       </div>
        <script>
           window.obj = {{ json_encode($timetable) }};
           window.onload= function(){
-            generateTimeTable(obj);
+              generateTimeTable(obj);
           }
    </script>
 

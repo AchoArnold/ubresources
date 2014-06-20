@@ -325,6 +325,9 @@ blockquote, blockquote p {
 .timetable:hover {
   cursor: pointer; }
 
+.spinner {
+  top: 255px !important; }
+
 /* Media Queries  */
 @media screen and (min-width: 768px) {
   .navbar-search {
@@ -352,6 +355,9 @@ blockquote, blockquote p {
   .bs-header p {
     margin-right: 380px; } }
 @media screen and (max-width: 843px) {
+  .spinner {
+    display: none !important; }
+
   .navbar-default .navbar-form .btn-info:before {
     content: 'Search  '; } }
 /*-- Fonts --*/

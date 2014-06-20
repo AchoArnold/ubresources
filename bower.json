@@ -1,0 +1,20 @@
+{
+  "name": "ubresources",
+  "version": "0.0.0",
+  "homepage": "https://github.com/najela/ubresources",
+  "authors": [
+    "najela <acho.arnold@live.com>"
+  ],
+  "description": "Front End Package Manager",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "spin": "http://fgnass.github.io/spin.js/spin.js"
+  }
+}

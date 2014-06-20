@@ -399,7 +399,9 @@ blockquote{
   cursor:pointer;
 }
 
-
+.spinner{
+    top:255px !important;
+}
 
 
 
@@ -440,7 +442,6 @@ blockquote{
 }
 
 @media screen and (min-width: 992px) {
-
   .bs-header h1,
   .bs-header p {
   margin-right: 380px;
@@ -448,6 +449,9 @@ blockquote{
 }
 
 @media screen and (max-width: 843px) {
+  .spinner{
+    display:none !important;
+  }
   .navbar-default .navbar-form .btn-info:before{
     content: 'Search  ';
   }

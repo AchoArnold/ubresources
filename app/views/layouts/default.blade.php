@@ -164,5 +164,7 @@
         {{ HTML::script('assets/js/vendor/jquery-2.0.3.min.js') }}
         {{ HTML::script('assets/js/vendor/bootstrap.js') }}
       @endif
+      {{ HTML::script('assets/js/vendor/spin/index.js')}}
+      {{ HTML::script('assets/js/helper.js')}}
     </body>
   </html>
