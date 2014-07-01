@@ -59,11 +59,18 @@ class TimetableController extends \BaseController {
 			return  View::make('shared.404');
 		}
 
+		$week = Input::get('week');
+		$week = $week * 7;
+		//return $week;
+		foreach ($timetable_entries as $entry) {
+			$entry->day -= $week;
+		}
 		//return Response::json($timetable_entries);
 		return View::make('timetables.show')
 		->with('title', "Timetable for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $level)
 		->with('timetable', $timetable_entries)
 		->with('meta_data', $meta_data)
+		->with('week', $week/7 +1)
 		->with('level', $level);
 	}
 

@@ -9,7 +9,6 @@ class Timetable extends Eloquent
     		->join('departments', 'departments.id', '=', 'timetables.department_id')
     		->join('faculties', 'faculties.id', '=', 'departments.faculty_id')
            ->distinct()
-            ->remember(500)
     		->get();
 
       $i = 0;
