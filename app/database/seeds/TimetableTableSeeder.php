@@ -53,3 +53,7 @@ class TimetableTableSeeder extends Seeder{
 		return $course[0]->department_id;
 	}
 }
+
+class Course extends Eloquent
+{
+}
