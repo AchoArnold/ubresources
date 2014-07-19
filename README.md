@@ -2,7 +2,7 @@ UB Resources
 =========
 
 ## General information
-*	Url : [https://ubresources.com](UBresources(
+*	Url : [UBresources](https://ubresources.com)
 *	To contribute, have a look at [CONTRIBUTING.md](https://github.com/najela/ubresources/blob/master/CONTRIBUTING.md)
 
 ## To Do List
