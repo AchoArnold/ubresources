@@ -17,7 +17,9 @@ Route::get('about', 'AboutController@index');
 
 Route::get('disclaimer', 'DisclaimerController@show');
 
+
 Route::resource('gist', 'GistController');
+
 
 Route::get('useful-links', 'UsefulLinkController@index');
 
@@ -46,7 +48,9 @@ Route::get('contribute','ContributionController@index');
 
 Route::get('contribute/{id}', 'ContributionController@show');
 
+
 Route::get('help-desk', 'HelpDeskController@index');
+
 
 Route::get('search', 'SearchController@index');
 
@@ -85,6 +89,9 @@ Route::group(array('before'=>'guest'), function(){
 });
 
 Route::group(array('before'=>'auth'), function(){
+
+	Route::resource('assignments', 'AssignmentController');
+
 
 	Route::get('account/edit', 'AccountController@edit');
 

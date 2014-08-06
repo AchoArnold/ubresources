@@ -13,17 +13,10 @@
 @section('content')
 	<h3 class="text-center">Past questions for  {{$meta_data[0]->faculty_name}} department of {{$meta_data[0]->department_name}} level {{$level}}</h3>
 
-    @if (Session::has('error'))
-        <div class="alert alert-danger fade in">
-          <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
-          <strong><span class="glyphicon glyphicon-remove-circle"></span></strong>
-           {{Session::get('error')}}
-      </div>
-    @else
       <div class="alert alert-info">
         <p><strong>NOTE:</strong> These files have been compressed so as to  reduce size and optimize bandwidth.</p>
       </div>
-  @endif
+
    <section class="course-table">
    	{{Form::open(array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
         {{ Form::hidden('semester', '1') }}
