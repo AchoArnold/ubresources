@@ -15,13 +15,15 @@
       ">
     @endif
     Timetables</a>
-    <a href="{{URL::to('assignments')}}" class="list-group-item
-    @if (Request::is('assignments*'))
-      active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
-    @else
-      ">
+    @if(Auth::user())
+      <a href="{{URL::to('assignments')}}" class="list-group-item
+      @if (Request::is('assignments*'))
+        active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+      @else
+        ">
+      @endif
+      Assignments</a>
     @endif
-    Assignments</a>
     <a href="{{URL::to('past-questions')}}" class="list-group-item
     @if (Request::is('past-questions*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
