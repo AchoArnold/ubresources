@@ -10,8 +10,10 @@ class AssignmentController extends \BaseController {
 	 */
 	public function index()
 	{
+		$assignments = Assignment::all();
 		return View::make('assignment.index')
-		->with('title', 'Latest news in the University of Buea');
+		->with('title', 'Latest news in the University of Buea')
+		->with('assignments', $assignments);
 	}
 
 	/**

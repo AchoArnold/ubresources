@@ -1,11 +1,10 @@
 <?php
 
-class Gist extends Eloquent{
+class Assignment extends Eloquent{
 	public static function search($query)
 	{
-		$results = DB::table('gists')
+		$results = DB::table('assignments')
 							  ->where('content', 'LIKE', '%'.$query.'%')
-							  ->orWhere('title', 'LIKE', '%'.$query.'%')
 							  ->get();
 
 		return $results;
