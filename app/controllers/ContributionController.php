@@ -82,7 +82,7 @@ class ContributionController extends \BaseController {
 					$content->author_id = Input::get('email');
 					$content->content = $name;
 
-					if($content->save() && $file->move(storage_path().'/uploads/'.$id.'/'.$name))
+					if($content->save() && $file->move(storage_path().'/uploads/'.$id, $name))
 					{
 						Mail::later(200,'shared.email', array('email'=>Input::get('email'), 'mail_content' => $content->content), function($message) {
 		    			$message->to('arnold@archlinux', 'Web Master')->subject("UB Resources | Contributions");

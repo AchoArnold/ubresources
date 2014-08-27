@@ -1,7 +1,7 @@
 <?php
 
 class Gist extends Eloquent{
-	
+
 	public static function search($query)
 	{
 		$results = DB::table('gists')

@@ -158,7 +158,7 @@ class AccountController extends \BaseController {
 	public function login()
 	{
 		return View::make('account.login')
-		->with('title', 'Sign in to your UB Resoruces account');
+		->with('title', 'Sign in to your UB Resources account');
 	}
 
 	public function logout()
@@ -170,7 +170,9 @@ class AccountController extends \BaseController {
 		   ->with('message', 'You are now logged out');
 		}
 		else
-			return Redirect::intended('/');
+		{
+			return Redirect::to('/');
+		}
 	}
 
 	public function post_login()

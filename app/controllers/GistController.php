@@ -124,7 +124,7 @@ class GistController extends \BaseController {
 			$gist->title = Input::get('title');
 			$gist->content = Input::get('content');
 			if($gist->save())
-				return Redirect::back()
+				return Redirect::to('gist/'.$gist->uri)
 				->with('message', 'Gist Updated successfully!');
 			else
 			{

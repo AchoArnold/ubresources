@@ -71,8 +71,7 @@ em{
   font-weight: bold;
 }
 
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs> li.active > a:focus 
-{
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs> li.active > a:focus{
   background-color:#428bca;
   color:#ffffff;
 }
@@ -86,6 +85,7 @@ em{
 margin-top:30px;
 padding-bottom: 10px;
 }
+
 /*-- Forms --*/
 .course-form{
   margin: 0 auto;
@@ -115,8 +115,7 @@ width:100%;
 .gpa th,
 .course th,
 .course td,
-.gpa  input
-{
+.gpa  input{
   text-align: center;
 }
 
@@ -216,8 +215,7 @@ Copyright
 }
 
 
-.copyright .list-inline .icon a:hover
-{
+.copyright .list-inline .icon a:hover{
   border-bottom: none;
 }
 
@@ -321,8 +319,7 @@ font-size: 35px;
   margin-right:5px;
 }
 
-.join li
-{
+.join li{
   background-color: #ddd;
 }
 
@@ -411,8 +408,7 @@ blockquote{
 
 /* Media Queries  */
 @media screen and (min-width: 768px) {
-  .navbar-search
-{
+  .navbar-search{
   margin-left:40px;
 }
 
@@ -421,12 +417,12 @@ blockquote{
 }
 
 
-  .bs-header {
+  .bs-header{
   text-align: left;
   font-size: 21px;
   }
 
-  .bs-header h1 {
+  .bs-header h1{
   font-size: 60px;
   line-height: 1;
   }
