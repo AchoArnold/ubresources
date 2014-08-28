@@ -20,6 +20,10 @@ Route::get('disclaimer', 'DisclaimerController@show');
 
 Route::resource('gist', 'GistController');
 
+Route::get('gist.json', function(){
+	return Response::json(Gist::all());
+});
+
 
 Route::get('useful-links', 'UsefulLinkController@index');
 
@@ -90,7 +94,7 @@ Route::group(array('before'=>'guest'), function(){
 
 Route::group(array('before'=>'auth'), function(){
 
-	Route::resource('assignments', 'AssignmentController');
+	#Route::resource('assignments', 'AssignmentController');
 
 
 	Route::get('account/edit', 'AccountController@edit');
