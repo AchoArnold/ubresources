@@ -28,11 +28,7 @@ Route::get('gist.json', function(){
 Route::get('useful-links', 'UsefulLinkController@index');
 
 Route::get('useful-links.json', function(){
-	$links = UsefulLink::articles();
-	foreach ($links as $link ){
-		$link->content = strip_tags($link->content);
-	}
-	return Response::json( $links );
+	return Response::json( UsefulLink::articles() );
 });
 
 
