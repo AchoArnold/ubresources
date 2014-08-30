@@ -27,6 +27,11 @@ Route::get('gist.json', function(){
 
 Route::get('useful-links', 'UsefulLinkController@index');
 
+Route::get('useful-links.json', function(){
+	return Response::json( UsefulLink::articles() );
+});
+
+
 
 Route::get('timetables', 'TimetableController@index');
 
@@ -113,4 +118,4 @@ Route::group(array('before'=>'auth'), function(){
 
 		Route::get('account/logout', 'AccountController@logout');
 	});
-});
+}); 
