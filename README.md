@@ -7,3 +7,7 @@ UB Resources
 
 ## To Do List
 * To view the to do list for this site, go to the [github issues page](https://github.com/najela/ubresources/issues)
+
+## Bugs
+* Please report any bug by creating a [new github issue](https://github.com/najela/ubresources/issues/new).
+* **Please email security bugs directly at arnold@archlinux.info**
