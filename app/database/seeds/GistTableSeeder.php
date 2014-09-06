@@ -3,7 +3,7 @@
 class GistTableSeeder extends Seeder{
 	public function run(){
 		DB::table('assignments')->insert(array(
-			array('id'=>1, 'author_id'=>1, 'content' => '<p>This is the assignment for the <strong>object oriented programming course (CEF306)</strong> in java given by Mr <em>MEGOZE MATHIEU HILAIRE</em>. This assignment is meant for the students of the faculty of Engineering and technology, department of computer engineering level 300. </p>Please download the assignment in pdf format by clicking <a href="/packages/assignments/java-assignment.pdf">here</a>. <blockquote>If you have any worries or proposed solutions, you can mention them by leaving a comment under this post. Thanks</blockquote>','uri' => 'hello',  'course_ids' =>"[".self::courseId('CEF306')."]", 'given_at' => '2014-07-01 10:07:34', 'created_at' => '2014-07-01 10:07:34', 'updated_at' =>'2014-07-01 10:07:34')
+			array('id'=>1, 'author_id'=>10, 'content' => '<p>This is the assignment for the <strong>object oriented programming course (CEF306)</strong> in java given by Mr <em>MEGOZE MATHIEU HILAIRE</em>. This assignment is meant for the students of the faculty of Engineering and technology, department of computer engineering level 300. </p>Please download the assignment in pdf format by clicking <a href="/packages/assignments/java-assignment.pdf">here</a>. <blockquote>If you have any worries or proposed solutions, you can mention them by leaving a comment under this post. Thanks</blockquote>', 'course_id' =>self::courseId('CEF306'), 'level' => '300',  'given_at' => '2014-07-01 10:07:34', 'created_at' => '2014-07-01 10:07:34', 'updated_at' =>'2014-07-01 10:07:34', 'uri'  => 'CEF 306 Assignment')
 		));
 	}
 

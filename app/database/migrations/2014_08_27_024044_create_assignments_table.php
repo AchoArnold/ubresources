@@ -16,8 +16,11 @@ class CreateAssignmentsTable extends Migration {
 		{
 			$table->increments('id');
 			$table->text('content');
-			$table->string('author_id');
-			$table->string('course_ids');
+			$table->integer('author_id');
+			$table->foreign('author_id')->references('id')->on('users');
+			$table->integer('course_id');
+			$table->foreign('course_id')->references('id')->on('courses');
+			$table->string('level');
 			$table->datetime('given_at');
 			$table->string('uri');
 			$table->datetime('due_at')->nullable();

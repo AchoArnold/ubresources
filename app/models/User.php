@@ -65,6 +65,11 @@ class User extends Eloquent implements UserInterface, RemindableInterface {
 		return $this->email;
 	}
 
+	public function assignments()
+   {
+      return $this->hasMany('Assignment');
+   }
+
 	public static function validate_join($input) {
       $rules = array(
         'username' => 'Required|Min:4|Max:16|alpha_dash|unique:users',

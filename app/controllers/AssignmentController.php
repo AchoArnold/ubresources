@@ -10,7 +10,7 @@ class AssignmentController extends \BaseController {
 	 */
 	public function index()
 	{
-		$assignments = Assignment::all();
+		$assignments = Assignment::whereLevel('300');
 		return View::make('assignment.index')
 		->with('title', 'Latest news in the University of Buea')
 		->with('assignments', $assignments);

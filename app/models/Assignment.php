@@ -1,12 +1,14 @@
 <?php
 
 class Assignment extends Eloquent{
-	public static function search($query)
-	{
-		$results = DB::table('assignments')
-							  ->where('content', 'LIKE', '%'.$query.'%')
-							  ->get();
 
-		return $results;
-	}
+	public function course()
+   {
+      return $this->belongsTo('Course');
+   }
+
+   public function author()
+   {
+      return $this->belongsTo('User');
+   }
 }
