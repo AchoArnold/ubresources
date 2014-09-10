@@ -1,5 +1,6 @@
 @extends('/layouts/default')
 @include('account/side-nav')
+@include('account/partials/_header')
 
 @section('head')
 	<meta name="description" content="About Us at UBresources">

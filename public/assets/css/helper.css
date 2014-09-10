@@ -1,454 +1,74 @@
-.glyphicon {
-  margin-left: 5px;
-}
-
-/*-- Topography --*/
-body {
-  padding-top: 50px;
-  font-size: 15px;
-  font-family: 'Open Sans', Arial, sans-serif;
-}
-
-.navbar-default {
-  border: none;
-  background: black url(../images/navbar.png) repeat;
-  font-size: 17px;
-}
-
-.bs-header {
-  padding: 10px 15px 10px;
-  border-bottom: 2px solid #f0e6f2;
-  background: url(/assets/images/pattern-gray.png);
-  text-align: center;
-  font-size: 16px;
-}
-
-.navbar-nav li a, .navbar-form {
-  text-align: center;
-}
-
-.bs-header p {
-  font-weight: 300;
-  line-height: 1.5;
-}
-
-.bs-header .container {
-  position: relative;
-}
-
-.side-nav {
-  display: block;
-  margin-top: 30px;
-  padding-bottom: 25px;
-  font-size: 18px;
-}
-
-.side-nav .list-group-item {
-  display: block;
-  background: rgba(0, 0, 0, 0.7);
-  color: greenyellow;
-  text-transform: uppercase;
-  text-shadow: 0px 0px 5px #eeb213;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.2s linear;
-  -moz-transition: all 0.2s linear;
-  -ms-transition: all 0.2s linear;
-  -o-transition: all 0.2s linear;
-  transition: all 0.2s linear;
-}
-
-.side-nav .list-group-item:hover,
-.side-nav .list-group-item:focus {
-  background-color: brown;
-}
-
-.side-nav .list-group-item.active,
-.side-nav .list-group-item.active:hover,
-.side-nav .list-group-item.active:focus {
-  background: black;
-  background: #428bca;
-  text-shadow: 0px 0px 1px #eeb213;
-}
-
-em {
-  font-weight: bold;
-}
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
-  background-color: #428bca;
-  color: #ffffff;
-}
-
-.nav-tabs {
-  color: #5bc0de;
-  font-weight: bold;
-}
-
-.main-content {
-  margin-top: 30px;
-  padding-bottom: 10px;
-}
-
-/*-- Forms --*/
-.course-form {
-  margin: 0 auto;
-  width: 70%;
-}
-
-/*-- Headings --*/
-h2 {
-  word-spacing: 4px;
-  letter-spacing: 1px;
-  font-size: 34px;
-  font-family: 'BebasNeue', arial, monospace;
-}
-
-/* GPA Calculator Table */
-.semester {
-  float: left;
-  margin-right: 2%;
-  margin-left: 1%;
-  width: 47%;
-}
-
-.gpa .form-control {
-  padding: 1px;
-  width: 100%;
-}
-
-.gpa th,
-.course th,
-.course td,
-.gpa input {
-  text-align: center;
-}
-
-.gpa-button a {
-  margin-right: 20px;
-  margin-bottom: 50px;
-}
-
-.gpa-button {
-  margin: 0 auto;
-  margin-top: 10px;
-  padding-bottom: 10px;
-  width: 50% !important;
-}
-
-.gpa-button input {
-  margin-left: 20px;
-  width: 100px;
-}
-
-.gpa-button p {
-  font-weight: bold;
-  font-size: large;
-}
-
 /*
-  ************* Gist Post *********
- */
-.gist-post {
-  border-bottom: #b7b7b7 dashed 1px;
-  font-size: 16px;
-  font-family: 'Open Sans';
-}
+Error: Undefined mixin 'transition'.
+        on line 218 of sass/helper.scss, in `transition'
+        from line 218 of sass/helper.scss
 
-.single-post {
-  padding-bottom: 34px;
-}
+213: }
+214: 
+215: .copyright .list-inline li img{
+216:   height:30px;
+217:   opacity: 0.7;
+218:   @include transition(.3s all linear);
+219:   &:hover{
+220:     opacity: 1;
+221:   }
+222: }
+223: 
 
-.gist-post h3,
-.nice-header {
-  color: #5bc0de;
-  font-style: italic;
-  font-size: 35px;
-  font-family: Redressed, Georgia;
-}
-
-.gist-post .read-more {
-  font-style: italic;
-}
-
-.post-date {
-  color: brown;
-  text-align: left;
-}
-
-.social-buttons {
-  display: block;
-  height: 30px;
-}
-
-.social-buttons ul {
-  padding-left: 0;
-  list-style: none;
-}
-
-.social-buttons ul li {
-  float: left;
-  padding-left: 25px;
-}
-
-/** Add Content **/
-.add-content {
-  padding-top: 350px;
-  color: gray;
-  font-size: small;
-}
-
-/*
-Copyright
----------------------- */
-.copyright {
-  margin-top: 20px;
-  padding-top: 10px;
-  background-color: #3F3F3F;
-  color: white;
-  font-size: 18px;
-}
-
-.copyright a {
-  text-align: center;
-  text-decoration: none;
-}
-
-.copyright a:hover,
-.copyright a:focus {
-  border-bottom: #5bc0de solid 2px;
-  color: #5bc0de;
-}
-
-.copyright .list-inline li img {
-  height: 30px;
-}
-
-.copyright .list-inline .icon a:hover {
-  border-bottom: none;
-}
-
-.error-form {
-  display: block;
-  margin: 0 auto;
-  padding-top: 30px;
-  width: 80%;
-}
-
-.copyright .list-inline {
-  padding-right: 10px;
-}
-
-.navbar-default .navbar-brand {
-  color: greenyellow;
-  font-size: 35px;
-}
-
-.navbar-default .navbar-form {
-  border: none;
-}
-
-.post-comment {
-  margin-top: 10px;
-}
-
-.comment-heading {
-  margin-bottom: 15px;
-}
-
-.comment-heading h4 {
-  margin: 0;
-  font-size: 25px;
-}
-
-.old-comments .panel-title {
-  color: grey;
-  font-size: 12px;
-}
-
-.old-comments .glyphicon {
-  display: block;
-  float: right;
-  margin-left: 20px;
-  color: #333;
-}
-
-.old-comments .glyphicon:hover,
-.old-comments .glyphicon:focus {
-  color: #428bca;
-}
-
-.panel-default > .panel-heading {
-  background-color: silver;
-}
-
-.panel .glyphicon-play {
-  position: absolute;
-  top: 9px;
-  right: 97%;
-  display: block;
-  float: left;
-  color: silver;
-  font-size: 20px;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-.panel-success .glyphicon-play {
-  color: #dff0d8;
-}
-
-.timetable td {
-  height: 60px;
-  text-align: center;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.search-panel {
-  background-color: #dff0d8;
-}
-
-.table .credit-total {
-  border: none;
-  font-weight: bold;
-}
-
-.join-us .glyphicon-ok {
-  color: green;
-  font-size: 10px;
-}
-
-.glyphicon-remove {
-  margin-right: 5px;
-}
-
-.join li {
-  background-color: #ddd;
-}
-
-.sign-in {
-  margin: 0 auto;
-  min-width: 300px;
-  width: 40%;
-}
-
-.sign-in .panel {
-  margin-bottom: 0;
-}
-
-.sign-in .panel-heading {
-  margin-top: -20px;
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.navbar-default .auth .dropdown-toggle,
-.navbar-default .navbar-nav > li > a {
-  padding-left: 0;
-  color: #fff;
-}
-
-.navbar-default .auth .dropdown-menu li a {
-  padding-top: 6px;
-  padding-bottom: 0;
-  height: 40px;
-  text-align: left;
-  font-weight: bold;
-  font-size: 17px;
-}
-
-.navbar-default .auth .dropdown-toggle:hover {
-  color: pink;
-}
-
-.navbar-default .auth .dropdown-menu li a:hover {
-  background-color: #eaebec;
-}
-
-.navbar-default .auth .dropdown-toggle {
-  font-weight: bold;
-}
-
-.account-nav .list-group-item {
-  text-transform: none;
-}
-
-.comment-panel {
-  padding-bottom: 3px;
-}
-
-blockquote, blockquote p {
-  font-weight: bold;
-  font-size: small;
-  font-color: grey;
-  font-style: italic;
-}
-
-.gist-post h4 {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-.timetable:hover {
-  cursor: pointer;
-}
-
-.spinner {
-  top: 255px !important;
-}
-
-/* Media Queries  */
-@media screen and (min-width: 768px) {
-  .navbar-search {
-    margin-left: 40px;
-  }
-
-  .navbar-form .form-control {
-    width: 400px;
-  }
-
-  .bs-header {
-    text-align: left;
-    font-size: 21px;
-  }
-
-  .bs-header h1 {
-    font-size: 60px;
-    line-height: 1;
-  }
-}
-.text-right .glyphicon-search {
-  margin-right: 5px;
-}
-
-.text-center .glyphicon-upload,
-.glyphicon-download {
-  margin-left: 5px;
-}
-
-@media screen and (min-width: 992px) {
-  .bs-header h1,
-  .bs-header p {
-    margin-right: 380px;
-  }
-}
-@media screen and (max-width: 843px) {
-  .spinner {
-    display: none !important;
-  }
-
-  .navbar-default .navbar-form .btn-info:before {
-    content: 'Search  ';
-  }
-}
-/*-- Fonts --*/
-@font-face {
-  font-weight: normal;
-  font-style: normal;
-  font-family: 'BebasNeue';
-  src: url("../fonts/BebasNeue.eot");
-  src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg");
-}
+Backtrace:
+sass/helper.scss:218:in `transition'
+sass/helper.scss:218
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:338:in `block in visit_mixin'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:98:in `block in with_mixin'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:98:in `with_mixin'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:336:in `visit_mixin'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block (2 levels) in visit_rule'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `map'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:420:in `block in visit_rule'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:418:in `visit_rule'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `block in with_base'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:115:in `with_frame'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/stack.rb:79:in `with_base'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `map'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/base.rb:36:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:36:in `css_tree'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/engine.rb:368:in `_render_with_sourcemap'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/engine.rb:285:in `render_with_sourcemap'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `each'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/sass-3.4.3/lib/sass/plugin/compiler.rb:329:in `block in watch'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/home/xift/.rvm/gems/ruby-2.1.0/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined mixin 'transition'.\A         on line 218 of sass/helper.scss, in `transition'\A         from line 218 of sass/helper.scss\A \A 213: }\A 214: \A 215: .copyright .list-inline li img{\A 216:   height:30px;\A 217:   opacity: 0.7;\A 218:   @include transition(.3s all linear);\A 219:   &:hover{\A 220:     opacity: 1;\A 221:   }\A 222: }\A 223: "; }

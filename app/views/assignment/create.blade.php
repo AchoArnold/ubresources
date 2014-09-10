@@ -1,5 +1,5 @@
 @extends('/layouts/default')
-@include('gist/partials/_header')
+@include('assignment/partials/_header')
 
 @section('content')
   <div class="panel panel-success">

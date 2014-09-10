@@ -4,6 +4,7 @@
 
 /*-- Topography --*/
 body {
+  min-height: 100%;
   padding-top:50px;
   font-size: 15px;
   font-family: 'Open Sans', Arial, sans-serif;
@@ -192,6 +193,7 @@ width:100%;
 Copyright
 ---------------------- */
 .copyright {
+  width:100%;
   margin-top: 20px;
   padding-top: 10px;
   background-color: #3F3F3F;
@@ -212,6 +214,11 @@ Copyright
 
 .copyright .list-inline li img{
   height:30px;
+  opacity: 0.7;
+  @include transition(.3s all linear);
+  &:hover{
+    opacity: 1;
+  }
 }
 
 
