@@ -140,8 +140,9 @@ class AccountController extends \BaseController {
 
 	public function update_password()
 	{
-		$user = User::find(Auth::user()->id)->first();
+		$user = Auth::user();
 
+		//return Input::get('old_password');
 		if( Hash::check(Input::get('old_password'), $user->password) )
 		{
 			$user->password = Hash::make(Input::get('password'));
