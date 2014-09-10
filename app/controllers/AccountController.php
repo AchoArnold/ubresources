@@ -90,7 +90,7 @@ class AccountController extends \BaseController {
 	public function edit()
 	{
 		$profile =  Profile::whereUserId(Auth::user()->id)->first();
-		if($profile == NULL)
+		if(empty($profile))
 			$profile = new Profile();
 		$faculty_data = CourseOutline::departments();
 		return View::make('account.edit')
@@ -203,5 +203,42 @@ class AccountController extends \BaseController {
 		return Redirect::back()
 	   ->withInput()
 	   ->with('error', "Invalid username or password");
+	}
+
+	public function json_login(){
+		$username = Input::get('username');
+		$password = Input::get('password');
+
+		if(Auth::attempt( ['username' => $username, 'password' => $password] ))
+		{
+			$user = Auth::user();
+			$profile =  Profile::whereUserId(Auth::user()->id)->first();
+
+			if (empty($profile))
+			{
+				$profile="{'error': 'profile information is not available for this user'}";
+			}
+			else{
+				$profile = $profile->toArray();
+			}
+
+			Auth::logout();
+			return Response::json(['user' => $user->toArray(), 'profile' => $profile]);
+		}
+		else
+		{
+			$data = User::whereRecoveryEmail(Input::get('username'))->first();
+			if($data)
+			{
+				if( Auth::attempt( ['username' => $data->username, 'password' => Input::get('password')]) )
+				{
+					$user = Auth::user();
+					Auth::logout();
+					return Response::json($user);
+				}
+			}
+		}
+
+		return Response::json('{"error" : "username or password invalid"}');
 	}
 }

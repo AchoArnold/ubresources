@@ -10,9 +10,17 @@ class AssignmentController extends \BaseController {
 	 */
 	public function index()
 	{
-		$assignments = Assignment::whereLevel('300');
+		$profile =  Profile::whereUserId(Auth::user()->id)->first();
+		if(empty($profile)){
+			return View::make('assignment.index')
+			->with('title', 'Assignments for courses in the University of Buea');
+		}
+
+		$assignments = Assignment::whereLevel($profile->level)->get();
+		$meta_data = Timetable::meta_data( $profile->faculty_id, $profile->department_id );
+
 		return View::make('assignment.index')
-		->with('title', 'Latest news in the University of Buea')
+		->with('title', "Assignments for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $profile->level)
 		->with('assignments', $assignments);
 	}
 
@@ -24,7 +32,13 @@ class AssignmentController extends \BaseController {
 	 */
 	public function create()
 	{
-		//
+		if(Auth::user()->is_admin())
+		{
+			return View::make('assignment.create')
+			->with('title', 'Create a new assignment article');
+		}
+		return View::make('shared.404')
+		->with('title', "Sorry Page cannot be found");
 	}
 
 	/**

@@ -82,6 +82,8 @@ Route::group(array('before'=>'csrf'), function(){
 
 });
 
+Route::post('login.json', 'AccountController@json_login');
+
 
 Route::group(array('before'=>'guest'), function(){
 
