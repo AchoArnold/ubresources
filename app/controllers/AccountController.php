@@ -247,6 +247,6 @@ class AccountController extends \BaseController {
 			}
 		}
 
-		return null;
+		return '';
 	}
 }
