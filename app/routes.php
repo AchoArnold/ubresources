@@ -120,4 +120,4 @@ Route::group(array('before'=>'auth'), function(){
 
 		Route::get('account/logout', 'AccountController@logout');
 	});
-}); 
+});

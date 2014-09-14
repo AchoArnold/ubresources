@@ -1,6 +1,7 @@
 <?php
 
-class GistTableSeeder extends Seeder{
+class ResultsTableSeeder extends Seeder{
+
 	public function run(){
 		$id =1;
 		DB::table('results')->insert(array(

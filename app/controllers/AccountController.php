@@ -212,8 +212,9 @@ class AccountController extends \BaseController {
 
 		if(Auth::attempt( ['username' => $username, 'password' => $password] ))
 		{
-			$user = Auth::user();
-			$profile =  Profile::whereUserId(Auth::user()->id)->first();
+			$user      =  Auth::user();
+			$profile  =  Profile::whereUserId(Auth::user()->id)->first();
+			$results  =  Result::whereUserId(Auth::user()->id)->get();
 
 			if (empty($profile))
 			{
@@ -223,8 +224,14 @@ class AccountController extends \BaseController {
 				$profile = $profile->toArray();
 			}
 
+			if (!empty($results))
+			{
+				$results = $results;
+			}
+
 			Auth::logout();
-			return Response::json(['user' => $user->toArray(), 'profile' => $profile]);
+			return Response::json(['user' => $user->toArray(), 'profile' => $profile,
+				'results' =>$results->toArray()]);
 		}
 		else
 		{
