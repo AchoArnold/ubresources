@@ -247,6 +247,6 @@ class AccountController extends \BaseController {
 			}
 		}
 
-		return Response::json('{"error" : "username or password invalid"}');
+		return '';
 	}
 }
