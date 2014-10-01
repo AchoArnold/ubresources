@@ -1,6 +1,6 @@
 @extends('/layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
 	<meta name="description" content="Fast and efficient GPA calculator for the University of Buea">
       {{HTML::script('assets/js/gpa_calc.js')}}

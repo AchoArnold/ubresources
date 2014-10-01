@@ -21,7 +21,9 @@ Route::get('disclaimer', 'DisclaimerController@show');
 Route::resource('gist', 'GistController');
 
 Route::get('gist.json', function(){
-	return Response::json(Gist::all());
+	$gists = Gist::with('comments')->get();
+
+	return $gists;
 });
 
 
@@ -103,6 +105,7 @@ Route::group(array('before'=>'auth'), function(){
 
 	Route::resource('assignments', 'AssignmentController');
 
+	Route::controller('results', 'ResultController');
 
 	Route::get('account/edit', 'AccountController@edit');
 

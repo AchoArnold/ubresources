@@ -13,12 +13,17 @@ class Comment extends Eloquent{
    public static function get_comments($gist_id)
    {
    	$comments = DB::table('comments')
-				   	->select('recovery_email','comments.created_at','comments.author_id', 'comments.content' )
-				   	->join('users', 'author_id', '=', 'users.id')
-					->where('gist_id', '=', $gist_id)
-					->orderBy('comments.updated_at', 'dsc')
-					->get();
+   	->select('recovery_email','comments.created_at','comments.author_id', 'comments.content' )
+   	->join('users', 'author_id', '=', 'users.id')
+	->where('gist_id', '=', $gist_id)
+	->orderBy('comments.updated_at', 'dsc')
+	->get();
 
 		return $comments;
+   }
+
+   public function gist()
+   {
+      return $this->belongsTo('Gist');
    }
 }

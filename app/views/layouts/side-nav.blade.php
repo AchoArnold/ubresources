@@ -15,7 +15,6 @@
       ">
     @endif
     Timetables</a>
-    @if(Auth::user())
       <a href="{{URL::to('assignments')}}" class="list-group-item
       @if (Request::is('assignments*'))
         active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
@@ -23,7 +22,6 @@
         ">
       @endif
       Assignments</a>
-    @endif
     <a href="{{URL::to('past-questions')}}" class="list-group-item
     @if (Request::is('past-questions*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
@@ -31,6 +29,13 @@
       ">
     @endif
     Past Questions</a>
+    <a href="{{URL::to('results')}}" class="list-group-item
+    @if (Request::is('results*'))
+      active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
+    @else
+      ">
+    @endif
+    Results</a>
     <a href="{{URL::to('gpa-calculator')}}" class="list-group-item
     @if (Request::is('gpa-calculator*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>

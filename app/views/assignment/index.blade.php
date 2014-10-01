@@ -29,7 +29,7 @@
 	@else
 		<div class="text-center">
 			<h1>
-				Please you have to fill your profile information so we can determine which assignments we should be displaying.
+				Please complete your profile information so we can determine which assignments we should be displaying.
 			</h1>
 			<a href="{{URL::to('account/edit')}}" class="btn btn-warning btn-lg">Edit Profile <span class="glyphicon glyphicon-hand-right"></a>
 		</div>
