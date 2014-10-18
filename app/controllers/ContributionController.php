@@ -27,25 +27,25 @@ class ContributionController extends \BaseController {
 					$validate = Contribution::validate(Input::all());
 
 			       	if ( $validate->passes() ) 
-			       	{
-						$content = new Contribution;
-						$content->type = 3;
-						$content->author_id = Input::get('email');
-						$content->content = Input::get('description');
+				      {
+							$content = new Contribution;
+							$content->type = 3;
+							$content->author_id = Input::get('email');
+							$content->content = Input::get('description');
 
-						if($content->save())
-						{
-							Mail::later(200,'shared.email', array('email'=>Input::get('email'), 'mail_content' => Input::get('description')), function($message) {
-			    			$message->to('arnold@archlinux.info', 'Web Master')->subject('UB Resources | Errors && Suggestions');
-							});
+							if($content->save())
+							{
+								Mail::later(200,'shared.email', array('email'=>Input::get('email'), 'mail_content' => Input::get('description')), function($message) {
+				    			$message->to('arnold@archlinux.info', 'Web Master')->subject('UB Resources | Errors && Suggestions');
+								});
 
-							return Redirect::back()
-							->with('message', 'Your message has been received successfully, we will respond to it as soon as possible!');
-						}
-						else{
-							return Redirect::back()
-							->withInput()
-							->with('error', 'We are currently having problems with our server. Please send your message a little later');
+								return Redirect::back()
+								->with('message', 'Your message has been received successfully, we will respond to it as soon as possible!');
+							}
+							else{
+								return Redirect::back()
+								->withInput()
+								->with('error', 'We are currently having problems with our server. Please send your message a little later');
 						}
 					}
 					else

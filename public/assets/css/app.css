@@ -376,5 +376,9 @@ blockquote, blockquote p {
   font-family: 'BebasNeue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg"); }
+.search-btn {
+  background-color: #428bca;
+  border-color: #428bca;
+  font-weight: bold; }
 
 /*# sourceMappingURL=app.css.map */

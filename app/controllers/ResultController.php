@@ -10,30 +10,11 @@ class ResultController extends \BaseController {
 	 */
 	public function getIndex()
 	{
-		if (Auth::user()->profile)
-		{
-			$faculty_id = Auth::user()->profile->faculty_id;
-			$department_id = Auth::user()->profile->department_id;
-			$level = Auth::user()->profile->level;
-			$course_outline_entries = CourseOutline::course_outline_array($department_id, $level );
-			if ($course_outline_entries == NULL){
-				return 404;
-			}
-			$meta_data = CourseOutline::meta_data( $faculty_id, $department_id );
-			if($meta_data == NULL)
-			{
-				return 404;
-			}
-		}
-		else{
-			$course_outline_entries = [];
-			$meta_data = '';
-		}
+		$course_outline_entries = Result::get_results(Auth::user()->id, 1);
 
 		return View::make('results.index')
 		->with('title', "First Semester Results for the academic year 2014/2015")
-		->with('courses', $course_outline_entries)
-		->with('meta_data', $meta_data);
+		->with('courses', $course_outline_entries);
 
 	}
 

@@ -22,34 +22,42 @@
 		</div>
 
 	@else
-		<h1 class="text-center">
-			First Semester Results for the academic year 2014/2015
-		</h1>
 
-		<table class="table table-hover table-bordered">
-			<thead>
-				<tr>
-					<th>Course Code</th>
-	            <th>Course Title</th>
-	            <th>Credit Value</th>
-	            <th>CA Mark</th>
-					<th>Exam Mark</th>
-					<th>Grade</th>
-				</tr>
-			</thead>
-			<tbody>
-				@foreach($courses as $course)
+		@if ( count($courses))
+			<h3 class="text-center">First semester results for <em>{{Auth::user()->profile->name}}</em> with matriculation number: <b><span class="text-info">{{Auth::user()->profile->matriculation}}</span></b></h3>
+			<table class="table table-striped table-bordered">
+				<thead>
 					<tr>
-						<td>{{ $course->short_name }}</td>
-						<td>{{ $course->name }}</td>
-						<td>{{ $course->credit_value }}</td>
-						<td>{{ 29 }}</td>
-						<td>{{ 51 }}</td>
-						<td>{{ 'A' }}</td>
+						<th>Course Code</th>
+		            <th>Course Title</th>
+		            <th>Credit Value</th>
+		            <th>CA Mark</th>
+						<th>Exam Mark</th>
+						<th>Total</th>
+						<th>Grade</th>
 					</tr>
-				@endforeach
+				</thead>
+				<tbody>
+					@foreach($courses as $course)
+						<tr>
+							<td>{{ $course->short_name }}</td>
+							<td>{{ $course->name }}</td>
+							<td>{{ $course->credit_value }}</td>
+							<td>{{ $course->ca }}</td>
+							<td>{{ $course->exam }}</td>
+							<td>{{ $course->ca + $course->exam }}</td>
+							<td>{{ $course->grade }}</td>
+						</tr>
+					@endforeach
 
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		@else
+			<h1 class="text-center">
+				Sorry we do not have your results
+				<br>
+				<span class="text-danger">yet!</span>
+			</h1>
+		@endif
 	@endif
 @stop

@@ -128,6 +128,7 @@ class AccountController extends \BaseController {
 		$profile->sex =  Input::get('sex');
 		$profile->location = Input::get('location');
 		$profile->user_id = Auth::user()->id;
+		$profile->matriculation = Str::upper(Input::get('matriculation'));
 
 		if ($profile->save())
 		{
@@ -165,28 +166,14 @@ class AccountController extends \BaseController {
 	public function logout()
 	{
 		Auth::logout();
-		if( Request::header('referer') != NULL )
-		{
-			return Redirect::back()
-		   ->with('message', 'You are now logged out');
-		}
-		else
-		{
-			return Redirect::to('/');
-		}
+		return Redirect::intended('/');
 	}
 
 	public function post_login()
 	{
 		if(Auth::attempt(Input::only('username', 'password')))
 		{
-			if( Request::header('referer') != NULL )
-			{
-				return Redirect::back()
-		      ->with('message', 'You are now logged in');
-			}
-			else
-				return Redirect::intended('/');
+			return Redirect::intended('/');
 		}
 		else
 		{

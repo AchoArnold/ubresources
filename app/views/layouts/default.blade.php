@@ -41,7 +41,7 @@
               <div class="form-group">
                 {{Form::text('q',NULL, array('class' => 'form-control','maxlength' => '20', 'placeholder' => 'I want to search this site for..', 'oninput' => "toggle_button(this, 'post-query')"))}}
               </div>
-              <button type="submit" id="post-query" class="btn  btn-info" disabled><span class="glyphicon glyphicon-search"></span></button>
+              <button type="submit" id="post-query" class="btn  btn-info search-btn" disabled><span class="glyphicon glyphicon-search"></span> Search</button>
             {{Form::close()}}
             <div>
               </div><!-- /.navbar-collapse -->

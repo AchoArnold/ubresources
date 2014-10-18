@@ -12,9 +12,15 @@
             <h2 class="text-center nice-header">Edit profile for {{Auth::user()->username}}</h2>
             {{Form::model($profile, array('method' => 'POST', 'url' => Request::url() ))}}
               <div class="form-group">
-                {{Form::label('Full Name (optional)', null, array('class' => 'control-label'))}}
-                {{Form::text('name',null, array('pattern'=>'[a-z A-Z]+','class'=>'form-control', 'placeholder' => 'Your full name goes here', 'maxlength' => '32'))}}
+                {{Form::label('Full Name (required)', null, array('class' => 'control-label'))}}
+                {{Form::text('name',null, array('pattern'=>'[a-z A-Z]+','class'=>'form-control', 'placeholder' => 'Your full name as it appears on your admission letter', 'maxlength' => '32', 'required' => 'true'))}}
               </div>
+
+              <div class="form-group">
+                {{Form::label('Matriculation Number (required)', null, array('class' => 'control-label'))}}
+                {{Form::text('matriculation',null, array('class'=>'form-control', 'placeholder' => 'Your matriculation number as it appears on your admission letter', 'maxlength' => '32', 'required' => 'true'))}}
+              </div>
+
               <div class="form-group">
                 {{Form::label('Telephone (optional)', null, array('class' => 'control-label'))}}
                 {{Form::text('telephone',null, array('pattern'=>'[0-9]+','class'=>'form-control', 'placeholder' => 'Please enter your telephone number', 'maxlength' => '15'))}}

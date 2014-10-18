@@ -52,6 +52,3 @@ class GistTableSeeder extends Seeder{
 
 	}
 }
-
-class Course extends Eloquent{
-}

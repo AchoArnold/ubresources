@@ -1,4 +1,4 @@
-@extends('/layouts/default')
+@extends('layouts/default')
 @include('gist/partials/_header')
 
 @section('content')
