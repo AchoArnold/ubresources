@@ -2,20 +2,67 @@
 
 class CourseTableSeeder extends Seeder{
 	public function run(){
-		$id = 41;
+		$id = 55;
 		DB::table('courses')->insert(array(
 
-			array('id' => '21', 'department_id' => '2', 'name' => 'Sequence Control', 'short_name' => 'EEF315', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Power Electronics Lab', 'short_name' => 'EEF401', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
-			array('id' => 33, 'department_id' => '2', 'name' => 'Circuit Analysis', 'short_name' => 'EEF210', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Electronics Machines I', 'short_name' => 'EEF403', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
-			array('id' => 28, 'department_id' => '2', 'name' => 'Basic Electronics', 'short_name' => 'EEF317', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Micro-controllers and Microprocessors', 'short_name' => 'EEF405', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
-			array('id' => 34, 'department_id' => '2', 'name' => 'Basic Electronics Practicum', 'short_name' => 'EEF318', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Power System Components', 'short_name' => 'EEF407', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
-			array('id' => 13, 'department_id' => '2', 'name' => 'Sequence control Lab', 'short_name' => 'EEF314', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Technical Drawing', 'short_name' => 'EEF413', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
-			array('id' => 12, 'department_id' => '2', 'name' => 'Systems Engineering', 'short_name' => 'EEF316', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Radio and Television', 'short_name' => 'EEF415', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Basic Telecoms Lab', 'short_name' => 'EEF417', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Radio and Television Lab', 'short_name' => 'EEF419', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Coding Theory', 'short_name' => 'EEF421', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Switching Theory', 'short_name' => 'EEF423', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Antenna and Propagation', 'short_name' => 'EEF425', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Feedback Systems', 'short_name' => 'EEF409', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Digital Telecoms I', 'short_name' => 'EEF427', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Mobile Telecoms', 'short_name' => 'EEF429', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Radio and Communications', 'short_name' => 'EEF431', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Signal Processing', 'short_name' => 'EEF433', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '2', 'name' => 'Telecoms Lab I', 'short_name' => 'EEF435', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+
+
+
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Operational Research', 'short_name' => 'CEF401', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Unix Administration', 'short_name' => 'CEF403', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Software Engineering', 'short_name' => 'CEF411', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Digital Electronics Lab', 'short_name' => 'CEF423', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Technical Writing', 'short_name' => 'CEF415', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Switching & Routing Protocols', 'short_name' => 'CEF417', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Analysis and Design of Algorithms', 'short_name' => 'CEF405', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Computer Networks Lab', 'short_name' => 'CEF419', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Object Oriented Modeling', 'short_name' => 'CEF407', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => '1', 'name' => 'Fundamentals of Artificial Intelligence', 'short_name' => 'CEF409', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
 
 		));
 	}

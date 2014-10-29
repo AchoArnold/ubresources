@@ -20,11 +20,6 @@ function generateTimeTable(data){
       $(this).html(markupHTML);
       $(this).fadeIn();
    });
-
-   $("#timetable-table tbody tr td").on("click", function(event){
-		alert($(this).text());
-  });
-
 }
 
 
@@ -54,3 +49,9 @@ function generateTimeTableRows(data)
     }
     return markupHTML;
 }
+
+
+/* Handlers */
+$(document).on("click", ".timetable tbody td", function(event) {
+  //alert($(this).text());
+});

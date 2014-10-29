@@ -28,14 +28,14 @@
     @else
       ">
     @endif
-    Past Questions</a>
+    Past Questions</a><!--
     <a href="{{URL::to('results')}}" class="list-group-item
     @if (Request::is('results*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
     @else
       ">
     @endif
-    Results</a>
+    Results</a> -->
     <a href="{{URL::to('gpa-calculator')}}" class="list-group-item
     @if (Request::is('gpa-calculator*'))
       active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>

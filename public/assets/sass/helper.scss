@@ -398,11 +398,6 @@ blockquote{
   }
 }
 
-
-.timetable:hover{
-  cursor:pointer;
-}
-
 .spinner{
     top:255px !important;
 }
@@ -454,9 +449,6 @@ blockquote{
 @media screen and (max-width: 843px) {
   .spinner{
     display:none !important;
-  }
-  .navbar-default .navbar-form .btn-info:before{
-    content: 'Search  ';
   }
 }
 

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,yBAAyB;EACvB,MAAM,EAAC,OAAO;EACd,UAAU,EAAE,2CAA2C",
+"sources": ["../sass/timetable.scss"],
+"names": [],
+"file": "timetable.css"
+}

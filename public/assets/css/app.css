@@ -331,9 +331,6 @@ blockquote, blockquote p {
   font-weight: bold;
   text-decoration: underline; }
 
-.timetable:hover {
-  cursor: pointer; }
-
 .spinner {
   top: 255px !important; }
 
@@ -365,10 +362,7 @@ blockquote, blockquote p {
     margin-right: 380px; } }
 @media screen and (max-width: 843px) {
   .spinner {
-    display: none !important; }
-
-  .navbar-default .navbar-form .btn-info:before {
-    content: 'Search  '; } }
+    display: none !important; } }
 /*-- Fonts --*/
 @font-face {
   font-weight: normal;
@@ -376,6 +370,10 @@ blockquote, blockquote p {
   font-family: 'BebasNeue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg"); }
+.timetable tbody td:hover {
+  cursor: pointer;
+  background: url(/assets/images/pattern-gray.png) repeat; }
+
 .search-btn {
   background-color: #428bca;
   border-color: #428bca;

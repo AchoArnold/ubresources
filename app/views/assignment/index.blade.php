@@ -10,9 +10,15 @@
 		@else
 			@foreach($assignments as $assignment)
 				<article class="gist-post">
-				   <h3>{{link_to_route('assignments.show','Object Oriented Programming (CEF306) Assignment',  [$assignment->uri])}}</h3>
+				   <h3>{{link_to_route('assignments.show',$assignment->course->name .' Assignment',  [$assignment->uri])}}</h3>
 				   <p class="post-date">
 				   	{{ExCarbon::niceDate("Posted", $assignment->created_at)}}
+				   	@if ($assignment->due_at)
+					   	<br>
+					   	<span class="text-info">
+					   		{{ExCarbon::niceDate("Due", new Carbon\Carbon ($assignment->due_at ))}}
+					   	</span>
+					   @endif
 				   </p>
 				   <p>
 				   	@if(strlen($assignment->content) > 200)

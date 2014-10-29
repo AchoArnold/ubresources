@@ -59,9 +59,13 @@ class AssignmentController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($id)
+	public function show($uri)
 	{
-		//
+		$assignment =  Assignment::whereUri($uri)->firstOrFail();
+
+		return View::make('assignment.show')
+		->with('title', $assignment->course->name .' Assignment')
+		->with('assignment', $assignment);
 	}
 
 	/**
