@@ -23,6 +23,20 @@ Route::resource('gist', 'GistController');
 Route::get('gist.json', function(){
 	$gists = Gist::with('comments')->get();
 
+	foreach ($gists as $gist) {
+		foreach ($gist->comments as $comment) {
+			if (is_object($comment)) {
+				$user = User::find($comment->author_id);
+				if ($user) {
+					$comment->author_id  = $user->username;
+				}
+				else {
+					$comment->author_id = "Unknown";
+				}
+			}
+		}
+	}
+
 	return $gists;
 });
 

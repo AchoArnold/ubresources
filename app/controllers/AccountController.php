@@ -201,7 +201,7 @@ class AccountController extends \BaseController {
 		{
 			$user      =  Auth::user();
 			$profile  =  Profile::whereUserId(Auth::user()->id)->first();
-			$results  =  Result::whereUserId(Auth::user()->id)->get();
+			$results  =  Result::get_results_json(Auth::user()->id);
 
 			if (empty($profile))
 			{
@@ -218,7 +218,7 @@ class AccountController extends \BaseController {
 
 			Auth::logout();
 			return Response::json(['user' => $user->toArray(), 'profile' => $profile,
-				'results' =>$results->toArray()]);
+				'results' =>$results]);
 		}
 		else
 		{

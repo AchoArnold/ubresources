@@ -2,12 +2,12 @@
 
 class Result extends Eloquent
 {
-	public function user() {
-		return $this->belongsTo('User');
-	}
+      public function user() {
+      	return $this->belongsTo('User');
+      }
 
-	public static function get_results($user_id, $semester) {
-      $lists = DB::table('results')
+      public static function get_results($user_id, $semester) {
+            $lists = DB::table('results')
       	->join('courses', 'courses.id', '=', 'results.course_id')
       	->join('course_outlines', 'course_outlines.course_id',  '=', 'results.course_id')
       	->where('results.user_id', '=', $user_id)
@@ -15,7 +15,21 @@ class Result extends Eloquent
       	->orderBy('results.semester', 'asc')
       	->get();
 
-      return $lists;
-	}
+            return $lists;
+      }
+
+
+      // Results Explicit
+      public static function get_results_json($user_id) {
+            $lists = DB::table('results')
+            ->join('courses', 'courses.id', '=', 'results.course_id')
+            ->join('course_outlines', 'course_outlines.course_id',  '=', 'results.course_id')
+            ->where('results.user_id', '=', $user_id)
+            ->orderBy('results.semester', 'asc')
+            ->get();
+
+            return $lists;
+      }
+
 
 }
