@@ -21,7 +21,7 @@ Route::get('disclaimer', 'DisclaimerController@show');
 Route::resource('gist', 'GistController');
 
 Route::get('gist.json', function(){
-	$gists = Gist::with('comments')->get();
+	$gists = Gist::with('comments')->orderBy('created_at', 'dsc')->get();
 
 	foreach ($gists as $gist) {
 		foreach ($gist->comments as $comment) {
