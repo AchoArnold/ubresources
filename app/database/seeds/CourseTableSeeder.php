@@ -2,8 +2,7 @@
 
 class CourseTableSeeder extends Seeder{
 	public function run(){
-		//$id = 55
-		$id = 89;
+		$id = 55;
 		DB::table('courses')->insert(array(
 
 			/* */
