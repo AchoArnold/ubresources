@@ -2,7 +2,6 @@
 @include('timetables/partials/_header')
 
 @section('head')
-  {{HTML::script('assets/js/timetable.js')}}
   <meta name="description" content="Timetable for  {{strtolower($meta_data[0]->faculty_name)}} department of {{strtolower($meta_data[0]->department_name)}} level {{$level}}">
 @stop
 
@@ -18,4 +17,8 @@
               }
           </script>
 
+@stop
+
+@section('extra-scripts')
+  {{HTML::script('assets/js/timetable.js')}}
 @stop

@@ -166,5 +166,7 @@
       @endif
       {{ HTML::script('assets/js/vendor/spin/index.js')}}
       {{ HTML::script('assets/js/helper.js')}}
+
+       @yield('extra-scripts')
     </body>
   </html>

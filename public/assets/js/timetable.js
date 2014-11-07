@@ -27,8 +27,15 @@ function displayEntry(data,day, time)
 {
 	var markupHTML = ''
 	for (var i = 0; i < data.length; i++) {
-		if (data[i].day == day  && data[i].start_at == time)
+		if (data[i].day == day  && data[i].start_at == time){
 			markupHTML +=  data[i].short_name  + '<br/>' + obj[i].venue;
+                 for( var j = i+1;  j < data.length; j++) {
+                      if (data[j].day == day  && data[j].start_at == time) {
+                          markupHTML +=  '<hr />';
+                      }
+                 }
+            }
+
 	}
 	return markupHTML;
 }

@@ -2,8 +2,11 @@
 
 class CourseTableSeeder extends Seeder{
 	public function run(){
-		$id = 55;
+		//$id = 55
+		$id = 89;
 		DB::table('courses')->insert(array(
+
+			/* */
 
 			array('id' => $id++, 'department_id' => '2', 'name' => 'Power Electronics Lab', 'short_name' => 'EEF401', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
@@ -63,6 +66,27 @@ class CourseTableSeeder extends Seeder{
 
 			array('id' => $id++, 'department_id' => '1', 'name' => 'Fundamentals of Artificial Intelligence', 'short_name' => 'CEF409', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
 
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Maths for Engineering', 'short_name' => 'EEF209', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Signals and Systems', 'short_name' => 'EEF205', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Physics for Engineering', 'short_name' => 'EEF211', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Algebra', 'short_name' => 'EEF313', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Electromagnetic Measurements', 'short_name' => 'EEF213', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Analog Electronics I', 'short_name' => 'EEF201', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Digital Electronics I', 'short_name' => 'EEF203', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Analog Electronics II Lab', 'short_name' => 'EEF305', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+			array('id' => $id++, 'department_id' => 2, 'name' => 'Digital Electronics Lab', 'short_name' => 'EEF307', 'created_at'=>date('Y-m-d H:i:s'), 'updated_at' => date('Y-m-d H:i:s') ),
+
+		/*	*/
 
 		));
 	}
