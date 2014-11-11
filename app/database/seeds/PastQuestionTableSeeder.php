@@ -23,7 +23,7 @@ class PastQuestionTableSeeder extends Seeder{
 
 			array('id'=>$id++, 'department_id'=>'1', 'level' => '300', 'course_id' =>self::courseId('CEF312'), 'type' => '1', 'date'=>'2014', 'file_path' => 'assets/past_questions/1/1/300/2/'.self::courseId('CEF312'), 'semester'=>'2', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' =>date('Y-m-d H:i:s')),
 
-			array('id'=>$id++, 'department_id'=>'1', 'level' => '300', 'course_id' =>self::courseId('CEF312'), 'type' => '2', 'date'=>'2014', 'file_path' => 'assets/past_questions/1/1/300/2/'.self::courseId('CEF312'), 'semester'=>'2', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' =>date('Y-m-d H:i:s'))
+			array('id'=>$id++, 'department_id'=>'1', 'level' => '300', 'course_id' =>self::courseId('CEF312'), 'type' => '2', 'date'=>'2014', 'file_path' => 'assets/past_questions/1/1/300/2/'.self::courseId('CEF312'), 'semester'=>'2', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' =>date('Y-m-d H:i:s')),
 
 			array('id'=>$id++, 'department_id'=>'1', 'level' => '300', 'course_id' =>self::courseId('CEF306'), 'type' => '1', 'date'=>'2014', 'file_path' => 'assets/past_questions/1/1/300/2/'.self::courseId('CEF306'), 'semester'=>'2', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' =>date('Y-m-d H:i:s')),
 
