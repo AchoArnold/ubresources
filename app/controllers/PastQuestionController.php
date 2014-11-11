@@ -35,6 +35,8 @@ class PastQuestionController extends \BaseController {
 		$semester = Input::get('semester');
 		//return public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;
 		$zip_file = PastQuestion::compress($faculty_id,$department_id,$level, $semester, $course_id);
+
+		//return $zip_file;
 		if($zip_file == NULL){
 			return Redirect::back()
 			->with('error', 'Sorry, your request cannot be processed at the moment. Please try again later');
