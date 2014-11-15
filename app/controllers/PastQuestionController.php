@@ -7,8 +7,7 @@ class PastQuestionController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function index()
-	{
+	public function index() {
 		$department_array = PastQuestion::departments();
 
 		return View::make('past-questions.index')
@@ -16,8 +15,7 @@ class PastQuestionController extends \BaseController {
 		->with('form_list', $department_array);
 	}
 
-	public function handle_form()
-	{
+	public function handle_form() {
 		$faculty_id = Input::get('faculty');
 		$department_id = Input::get('department');
 		$level = Input::get('level');
@@ -29,15 +27,12 @@ class PastQuestionController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function download($faculty_id, $department_id, $level)
-	{
+	public function download($faculty_id, $department_id, $level) {
 		$course_id = Input::get('course_id');
 		$semester = Input::get('semester');
-		//return public_path().'/packages/past_questions/'.$faculty_id.'/'.$department_id.'/'.$level.'/'.$semester.'/'.$course_id;
 		$zip_file = PastQuestion::compress($faculty_id,$department_id,$level, $semester, $course_id);
 
-		//return $zip_file;
-		if($zip_file == NULL){
+		if($zip_file == NULL) {
 			return Redirect::back()
 			->with('error', 'Sorry, your request cannot be processed at the moment. Please try again later');
 		}
@@ -51,16 +46,14 @@ class PastQuestionController extends \BaseController {
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function show($faculty_id, $department_id, $level)
-	{
+	public function show($faculty_id, $department_id, $level) {
 
 		$past_question_entries = PastQuestion::past_question_array($department_id, $level );
-		if ($past_question_entries == NULL){
+		if ($past_question_entries == NULL) {
 			return Response::view('shared.404',array('title'=>"Error: Request cannot be processed!"),404);
 		}
 		$meta_data = PastQuestion::meta_data( $faculty_id, $department_id );
-		if($meta_data == NULL)
-		{
+		if($meta_data == NULL) {
 			return 404;
 		}
 

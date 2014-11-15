@@ -39,12 +39,11 @@
      {{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
             {{ Form::hidden('semester', '2') }}
      		<div calass="form-group">
-     			{{Form::label('First Semester Courses:')}}
+     			{{Form::label('Second Semester Courses:')}}
          	<select class="form-control"  name="course_id" id="course_id">
 	           @foreach($past_question as $entry)
 	       			@if($entry->semester == 2)
-	       				<option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}
-	       				</option>
+	       				<option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}</option>
 	       			@endif
 	       		@endforeach
          	</select>
