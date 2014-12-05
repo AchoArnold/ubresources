@@ -84,15 +84,17 @@
                   @yield('header')
               </div>
 
-              <div class="col-md-3 featured-item">
-                <h3 class="text-center">FetSoft</h3>
-                <div class="col-md-4">
-                  {{HTML::image('/packages/app/fetsoft.png')}}
+              <a class="featured-link"  download  href="/packages/app/Fetapp.apk">
+                 <div class="col-md-3 featured-item">
+                  <h3 class="text-center">FetSoft</h3>
+                  <div class="col-md-4">
+                    {{HTML::image('/packages/app/fetsoft.png')}}
+                  </div>
+                  <div class="col-md-8">
+                    <p>Click here to download our companion android app</p>
+                  </div>
                 </div>
-                <div class="col-md-8">
-                  <p>Click here to download our companion android app</p>
-                </div>
-              </div>
+              </a>
 
            </div>
 
