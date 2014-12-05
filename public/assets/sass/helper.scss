@@ -440,6 +440,10 @@ blockquote{
   margin-left: 5px;
 }
 
+.text-wrap{
+  word-wrap: break-word;
+}
+
 @media screen and (min-width: 992px) {
   .bs-header h1,
   .bs-header p {
@@ -466,11 +470,4 @@ src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
 url('../fonts/BebasNeue-webfont.woff') format('woff'),
 url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
 url('../fonts/BebasNeue-webfont.svg#BebasNeuemedium') format('svg');
-}
-
-
-
-/* Overwriting bootstrap styles */
-.btn-info{
-  background-color: #52d1d8;
 }
