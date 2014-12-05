@@ -201,7 +201,7 @@ class AccountController extends \BaseController {
 			$user      =  Auth::user();
 			$profile  =  Profile::whereUserId(Auth::user()->id)->first();
 			$results  =  Result::get_results_json(Auth::user()->id);
-			$assignments = Assignment::whereLevel($profile->level)->get();
+			$assignments = Assignment::whereLevel($profile->level)->get()->toArray();
 
 			if (empty($profile)) {
 				$profile="{'error': 'profile information is not available for this user'}";

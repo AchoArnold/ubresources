@@ -444,10 +444,37 @@ blockquote{
   word-wrap: break-word;
 }
 
+.featured-item{
+  border:1px solid #d2ab67;
+  p {
+    font-size: 15px;
+  }
+  h3{
+    margin-top: 10px;
+  }
+  img{
+    max-width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px;
+  }
+  .col-md-4,
+  .col-md-8{
+    padding-left: 0;
+    padding-right: 5px;
+  }
+
+}
+
 @media screen and (min-width: 992px) {
   .bs-header h1,
   .bs-header p {
-  margin-right: 380px;
+  margin-right: 50px;
+  }
+
+  .featured-item{
+    h1, p{
+      margin-right: 0;
+    }
   }
 }
 

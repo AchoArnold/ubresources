@@ -78,7 +78,23 @@
         <div class="container">
 
            <!-- Put the page header here -->
-           @yield('header')
+           <div class="row">
+            
+              <div class="col-md-9 main-section">
+                  @yield('header')
+              </div>
+
+              <div class="col-md-3 featured-item">
+                <h3 class="text-center">FetSoft</h3>
+                <div class="col-md-4">
+                  {{HTML::image('/packages/app/fetsoft.png')}}
+                </div>
+                <div class="col-md-8">
+                  <p>Click here to download our companion android app</p>
+                </div>
+              </div>
+
+           </div>
 
         </div>
       </section>
