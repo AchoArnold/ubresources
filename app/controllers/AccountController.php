@@ -201,26 +201,20 @@ class AccountController extends \BaseController {
 			$user      =  Auth::user();
 			$profile  =  Profile::whereUserId(Auth::user()->id)->first();
 			$results  =  Result::get_results_json(Auth::user()->id);
-			$assignments = null;
+			$assignments = Assignment::whereLevel($profile->level)->get()->toArray();
 
 			if (empty($profile)) {
 				$profile="{'error': 'profile information is not available for this user'}";
 			}
 			else {
-				$assignments = Assignment::whereLevel($profile->level)->get();
 				$profile = $profile->toArray();
-			}
-
-			if (!empty($results)) {
-				$results = $results;
 			}
 
 			Auth::logout();
 			return Response::json(['user' => $user->toArray(), 'profile' => $profile,
-				'results' =>$results, 'assignments' => $assignments]);
+				'results' =>$results, 'assignments' => $assignments ]);
 		}
-		else
-		{
+		else {
 			$data = User::whereRecoveryEmail(Input::get('username'))->first();
 			if($data)
 			{
