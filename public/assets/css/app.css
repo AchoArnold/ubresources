@@ -359,11 +359,14 @@ blockquote, blockquote p {
   word-wrap: break-word; }
 
 .featured-item {
-  border: 1px solid #d2ab67; }
+  border: 1px solid #b8b8b8;
+  border-radius: 5px;
+  margin-top: 25px; }
   .featured-item p {
     font-size: 15px; }
   .featured-item h3 {
-    margin-top: 10px; }
+    padding-top: 0;
+    margin-top: 0; }
   .featured-item img {
     max-width: 100%;
     margin-bottom: 5px;
@@ -373,10 +376,15 @@ blockquote, blockquote p {
     padding-left: 0;
     padding-right: 5px; }
 
+.featured-link {
+  color: #333; }
+  .featured-link:hover {
+    color: #333; }
+
 @media screen and (min-width: 992px) {
   .bs-header h1,
   .bs-header p {
-    margin-right: 50px; }
+    margin-right: 150px; }
 
   .featured-item h1, .featured-item p {
     margin-right: 0; } }
