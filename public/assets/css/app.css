@@ -41,7 +41,6 @@ body {
   background: rgba(0, 0, 0, 0.7);
   color: greenyellow;
   text-transform: uppercase;
-  text-shadow: 0px 0px 5px #eeb213;
   letter-spacing: 1px;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
@@ -51,7 +50,7 @@ body {
 
 .side-nav .list-group-item:hover,
 .side-nav .list-group-item:focus {
-  background-color: brown; }
+  background-color: #ececea; }
 
 .side-nav .list-group-item.active,
 .side-nav .list-group-item.active:hover,
@@ -370,6 +369,10 @@ blockquote, blockquote p {
   font-family: 'BebasNeue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg"); }
+/* Overwriting bootstrap styles */
+.btn-info {
+  background-color: #52d1d8; }
+
 .timetable tbody td:hover {
   cursor: pointer;
   background: url(/assets/images/pattern-gray.png) repeat; }

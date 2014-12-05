@@ -49,7 +49,6 @@ display: block;
 background: rgba(0,0,0,0.7);
 color:greenyellow;
 text-transform: uppercase;
-text-shadow: 0px 0px 5px #eeb213;
 letter-spacing: 1px;
 -webkit-transition: all 0.2s linear;
 -moz-transition: all 0.2s linear;
@@ -60,7 +59,7 @@ transition: all 0.2s linear;
 
 .side-nav .list-group-item:hover,
 .side-nav .list-group-item:focus{
-background-color:rgb(165, 42, 42);
+background-color:#ececea;
 }
 .side-nav .list-group-item.active,
 .side-nav .list-group-item.active:hover,
@@ -469,3 +468,9 @@ url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
 url('../fonts/BebasNeue-webfont.svg#BebasNeuemedium') format('svg');
 }
 
+
+
+/* Overwriting bootstrap styles */
+.btn-info{
+  background-color: #52d1d8;
+}

@@ -92,7 +92,7 @@ class AccountController extends \BaseController {
 		$profile =  Profile::whereUserId(Auth::user()->id)->first();
 		if(empty($profile))
 			$profile = new Profile();
-		$faculty_data = CourseOutline::departments();
+		$faculty_data = Timetable::departments();
 		return View::make('account.edit')
 		->with ('title', 'Edit profile')
 		->with('faculty_data',$faculty_data)
@@ -201,7 +201,7 @@ class AccountController extends \BaseController {
 			$user      =  Auth::user();
 			$profile  =  Profile::whereUserId(Auth::user()->id)->first();
 			$results  =  Result::get_results_json(Auth::user()->id);
-			$assignments = Assignment::whereLevel($profile->level)->get()->toArray();
+			$assignments = Assignment::whereLevel($profile->level)->get();
 
 			if (empty($profile)) {
 				$profile="{'error': 'profile information is not available for this user'}";

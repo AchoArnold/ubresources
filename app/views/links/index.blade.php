@@ -1,6 +1,6 @@
-@extends('/layouts/default')
+@extends('layouts/default')
 @include('layouts/side-nav')
-   
+
 @section('head')
 	<meta name="description" content="Links to some external sites which provide top notch resources">
 @stop
@@ -15,7 +15,7 @@
       <div class="col-md-6">
        <h2>{{$article->title}}</h2>
        <p>
-        {{$article->content}}
+        {{ String::makeLinks( HTML::entities($article->content)) }}
        </p>
        </div>
   @endforeach
