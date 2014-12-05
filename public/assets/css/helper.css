@@ -355,10 +355,31 @@ blockquote, blockquote p {
 .glyphicon-download {
   margin-left: 5px; }
 
+.text-wrap {
+  word-wrap: break-word; }
+
+.featured-item {
+  border: 1px solid #d2ab67; }
+  .featured-item p {
+    font-size: 15px; }
+  .featured-item h3 {
+    margin-top: 10px; }
+  .featured-item img {
+    max-width: 100%;
+    margin-bottom: 5px;
+    border-radius: 5px; }
+  .featured-item .col-md-4,
+  .featured-item .col-md-8 {
+    padding-left: 0;
+    padding-right: 5px; }
+
 @media screen and (min-width: 992px) {
   .bs-header h1,
   .bs-header p {
-    margin-right: 380px; } }
+    margin-right: 50px; }
+
+  .featured-item h1, .featured-item p {
+    margin-right: 0; } }
 @media screen and (max-width: 843px) {
   .spinner {
     display: none !important; } }
@@ -369,8 +390,5 @@ blockquote, blockquote p {
   font-family: 'BebasNeue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg"); }
-/* Overwriting bootstrap styles */
-.btn-info {
-  background-color: #52d1d8; }
 
 /*# sourceMappingURL=helper.css.map */

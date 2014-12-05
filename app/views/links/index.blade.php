@@ -12,7 +12,7 @@
 
 @section('content')
     @foreach($articles as $article)
-      <div class="col-md-6">
+      <div class="col-md-6 text-wrap">
        <h2>{{$article->title}}</h2>
        <p>
         {{ String::makeLinks( HTML::entities($article->content)) }}
