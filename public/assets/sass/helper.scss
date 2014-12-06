@@ -60,13 +60,14 @@ transition: all 0.2s linear;
 .side-nav .list-group-item:hover,
 .side-nav .list-group-item:focus{
 background-color:#ececea;
+  color: #333;
 }
 .side-nav .list-group-item.active,
 .side-nav .list-group-item.active:hover,
 .side-nav .list-group-item.active:focus{
 background: rgba(0,0,0,1.0);
+color: white;
 background: #428bca;
-text-shadow: 0px 0px 1px #eeb213;
 }
 
 em{
