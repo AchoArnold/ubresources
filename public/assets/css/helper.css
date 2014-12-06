@@ -39,7 +39,7 @@ body {
 .side-nav .list-group-item {
   display: block;
   background: rgba(0, 0, 0, 0.7);
-  color: greenyellow;
+  color: #acde8b;
   text-transform: uppercase;
   letter-spacing: 1px;
   -webkit-transition: all 0.2s linear;
@@ -361,16 +361,18 @@ blockquote, blockquote p {
 .featured-item {
   border: 1px solid #b8b8b8;
   border-radius: 5px;
-  margin-top: 25px; }
+  margin-top: 25px;
+  padding-bottom: -5px; }
   .featured-item p {
-    font-size: 15px; }
+    font-size: 14.5px; }
   .featured-item h3 {
     padding-top: 0;
     margin-top: 0; }
   .featured-item img {
     max-width: 100%;
-    margin-bottom: 5px;
-    border-radius: 5px; }
+    margin-bottom: 10px;
+    border-radius: 5px;
+    margin-top: -10px; }
   .featured-item .col-md-4,
   .featured-item .col-md-8 {
     padding-left: 0;
@@ -398,5 +400,9 @@ blockquote, blockquote p {
   font-family: 'BebasNeue';
   src: url("../fonts/BebasNeue.eot");
   src: url("../fonts/BebasNeue-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/BebasNeue-webfont.woff") format("woff"), url("../fonts/BebasNeue-webfont.ttf") format("truetype"), url("../fonts/BebasNeue-webfont.svg#BebasNeuemedium") format("svg"); }
+/* Overwriting bootstrap styles */
+.btn-success {
+  background-color: #079500;
+  border-color: #079500; }
 
 /*# sourceMappingURL=helper.css.map */

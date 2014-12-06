@@ -47,7 +47,7 @@ text-align: center;
 .side-nav .list-group-item{
 display: block;
 background: rgba(0,0,0,0.7);
-color:greenyellow;
+color:#acde8b;
 text-transform: uppercase;
 letter-spacing: 1px;
 -webkit-transition: all 0.2s linear;
@@ -448,8 +448,9 @@ blockquote{
   border:1px solid #b8b8b8;
   border-radius: 5px;
   margin-top: 25px;
+  padding-bottom: -5px;
   p {
-    font-size: 15px;
+    font-size: 14.5px;
   }
   h3{
     padding-top: 0;
@@ -457,8 +458,9 @@ blockquote{
   }
   img{
     max-width: 100%;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 5px;
+    margin-top: -10px;
   }
   .col-md-4,
   .col-md-8{
@@ -506,4 +508,10 @@ src: url('../fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
 url('../fonts/BebasNeue-webfont.woff') format('woff'),
 url('../fonts/BebasNeue-webfont.ttf') format('truetype'),
 url('../fonts/BebasNeue-webfont.svg#BebasNeuemedium') format('svg');
+}
+
+/* Overwriting bootstrap styles */
+.btn-success{
+  background-color: #079500;
+  border-color: #079500;
 }
