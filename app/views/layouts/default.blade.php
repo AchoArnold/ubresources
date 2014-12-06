@@ -79,12 +79,11 @@
 
            <!-- Put the page header here -->
            <div class="row">
-            
               <div class="col-md-9 main-section">
                   @yield('header')
               </div>
 
-              <a class="featured-link"  download  href="/packages/app/Fetapp.apk">
+              <a class="featured-link"  download  href="/packages/app/FetSoft.apk">
                  <div class="col-md-3 featured-item">
                   <h3 class="text-center">FetSoft</h3>
                   <div class="col-md-4">
