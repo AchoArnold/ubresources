@@ -11,12 +11,14 @@
 			@foreach($assignments as $assignment)
 				<article class="gist-post">
 				   <h3>{{link_to_route('assignments.show',$assignment->course->name .' Assignment',  [$assignment->uri])}}</h3>
+				   @if ($assignment->given_at)
 				   <p class="post-date">
-				   	{{ExCarbon::niceDate("Posted", $assignment->created_at)}}
+				   Given on {{ExCarbon::fullTime($assignment->given_at)}}
+				  	@endif
 				   	@if ($assignment->due_at)
 					   	<br>
 					   	<span class="text-info">
-					   		{{ExCarbon::niceDate("Due", new Carbon\Carbon ($assignment->due_at ))}}
+					   		Due on {{ExCarbon::fullTime($assignment->due_at )}}
 					   	</span>
 					   @endif
 				   </p>

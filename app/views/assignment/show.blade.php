@@ -5,11 +5,14 @@
 	<article class="gist-post single-post">
 	   <h3>{{$assignment->course->name}} Assignment</h3>
 	   <p class="post-date">
-	   	{{ExCarbon::niceDate("Posted", $assignment->created_at)}}
+	   	@if ($assignment->given_at)
+		   <p class="post-date">
+		   Given on {{ExCarbon::fullTime($assignment->given_at)}}
+		@endif
 	   	@if ($assignment->due_at)
 		   	<br>
 		   	<span class="text-info">
-		   		{{ExCarbon::niceDate("Due", new Carbon\Carbon ($assignment->due_at ))}}
+		   		Due on {{ExCarbon::fullTime($assignment->due_at )}}
 		   	</span>
 		   @endif
 		</p>

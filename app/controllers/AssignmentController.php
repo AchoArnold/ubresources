@@ -16,7 +16,7 @@ class AssignmentController extends \BaseController {
 			->with('title', 'Assignments for courses in the University of Buea');
 		}
 
-		$assignments = Assignment::whereLevel($profile->level)->get();
+		$assignments = Assignment::whereLevel($profile->level)->orderBy('created_at', 'dsc')->get();
 		$meta_data = Timetable::meta_data( $profile->faculty_id, $profile->department_id );
 
 		return View::make('assignment.index')
