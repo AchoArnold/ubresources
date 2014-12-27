@@ -12,4 +12,14 @@ class ExCarbon extends Carbon\Carbon {
       return $message;
     }
 
+    public static function fullDate($date) {
+    	$date = new DateTime($date);
+    	return $date->format('l jS F Y');
+    }
+
+    public static function fullTime($date) {
+      $date = new DateTime($date);
+      return $date->format('l jS F Y \a\t h:i A');
+    }
+
 }
