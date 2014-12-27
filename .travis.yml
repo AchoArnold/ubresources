@@ -1,0 +1,7 @@
+php:
+  - "5.6"
+
+# whitelist
+branches:
+  only:
+    - master
