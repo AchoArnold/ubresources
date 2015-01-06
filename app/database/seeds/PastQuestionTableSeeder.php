@@ -2,7 +2,7 @@
 
 class PastQuestionTableSeeder extends Seeder{
 	public function run(){
-		$id = 37;
+		$id = 38;
 		DB::table('past_questions')->insert(array(
 
 		array('id'=>$id++, 'department_id'=>'1', 'level' => '400', 'course_id' =>self::courseId('CEF409'), 'type' => '1', 'date'=>'2014', 'file_path' => 'assets/past_questions/1/1/400/2/'.self::courseId('CEF409'), 'semester'=>'1', 'created_at' => date('Y-m-d H:i:s'), 'updated_at' =>date('Y-m-d H:i:s')),
