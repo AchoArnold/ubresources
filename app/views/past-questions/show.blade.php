@@ -18,40 +18,42 @@
       </div>
 
    <section class="course-table">
-   	{{Form::open(array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
-        {{ Form::hidden('semester', '1') }}
-       <div calass="form-group">
-       	{{Form::label('First Semester Courses:')}}
-         <select class="form-control" name="course_id" id="course_id">
-         	@foreach($past_question as $entry)
-       			@if($entry->semester == 1)
-       				<option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}
-       				</option>
-       			@endif
-       		@endforeach
-         </select>
-         <br />
-         <div class="text-right">
-         <button type="submit" class="btn btn-primary">Download <span class="glyphicon glyphicon-download"></span></button>
-         </div>
-       </div>
-     {{Form::close()}}
-     {{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
-            {{ Form::hidden('semester', '2') }}
-     		<div calass="form-group">
-     			{{Form::label('Second Semester Courses:')}}
-         	<select class="form-control"  name="course_id" id="course_id">
-	           @foreach($past_question as $entry)
-	       			@if($entry->semester == 2)
-	       				<option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}</option>
-	       			@endif
-	       		@endforeach
-         	</select>
-         	<br />
-         <div class="text-right">
-         <button type="submit" class="btn btn-primary">Download<span class="glyphicon glyphicon-download"></span></button>
-         </div>
-        </div>
-    	{{Form::close()}}
+      @if($first_semester)
+       	{{Form::open(array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
+            {{ Form::hidden('semester', '1') }}
+           <div calass="form-group">
+           	{{Form::label('First Semester Courses:')}}
+             <select class="form-control" name="course_id" id="course_id">
+             	@foreach($first_semester as $entry)
+           			@if($entry->semester == 1)
+           				<option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}
+           				</option>
+           			@endif
+           		@endforeach
+             </select>
+             <br />
+             <div class="text-right">
+             <button type="submit" class="btn btn-primary">Download <span class="glyphicon glyphicon-download"></span></button>
+             </div>
+           </div>
+         {{Form::close()}}
+     @endif
+     @if ($second_semester)
+         {{Form::open( array('method' => 'POST', 'class' =>'course-form', 'url' => Request::path()))}}
+                {{ Form::hidden('semester', '2') }}
+         		<div calass="form-group">
+         			{{Form::label('Second Semester Courses:')}}
+             	<select class="form-control"  name="course_id" id="course_id">
+    	           @foreach($second_semester as $entry)
+    	       	   <option value="{{$entry->course_id}}">{{$entry->short_name}} : {{$entry->name}}</option>
+    	           @endforeach
+             	</select>
+             	<br />
+             <div class="text-right">
+             <button type="submit" class="btn btn-primary">Download<span class="glyphicon glyphicon-download"></span></button>
+             </div>
+            </div>
+        	{{Form::close()}}
+      @endif
    </section>
 @stop

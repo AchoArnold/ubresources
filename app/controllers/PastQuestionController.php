@@ -11,7 +11,7 @@ class PastQuestionController extends \BaseController {
 		$department_array = PastQuestion::departments();
 
 		return View::make('past-questions.index')
-		->with('title', 'Download past questions freely from here')
+		->with('title', 'Download Exam and CA question papers for free')
 		->with('form_list', $department_array);
 	}
 
@@ -48,8 +48,9 @@ class PastQuestionController extends \BaseController {
 	 */
 	public function show($faculty_id, $department_id, $level) {
 
-		$past_question_entries = PastQuestion::past_question_array($department_id, $level );
-		if ($past_question_entries == NULL) {
+		$first_semester = PastQuestion::past_question_array($department_id, $level,1 );
+		$second_semester = PastQuestion::past_question_array($department_id, $level,2 );
+		if ( ($first_semester == NULL) && $second_semester  == NULL ) {
 			return Response::view('shared.404',array('title'=>"Error: Request cannot be processed!"),404);
 		}
 		$meta_data = PastQuestion::meta_data( $faculty_id, $department_id );
@@ -59,7 +60,8 @@ class PastQuestionController extends \BaseController {
 
 		return View::make('past-questions.show')
 		->with('title', "PastQuestions for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $level)
-		->with('past_question', $past_question_entries)
+		->with('first_semester', $first_semester)
+		->with('second_semester', $second_semester)
 		->with('meta_data', $meta_data)
 		->with('level', $level);
 	}

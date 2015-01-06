@@ -71,15 +71,15 @@ class PastQuestion extends Eloquent
       return $data;
     }
 
-    public static function past_question_array($department_id, $level)
+    public static function past_question_array($department_id, $level, $semester)
     {
       $lists = DB::table('past_questions')
       	->select('level', 'short_name', 'name','semester', 'course_id')
       	->join('courses', 'courses.id', '=', 'past_questions.course_id')
       	->where('level', '=', $level)
+      ->where('semester', '=',  $semester)
       	->where('past_questions.department_id', '=', $department_id)
-      	->orderBy('semester', 'asc')
-            ->distinct()
+      ->distinct()
       	->get();
 
       return $lists;
