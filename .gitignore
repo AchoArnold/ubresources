@@ -1,4 +1,4 @@
 /vendor/*
 /app/config
 public/assets/.sass-cache/public/assets/.sass-cache/*
-past-questios/
+app/storage/past_questions/
