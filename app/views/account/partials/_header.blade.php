@@ -1,5 +1,3 @@
-@include('layouts/side-nav')
-
 @section('head')
 	<meta name="description" content="Assignments for the various classes taken at the university of Buea">
 @stop

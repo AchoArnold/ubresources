@@ -2,13 +2,11 @@
 
 class Assignment extends Eloquent{
 
-	public function course()
-   {
+	public function course() {
       return $this->belongsTo('Course');
    }
 
-   public function author()
-   {
+   public function author() {
       return $this->belongsTo('User');
    }
 }

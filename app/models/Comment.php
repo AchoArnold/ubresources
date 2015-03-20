@@ -22,6 +22,7 @@ class Comment extends Eloquent{
 		return $comments;
    }
 
+
    public function gist()
    {
       return $this->belongsTo('Gist');

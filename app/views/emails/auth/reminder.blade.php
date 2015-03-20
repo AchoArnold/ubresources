@@ -7,7 +7,16 @@
 		<h2>Password Reset</h2>
 
 		<div>
-			To reset your password, complete this form: {{ URL::to('password/reset', array($token)) }}.
+			<p>
+				To reset your password, fill the following form : {{HTML::link('password/reset/'.$token, URL::to('password/reset', array($token)) ) }}
+			</p>
+			<p>
+				Alternatively, you can copy and past the following link on your browser:<br>
+				<br>
+				{{ URL::to('password/reset', array($token)) }}.
+			</p>
+			<br>
+			Thanks
 		</div>
 	</body>
 </html>

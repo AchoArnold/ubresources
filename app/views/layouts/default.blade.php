@@ -51,7 +51,7 @@
                   <ul class="nav navbar-nav navbar-right auth">
                     <li class="dropdown ">
                       <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                         <img src="//gravatar.com/avatar/{{md5(Auth::user()->recovery_email)}}?s=28" alt="Profile picture" class="img-circle">
+                         <img src="//gravatar.com/avatar/{{md5(Auth::user()->email)}}?s=28" alt="Profile picture" class="img-circle">
                         {{{Auth::user()->username}}}<b class="caret"></b>
                       </a>
                       <ul class="dropdown-menu">
@@ -103,7 +103,7 @@
         <section class="row">
               @yield('side-nav')
 
-          <div class="col-md-9">
+              <div class="col-md-9">
             <div class="main-content">
               @section('content')
                    @if(Session::has('error'))
@@ -130,14 +130,11 @@
                 @endif
 
             <noscript>
-              <div class="alert alert-danger">
-                <p><strong> This website requires JavaScript to be enabled on your browser</strong></p>
-                <p>Please enable javascript if you want to use this website</p>
-              </div>
+                <div class="alert alert-danger">
+                  <p><strong> This website requires JavaScript to be enabled on your browser</strong></p>
+                  <p>Please enable javascript if you want to use this website</p>
+                </div>
             </noscript>
-
-              @yield('error')
-              @yield('message')
 
               <!-- Put the main page content here -->
               @yield('content')

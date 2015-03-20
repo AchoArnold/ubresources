@@ -281,17 +281,19 @@ Copyright
   background-color: #ddd; }
 
 .sign-in {
-  margin: 0 auto;
-  min-width: 300px;
-  width: 40%; }
-
-.sign-in .panel {
-  margin-bottom: 0; }
-
-.sign-in .panel-heading {
-  margin-top: -20px;
-  padding-top: 0;
-  padding-bottom: 0; }
+  margin: 0 auto; }
+  .sign-in .panel {
+    margin-bottom: 0; }
+  .sign-in .panel-heading {
+    margin-top: -20px;
+    padding-top: 0;
+    padding-bottom: 0; }
+  .sign-in .sign-up-link {
+    margin-left: 10px;
+    font-size: small;
+    display: inline-block; }
+  .sign-in .sign-in-btn {
+    display: inline-block; }
 
 .navbar-default .auth .dropdown-toggle,
 .navbar-default .navbar-nav > li > a {

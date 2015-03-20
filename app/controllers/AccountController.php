@@ -41,7 +41,7 @@ class AccountController extends \BaseController {
      			->with('error', 'Username "'.Input::get('username').'" already taken please chose another username');
      		}
 
-     		$email = User::whereRecoveryEmail(Input::get('email'))->first();
+     		$email = User::whereEmail(Input::get('email'))->first();
      		if($email)
      		{
      			return Redirect::back()
@@ -53,7 +53,7 @@ class AccountController extends \BaseController {
      		$user = new User;
      		$user->username = Input::get('username');
      		$user->password = Hash::make(Input::get('password'));
-     		$user->recovery_email = Input::get('email');
+     		$user->email = Input::get('email');
      		if($user->save())
      		{
      			Auth::attempt(Input::only('username', 'password'));
@@ -171,19 +171,21 @@ class AccountController extends \BaseController {
 
 	public function post_login()
 	{
-		if(Auth::attempt(Input::only('username', 'password')))
+		if(Auth::attempt(Input::only('username', 'password'), true))
 		{
-			return Redirect::intended('/');
+			return Redirect::intended('/')
+			->with('message', 'You have logged in successfully');
 		}
 		else
 		{
-			$data = User::whereRecoveryEmail(Input::get('username'))->first();
+			$data = User::whereEmail(Input::get('username'))->first();
 			if($data)
 			{
 				$auth_array = array('username' => $data->username, 'password' => Input::get('password'));
-				if( Auth::attempt($auth_array) )
+				if( Auth::attempt($auth_array, true) )
 				{
-					return Redirect::intended('/');
+					return Redirect::intended('/')
+					->with('message', 'You have logged in successfully');
 				}
 			}
 		}
@@ -215,7 +217,7 @@ class AccountController extends \BaseController {
 				'results' =>$results, 'assignments' => $assignments ]);
 		}
 		else {
-			$data = User::whereRecoveryEmail(Input::get('username'))->first();
+			$data = User::whereEmail(Input::get('username'))->first();
 			if($data)
 			{
 				if( Auth::attempt( ['username' => $data->username, 'password' => Input::get('password')]) )

@@ -141,6 +141,7 @@ function validate_change_password(event)
 	var form  = document.getElementById('change_password');
 	var form_inputs = form.getElementsByTagName('input');
 	var MarkupHTML  = "";
+
 	for (index = 0; index < form_inputs.length; ++index)
 	{
 		switch(index)
@@ -161,6 +162,7 @@ function validate_change_password(event)
 				break;
 		}
 	}
+
 	remove_validate_alert(form.parentNode)
 	if ( MarkupHTML.length > 0)
 	{
@@ -188,4 +190,42 @@ function remove_validate_alert(parent)
 {
 	if ( document.getElementById('validate_alert') )
   		parent.removeChild(document.getElementById('validate_alert'));
+}
+
+
+function validate_reset_password(event)
+{
+	// For older browsers and IE
+	event = event || window.event;
+	var form  = document.getElementById('change_password');
+	var form_inputs = form.getElementsByTagName('input');
+	var MarkupHTML  = "";
+
+	for (index = 0; index < form_inputs.length; ++index)
+	{
+		switch(index)
+		{
+			case 3:
+				if(form_inputs[index].value.length < 6)
+					MarkupHTML += "- Password must be greater than 6 characters<br/>";
+				else
+				{
+					var password = /[a-zA-Z0-9]+/;
+					if ( !password.test(form_inputs[index].value)  || form_inputs[index].value.length < 6)
+						MarkupHTML += "- Invalid password entered<br/>";
+				}
+				break;
+			case 4:
+				if(form_inputs[index].value != form_inputs[index-1].value)
+					MarkupHTML += "- Sorry the two passwords don't match<br/>";
+				break;
+		}
+	}
+
+	remove_validate_alert(form.parentNode)
+	if ( MarkupHTML.length > 0)
+	{
+		event.preventDefault();
+	 	create_alert_div(form, MarkupHTML);
+	}
 }

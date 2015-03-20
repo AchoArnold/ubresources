@@ -103,7 +103,17 @@ Route::post('login.json', 'AccountController@json_login');
 
 Route::group(array('before'=>'guest'), function(){
 
-	Route::get('join', 'AccountController@create');
+	Route::controller('password', 'RemindersController',
+		array(
+			'getRemind' => 'password.remind',
+			'postRemind' => 'password.postremind',
+			'getReset' => 'password.reset',
+			'postReset' => 'password.postreset'
+
+		)
+	);
+
+	Route::get('join',  array('uses' => 'AccountController@create', 'as' => 'user.create'));
 
 	Route::get('login', 'AccountController@login');
 
