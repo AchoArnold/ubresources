@@ -15,8 +15,8 @@
       ">
     @endif
     Timetables</a>
-      <a href="{{URL::to('assignments')}}" class="list-group-item
-      @if (Request::is('assignments*'))
+      <a href="{{URL::to('assignment')}}" class="list-group-item
+      @if (Request::is('assignment*'))
         active"><span class="badge"><span class="glyphicon glyphicon-hand-right"></span></span>
       @else
         ">

@@ -127,7 +127,7 @@ Route::group(array('before'=>'guest'), function(){
 
 Route::group(array('before'=>'auth'), function(){
 
-	Route::resource('assignments', 'AssignmentController');
+	Route::resource('assignment', 'AssignmentController');
 
 	Route::controller('results', 'ResultController');
 

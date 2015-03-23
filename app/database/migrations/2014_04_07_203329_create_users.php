@@ -16,7 +16,7 @@ class CreateUsers extends Migration {
 			$table->increments('id');
 			$table->string('username');
 			$table->string('password');
-			$table->string('recovery_email');
+			$table->string('email');
 			$table->timestamps();
 		});
 	}

@@ -42,17 +42,6 @@ class AssignmentController extends \BaseController {
 	}
 
 	/**
-	 * Store a newly created resource in storage.
-	 * POST /assignment
-	 *
-	 * @return Response
-	 */
-	public function store()
-	{
-		//
-	}
-
-	/**
 	 * Display the specified resource.
 	 * GET /assignment/{id}
 	 *
@@ -69,39 +58,104 @@ class AssignmentController extends \BaseController {
 	}
 
 	/**
-	 * Show the form for editing the specified resource.
-	 * GET /assignment/{id}/edit
+	 * Store a newly created assignment.
+	 *
+	 * @return Response
+	 */
+	public function store()
+	{
+		if(Auth::user()->is_admin())
+		{
+			$assignment = new assignment;
+			$assignment->author_id = Auth::user()->id;
+			$assignment->title = Input::get('title');
+			$assignment->content = Input::get('content');
+
+			if( assignment::whereassignmentUri(Str::slug($assignment->title))->first() )
+				$assignment->assignment_uri = Str::slug($assignment->title).'-'. date('Y-m-d');
+			else
+				$assignment->assignment_uri =  Str::slug($assignment->title );
+
+			if($assignment->save())
+				return Redirect::to('assignment/'.$assignment->uri)
+				->with('message', 'assignment created successfully!');
+			else
+			{
+				return Redirect::back()
+				->with('error','Sorry "assignment" cannot be created at the moment');
+			}
+		}
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
+	}
+
+	/**
+	 * Show the form for editing the a assignment.
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function edit($id)
+	public function edit($uri)
 	{
-		//
+		if (Auth::user()->is_admin())
+		{
+			$assignment = Assignment::whereUri($uri)->firstOrFail();
+			return View::make('assignment.edit')
+			->with('assignment', $assignment)
+			->with('title', $assignment->course->name .' Assignment');		}
+
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 
 	/**
 	 * Update the specified resource in storage.
-	 * PUT /assignment/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function update($id)
+	public function update($uri)
 	{
-		//
+		if(Auth::user()->is_admin())
+		{
+			$assignment = assignment::whereassignmentUri($uri)->firstOrFail();
+			$assignment->title = Input::get('title');
+			$assignment->content = Input::get('content');
+			if($assignment->save())
+				return Redirect::to('assignment/'.$assignment->uri)
+				->with('message', 'assignment Updated successfully!');
+			else
+			{
+				return  Redirect::back()
+				->with('error', 'Sorry assignment cannot be edited at the moment');
+			}
+		}
+
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
 
 	/**
 	 * Remove the specified resource from storage.
-	 * DELETE /assignment/{id}
 	 *
 	 * @param  int  $id
 	 * @return Response
 	 */
-	public function destroy($id)
+	public function destroy($uri)
 	{
-		//
+		if(Auth::user()->is_admin())
+		{
+			$assignment = assignment::whereassignmentUri($uri)->firstOrFail();
+			if($assignment->delete())
+				return Redirect::to('assignment')
+				->with('message', 'assignment deleted successfully!');
+			else
+			{
+				return Redirect::back()
+				->with('error', 'Sorry assignment cannot be deleted');
+			}
+		}
+		return View::make('shared.404')
+		->with('title', "Sorry your request cannot be processed");
 	}
-
 }

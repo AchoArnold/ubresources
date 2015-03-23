@@ -12,3 +12,9 @@
    	</div>
   </div>
 @stop
+
+@section('extra-scripts')
+ 	<script>
+    CKEDITOR.replace('gist-body');
+  </script>
+@stop

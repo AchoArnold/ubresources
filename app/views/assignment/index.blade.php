@@ -10,7 +10,7 @@
 		@else
 			@foreach($assignments as $assignment)
 				<article class="gist-post">
-				   <h3>{{link_to_route('assignments.show',$assignment->course->name .' Assignment',  [$assignment->uri])}}</h3>
+				   <h3>{{link_to_route('assignment.show',$assignment->course->name .' Assignment',  [$assignment->uri])}}</h3>
 				   @if ($assignment->given_at)
 				   <p class="post-date">
 				   Given on {{ExCarbon::fullTime($assignment->given_at)}}
@@ -28,7 +28,7 @@
 				   	@else
 				   		{{$assignment->content}}
 				   	@endif
-				   	[{{link_to_route('assignments.show','Read More',  [$assignment->uri])}}]
+				   	[{{link_to_route('assignment.show','Read More',  [$assignment->uri])}}]
 				   </p>
 			   </article>
 			@endforeach

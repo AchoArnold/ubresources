@@ -2,6 +2,9 @@
 
 @section('head')
 	<meta name="description" content="Get updated with the latest news and events happening at the university of Buea">
+	@if(Auth::user() && Auth::user()->is_admin())
+     	{{HTML::script('/assets/ckeditor/ckeditor.js')}}
+    @endif
 @stop
 @section('header')
     <h1>Gist</h1>

@@ -4,8 +4,8 @@
 </div>
 <div class="form-group">
  {{Form::label('content','Content')}}
- {{HTML::decode(Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Please enter the contents of the article','required' => 'true', 'size'=>'40x20', 'oninput'=> "toggle_button(this,'post-content')")))}}
+ {{HTML::decode(Form::textarea('content', null, array('class' => 'form-control', 'placeholder' => 'Please enter the contents of the article','required' => 'true', 'size'=>'40x20','id'=> 'gist-body')))}}
 </div>
 <div class="text-center">
-   {{Form::submit('Post Content', array('id'=>'post-content','disabled'=>'true', 'class' => 'btn btn-success'))}}
+   {{Form::submit('Post Content', array('id'=>'post-content', 'class' => 'btn btn-success'))}}
 </div>
