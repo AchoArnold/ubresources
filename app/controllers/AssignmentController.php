@@ -17,7 +17,12 @@ class AssignmentController extends \BaseController {
 		}
 
 		$assignments = Assignment::whereLevel($profile->level)->orderBy('created_at', 'dsc')->get();
+
 		$meta_data = Timetable::meta_data( $profile->faculty_id, $profile->department_id );
+
+		foreach ($assignments as $assignment) {
+			$assignment->course_id =  explode(',', $assignment->course_id)[0];
+		}
 
 		return View::make('assignment.index')
 		->with('title', "Assignments for ".strtolower($meta_data[0]->faculty_name). " department of".strtolower($meta_data[0]->department_name)." level ". $profile->level)
@@ -42,22 +47,6 @@ class AssignmentController extends \BaseController {
 	}
 
 	/**
-	 * Display the specified resource.
-	 * GET /assignment/{id}
-	 *
-	 * @param  int  $id
-	 * @return Response
-	 */
-	public function show($uri)
-	{
-		$assignment =  Assignment::whereUri($uri)->firstOrFail();
-
-		return View::make('assignment.show')
-		->with('title', $assignment->course->name .' Assignment')
-		->with('assignment', $assignment);
-	}
-
-	/**
 	 * Store a newly created assignment.
 	 *
 	 * @return Response
@@ -66,15 +55,35 @@ class AssignmentController extends \BaseController {
 	{
 		if(Auth::user()->is_admin())
 		{
-			$assignment = new assignment;
+			$assignment = new Assignment;
 			$assignment->author_id = Auth::user()->id;
-			$assignment->title = Input::get('title');
 			$assignment->content = Input::get('content');
+			$assignment->given_at = Input::get('given_at');
+			$assignment->due_at = Input::get('due_at');
+			$assignment->uri = Input::get('uri');
+			$assignment->course_id  = '';
 
-			if( assignment::whereassignmentUri(Str::slug($assignment->title))->first() )
-				$assignment->assignment_uri = Str::slug($assignment->title).'-'. date('Y-m-d');
-			else
-				$assignment->assignment_uri =  Str::slug($assignment->title );
+			$course_codes = explode(',',Input::get('course_id') );
+			$course = null;
+
+			foreach ($course_codes as $course_code) {
+				$course =  Course::whereShortName(trim($course_code))->first();
+				if($course) {
+					if ($assignment->course_id){
+						$assignment->course_id .= ','. $course->id;
+					}
+					else {
+						$assignment->course_id =  $course->id;
+					}
+				}
+				else{
+					return Redirect::back()
+					->withInput()
+					->with('error', 'Sorry we cannot find the course code named <b>'.trim($course_code).'</b>');
+				}
+			}
+				
+			$assignment->uri = Str::slug($course->name .' Assignment').'-'.date('Y-m-d');
 
 			if($assignment->save())
 				return Redirect::to('assignment/'.$assignment->uri)
@@ -88,6 +97,25 @@ class AssignmentController extends \BaseController {
 		return View::make('shared.404')
 		->with('title', "Sorry your request cannot be processed");
 	}
+
+	/**
+	 * Display the specified resource.
+	 * GET /assignment/{id}
+	 *
+	 * @param  int  $id
+	 * @return Response
+	 */
+	public function show($uri)
+	{
+		$assignment =  Assignment::whereUri($uri)->firstOrFail();
+
+		$assignment->course_id =  explode(',', $assignment->course_id)[0];
+	
+		return View::make('assignment.show')
+		->with('title', $assignment->course->name .' Assignment')
+		->with('assignment', $assignment);
+	}
+
 
 	/**
 	 * Show the form for editing the a assignment.

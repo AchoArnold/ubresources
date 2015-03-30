@@ -1,0 +1,1152 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"shipping",
+				"shipping_agent"
+			],
+			[
+				"user_is",
+				"user_is_store_manager"
+			],
+			[
+				"man",
+				"manufacturer_price"
+			],
+			[
+				"produ",
+				"products"
+			],
+			[
+				"shi",
+				"shipping_date"
+			],
+			[
+				"ExC",
+				"ExCarbon::fullDate($order"
+			],
+			[
+				"delivery",
+				"deliveryreport"
+			],
+			[
+				"ship",
+				"shipping_company"
+			],
+			[
+				"process",
+				"processing"
+			],
+			[
+				"deliver",
+				"delivered"
+			],
+			[
+				"add",
+				"address"
+			],
+			[
+				"ad",
+				"adminandshipping"
+			],
+			[
+				"shipping_com",
+				"shipping_company_email"
+			],
+			[
+				"link_to",
+				"link_to_route('orders"
+			],
+			[
+				"padding-t",
+				"padding-bottom"
+			],
+			[
+				"has",
+				"has_reviewed"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"first",
+				"firstname"
+			],
+			[
+				"getSign",
+				"getSignout"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"prdo",
+				"product"
+			],
+			[
+				"title",
+				"title	Attr"
+			],
+			[
+				"Revies",
+				"ReviewsController"
+			],
+			[
+				"theme",
+				"theme-btn-color"
+			],
+			[
+				"red",
+				"red-theme-color"
+			],
+			[
+				"backgr",
+				"background-color"
+			],
+			[
+				"flex",
+				"flexslider"
+			],
+			[
+				"video",
+				"videojs"
+			],
+			[
+				"downla",
+				"download_url"
+			],
+			[
+				"previ",
+				"preview_supported"
+			],
+			[
+				"image",
+				"image_preview_url"
+			],
+			[
+				"monthly",
+				"monthly_price"
+			],
+			[
+				"yearly",
+				"yearly_price"
+			],
+			[
+				"data-",
+				"data-yearly-price"
+			],
+			[
+				"month",
+				"monthly_price"
+			],
+			[
+				"selec",
+				"selector"
+			],
+			[
+				"url",
+				"urlArray"
+			],
+			[
+				"know",
+				"known_password"
+			],
+			[
+				"kno",
+				"known_password"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"preview",
+				"previewer"
+			],
+			[
+				"reqest",
+				"request_url"
+			],
+			[
+				"host",
+				"host=True"
+			],
+			[
+				"link",
+				"linkbox"
+			],
+			[
+				"file",
+				"file_ext"
+			],
+			[
+				"addL",
+				"addListViewRows"
+			],
+			[
+				"append",
+				"appendTo"
+			],
+			[
+				"target",
+				"targetObject"
+			],
+			[
+				"border-ra",
+				"border-radius"
+			],
+			[
+				"prevent",
+				"preventDefault"
+			],
+			[
+				"wipe",
+				"wipeTop"
+			],
+			[
+				"icon-hand-",
+				"icon-hand-right"
+			],
+			[
+				"background",
+				"background_img"
+			],
+			[
+				"mark",
+				"markmin_description"
+			],
+			[
+				"markup",
+				"markupHTML"
+			],
+			[
+				"preive",
+				"preview_supported"
+			],
+			[
+				"action",
+				"actionbox"
+			],
+			[
+				"download",
+				"download_url"
+			],
+			[
+				"sel",
+				"selector"
+			],
+			[
+				"smal",
+				"small_modal"
+			],
+			[
+				"marku",
+				"markupHTML"
+			],
+			[
+				"paddng",
+				"padding-bottom"
+			],
+			[
+				"avail",
+				"available_from"
+			],
+			[
+				"sharing",
+				"sharinglink"
+			],
+			[
+				"java",
+				"javascript"
+			],
+			[
+				"downloa",
+				"download_url"
+			],
+			[
+				"carou",
+				"carouselLinks"
+			],
+			[
+				"break",
+				"break-word"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"ava",
+				"availabile_to"
+			],
+			[
+				"avali",
+				"availabile_from"
+			],
+			[
+				"availabile",
+				"availabile_to"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"desc",
+				"description"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"border",
+				"border-width"
+			],
+			[
+				"rgb",
+				"rgba	rgba()"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"downlo",
+				"download_url"
+			],
+			[
+				"addCl",
+				"addClass"
+			],
+			[
+				"down",
+				"download_url"
+			],
+			[
+				"src",
+				"src=\"http"
+			],
+			[
+				"col",
+				"color"
+			],
+			[
+				"fade",
+				"fadeOut"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"min-",
+				"min-height"
+			],
+			[
+				"share",
+				"share_buttons"
+			],
+			[
+				"createLi",
+				"createListView"
+			],
+			[
+				"alert",
+				"alert(\"hello"
+			],
+			[
+				"actio",
+				"actionID"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"d",
+				"disabled"
+			],
+			[
+				"file_e",
+				"file_extension"
+			],
+			[
+				"exten",
+				"extensionTypes"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"publised",
+				"published_at"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"new",
+				"newString"
+			],
+			[
+				"temp",
+				"tempString"
+			],
+			[
+				"docume",
+				"document"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"featured",
+				"featured_posts"
+			],
+			[
+				"Front",
+				"FrontPagePosts"
+			],
+			[
+				"fig",
+				"figcaption"
+			],
+			[
+				"border-radi",
+				"border-radius"
+			],
+			[
+				"onmouse",
+				"onmouseover	Attr"
+			],
+			[
+				"on",
+				"onmouseover	Attr"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"galler",
+				"gallery_tile"
+			],
+			[
+				"galle",
+				"gallery_tile"
+			],
+			[
+				"gallery",
+				"gallerysections"
+			],
+			[
+				"requ",
+				"required_star"
+			],
+			[
+				"cnt",
+				"cnt_email"
+			],
+			[
+				"cnt_ms",
+				"cnt_msg_subject"
+			],
+			[
+				"cnt_e",
+				"cnt_email"
+			],
+			[
+				"cnt_em",
+				"cnt_email_message"
+			],
+			[
+				"aler",
+				"alert_msg"
+			],
+			[
+				"ale",
+				"alert_msg"
+			],
+			[
+				"label",
+				"label	<label>"
+			],
+			[
+				"div",
+				"div	Tag"
+			],
+			[
+				"PI",
+				"PI"
+			],
+			[
+				"global_add",
+				"global_add_array"
+			],
+			[
+				"p",
+				"p	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "packa",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"packag",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pacage",
+				"Package Control: Install Package"
+			],
+			[
+				"control",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"paclage",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"LiveReload: Enable/disable plugins",
+				"LiveReload: Enable/disable plug-ins"
+			],
+			[
+				"list pa",
+				"Package Control: List Packages"
+			],
+			[
+				"package s",
+				"Package Syncing: Define Sync Folder"
+			],
+			[
+				"",
+				"Bookmarks: Select Next"
+			],
+			[
+				"pca",
+				"Package Control: Install Package"
+			],
+			[
+				"pacl",
+				"Package Control: Install Package"
+			],
+			[
+				"p",
+				"Package Control: List Packages"
+			],
+			[
+				"Pac",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"packagec",
+				"Package Control: Install Package"
+			],
+			[
+				"emmet",
+				"Toggle Comment"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/bepolite/.xchat2/xchat.conf",
+		"/home/bepolite/.xchat2/chanopt.conf",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/notStrictEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/propEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/equal.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/package.json",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/notDeepEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/deepEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/notEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/strictEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/notPropEqual.xml",
+		"/home/bepolite/OpenSource/jQuery/api.qunitjs.com/entries/QUnit.test.xml",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/public/assets/sass/app.scss",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/update.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/shipping/deliveryreport/index.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/public/assets/js/app.js",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/vendor/jenssegers/mongodb/src/Jenssegers/Mongodb/Query/Builder.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ShippingController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/OrdersController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/models/ShippingLog.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/layouts/master.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/routes.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/process.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/models/Company.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/layouts/partials/_header.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/users/index.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/products/edit.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/manage.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/lib/Security.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/emails/orders/deliveryreport.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/models/Order.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/show.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/shipping/deliveryreport/show.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/lib/ExCarbon.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/index.blade.php",
+		"/home/bepolite/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/usr/share/nginx/html/trash/demo2.js",
+		"/usr/share/nginx/html/trash/demo2.html",
+		"/usr/share/nginx/html/trash/context.standalone.css",
+		"/home/bepolite/Learning/Language/English/terms.txt",
+		"/home/bepolite/Learning/ExtraStudies/PHP/Laravel/Texting.md",
+		"/usr/share/nginx/html/Job/makazosales/Sample tests/ItemsTest.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/StoreController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/tests/controllers/StoreTest.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/tests/RouteTest.php",
+		"/home/bepolite/tweets",
+		"/home/bepolite/Resume",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/tests/ExampleTest.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/phpunit.xml",
+		"/home/bepolite/To Do.md",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/config/app.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/bootstrap/start.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/vendor/bin/classpreloader.php",
+		"/usr/share/nginx/html/School/git-repo/app/tests/ExampleTest.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/404.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/composer.json",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/SocialController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/store/partials/_slider.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/public/assets/config.rb",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/public/assets/bower.json",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/BrandsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/PostsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/user.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/TabletsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ReviewsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/RemindersController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ProductsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ItemsController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/HomeController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ContactController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/ContactController",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/nginxinfo",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/CompaniesController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/emails/orders/date_updated.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/orders/ordersconfirm.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/users/partials/_myorders.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/emails/orders/shipping_company_assigned.blade.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/controllers/UsersController.php",
+		"/usr/share/nginx/html/Job/makazosales/makazosalesapp/app/views/emails/orders/shipmentnotification.blade.php",
+		"/home/bepolite/temp.sh",
+		"/home/bepolite/.bash_profile",
+		"/srv/http/Job/makazosales/makazosalesapp/public/assets/sass/app.scss",
+		"/srv/http/Job/makazosales/makazosalesapp/app/lib/Security.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/routes.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/OrdersController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/CompaniesController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/orders/manage.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/ShippingController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/orders/index.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/orders/show.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/public/assets/sass/email.scss",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/ordersconfirm.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/deliveryreport.blade.php",
+		"/srv/http/School/git-repo/app/views/admin/index.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/public/assets/js/app.js",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/date_updated.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/shipmentnotification.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/shipping_company_assigned.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/shipping/deliveryreport/show.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/UsersController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/shipping/deliveryreport/edit.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/models/ShippingLog.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/layouts/master.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/models/User.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/shipping/delivery-report.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/orders/update.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/layouts/partials/social.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/shipingnotification.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/public/assets/css/email.css",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/layouts/css.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/ProductsController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/ordersconfirm.php",
+		"/srv/http/mysites/talent-evolving/app/views/emails/invitation.blade.php",
+		"/srv/http/mysites/talent-evolving/app/views/emails/welcome.blade.php",
+		"/home/xift/Downloads/basic-email-template/basic.html",
+		"/home/xift/Downloads/basic-email-template/stylesheets/email.css",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/orders/ordersconfirm.html",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/layouts/master.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/emails/newsletter-email-template/stylesheets/email.css",
+		"/srv/http/Job/makazosales/makazosalesapp/app/controllers/StoreController.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/products/index.blade.php",
+		"/home/xift/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/srv/http/Job/makazosales/makazosalesapp/app/filters.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/products/partials/_form.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/products/show.blade.php",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/store/view.blade.php",
+		"/home/xift/Learning/UniversityOfBuea/Level400/SEMESTER I/CEF 409 - artificial-intelligence/Summary.md",
+		"/srv/http/Job/makazosales/makazosalesapp/app/views/products/edit.blade.php"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 109.0,
+		"where_history":
+		[
+			"<all files>",
+			"<open files>",
+			"<all files>"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"href=\"/expect\"",
+			"href=\"/notPropEqual\"",
+			"href=\"/propEqual\"",
+			"href=\"/notStrictEqual\"",
+			"equal/",
+			"href=\"/equal\"",
+			"delivery_time",
+			"col-lg-",
+			"shipping_",
+			"deliveryreport",
+			"getdeliveryReport",
+			"order",
+			"report",
+			"foo",
+			"=",
+			"item",
+			"user->id",
+			"auth::user()",
+			"auth::user",
+			"support",
+			"--quiet",
+			"getdeli",
+			"delivered",
+			"mail::",
+			"update",
+			".header",
+			"color",
+			"dat",
+			"create",
+			"admin",
+			"store_manager",
+			"text-wrap",
+			"admin",
+			"secur",
+			"admin\"",
+			"\"admin\"",
+			"admin == 4",
+			"admin ==",
+			"users/signup",
+			"signup",
+			"product.sh",
+			"getVie",
+			"company_id",
+			"store",
+			"cart-btn",
+			"breakpoint",
+			"border-bottom",
+			"long_",
+			"descrip",
+			"availabi",
+			"store",
+			"store_op",
+			"shipping",
+			"select(",
+			"category",
+			"Category",
+			"category",
+			"6px",
+			"cart-btn",
+			"support",
+			".navbar",
+			"navbar",
+			"cart-btn",
+			"div",
+			"navbar",
+			"h5",
+			"checkout",
+			"item",
+			"price",
+			"Price",
+			"price",
+			"height:",
+			".item",
+			"btn",
+			"ivol",
+			"product->",
+			"time",
+			"Time",
+			"time",
+			"ammount",
+			"lastname",
+			"firstname",
+			"logs",
+			"_time",
+			"time.update",
+			"log",
+			"addto",
+			"cart",
+			"return",
+			"getPro",
+			"create",
+			"description",
+			"availability",
+			"Availability",
+			"availability",
+			"mail::send",
+			"show",
+			"user_id",
+			"shipping.log",
+			"long_description",
+			"description",
+			"photo",
+			"mandril",
+			"something went",
+			"ngc",
+			"update",
+			"$shippings",
+			"user",
+			"users",
+			"user",
+			"users",
+			"process",
+			"manager",
+			"select",
+			"lastname",
+			"tr",
+			"create",
+			"country",
+			"Country",
+			"country",
+			"items",
+			"search-fo",
+			"search",
+			"input-group",
+			"background",
+			"border:",
+			"border",
+			"navigation"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"href=\"/expect/\"",
+			"href=\"/notPropEqual/\"",
+			"href=\"/propEqual/\"",
+			"href=\"/notStrictEqual/\"",
+			"href=\"/equal/\"",
+			"col-md-",
+			"admin == \"admin\"",
+			"product['details']->",
+			"_date",
+			"date.update",
+			"\\",
+			"",
+			"product",
+			"$product->short_description",
+			"$user",
+			"users",
+			"->id",
+			"item",
+			"items",
+			"Makazo",
+			"$product",
+			"'product",
+			"$product",
+			"product",
+			"->id",
+			"products.",
+			"$product",
+			"$products",
+			"assets/img/",
+			"your",
+			"$new_model",
+			"tablets/",
+			"$photo",
+			"$new_photo",
+			"new_picture",
+			"new_image",
+			"$review",
+			"/assets/img/",
+			"new_item",
+			"$item",
+			"items",
+			"\"/assets/",
+			"\"/assets/img/",
+			"/assets/img/pho",
+			"assets/img/paym",
+			"assets/img/pho",
+			"../img/template-assets/",
+			"no-gutter",
+			"plans-wrapper",
+			".file-name-col",
+			"file-name-col",
+			"file.",
+			"createPageLayout",
+			"appendTo($fileTypeDiv)",
+			"'<td>'",
+			"fileExtension",
+			"categorizeFile(",
+			"text-center",
+			"sidebar-margin",
+			": ",
+			":",
+			": ",
+			":",
+			": ",
+			":",
+			"sidebar-margin",
+			"\"icon-share\"",
+			"\"share\"",
+			"share",
+			"icon-share",
+			"../images",
+			"../../images",
+			"/",
+			"../../images/",
+			"../images/",
+			"bepolite",
+			"ViewBtn.",
+			"app/images/icons/",
+			"laGuiltiere",
+			"Gallery",
+			"<body onload=\"window.scrollTo(0,270);\">",
+			"<body>\n<script> window.location.href='http://www.eliteprogrammingclub.tk';</script>",
+			"<body onload=\"location.href=\"http://www.eliteprogrammingclub.tk;\">",
+			"<body onload=\"window.scrollTo(0,270);\">",
+			"&copy; 2013 Elite Programming Club.",
+			"or by subscribe to our regular updates.",
+			"You can join our",
+			"programming",
+			"How do I join the club?",
+			"<ul class=\"accordions\">",
+			"<script type=\"text/javascript\">writeQuotes()</script>",
+			"<a href=\"../contact.html\">",
+			"<a href=\"../about.html\">",
+			"size-3",
+			"<a href=\"./contribute/\">Get Involved →</a>",
+			"<a href=\"../contribute/\">Get Involved →</a>",
+			"<li><a href=\"mailto:support@eliteprogrammingclub.tk/?subject=Error Report\">Report Errors</a></li>",
+			"	<footer class=\"nerdnotfool\">\n		<section class=\"row\">\n			<section class=\"large-4 columns\">\n				<h6><strong>Elite Programmers</strong></h6>\n				<ul style=\"list-style: none;\">\n					<li><strong>→</strong> <a href=\"./about.html\">About Us</a></li>\n					<li><strong>→</strong> <a href=\"./contact.html\">Contact Us</a></li>\n				</ul>\n			</section>\n			<section class=\"large-4 columns\">\n				<h6><strong>Want to Contribute?</strong></h6>\n				<p>We are welcome to any suggestions on how to make this website better and much more attractive\n				<a href=\"./contribute/\">Get Involved →</a>\n				</p>\n			</section>\n			<section class=\"large-4 columns\">\n				<h6><strong>Privacy Policy</strong></h6>\n				<p><strong>→</strong> Content is available under <a class=\"external\" href=\"http://www.gnu.org/copyleft/fdl.html\" target=\"_blank\">\n				GNU Free Documentation License 1.3 or later</a> <br />\n				<strong>→</strong> <a href=\"../constitution.html\"> Constitution of the Elite programming  Club</a>\n				</p>\n			</section>\n		</section>\n	</footer>",
+			"",
+			"	<footer class=\"nerdnotfool\">\n		<section class=\"row\">\n			<section class=\"large-4 columns\">\n				<h6><strong>Elite Programmers</strong></h6>\n				<ul style=\"list-style: none;\">\n					<li><strong>→</strong> <a href=\"../about.html\">About Us</a></li>\n					<li><strong>→</strong> <a href=\"../contact.html\">Contact Us</a></li>\n				</ul>\n			</section>\n			<section class=\"large-4 columns\">\n				<h6><strong>Want to Contribute?</strong></h6>\n				<p>We are welcome to any suggestions on how to make this website better and much more attractive\n				<a href=\"../contribute/\">Get Involved →</a>\n				</p>\n			</section>\n			<section class=\"large-4 columns\">\n				<h6><strong>Privacy Policy</strong></h6>\n				<p><strong>→</strong> Content is available under <a class=\"external\" href=\"http://www.gnu.org/copyleft/fdl.html\" target=\"_blank\">\n				GNU Free Documentation License 1.3 or later</a> <br />\n				<strong>→</strong> <a href=\"../constitution.html\"> Constitution of the Elite programming  Club</a>\n				</p>\n			</section>\n		</section>\n	</footer>",
+			"club'",
+			"Elite Programming Club",
+			"elite programming club",
+			"	<script>\n	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){\n	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),\n	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)\n	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');\n\n	  ga('create', 'UA-43651708-2', 'eliteprogrammingclub.tk');\n	  ga('send', 'pageview');\n	</script>\n</body>",
+			"<![endif]-->",
+			"",
+			"<script type=\"text/javascript\">writeQuotes()</script>",
+			"	<!--  Including Javascript -->\n	<script src=\"../javascripts/vendor/jquery.min.js\"></script>\n	<script src=\"../javascripts/vendor/responsiveslides.min.js\"></script>\n	<script src=\"../javascripts/vendor/foundation.min.js\"></script>\n	<script>\n  $(function() {\n    $(\".rslides\").responsiveSlides();\n  });\n</script>\n	<script>\n		$(document).foundation();\n	</script>\n</body>\n</html>",
+			"<script type=\"text/javascript\">writeQuotes()</script>",
+			"	<link rel=\"shortcut icon\" href=\"./images/favicon.ico\" type=\"image/x-icon\">\n	<link rel=\"icon\" href=\"./images/favicon.ico\" type=\"image/x-icon\">\n	<link rel=\"stylesheet\" href=\"./stylesheets/app_style.min.css\">\n	<link rel=\"stylesheet\" href=\"./stylesheets/ui_style.css\">\n	<link rel=\"stylesheet\" href=\"./stylesheets/social_foundicons.css\">\n	<script src=\"./javascripts/vendor/custom.modernizr.js\"></script>\n	<script src=\"./javascripts/quote.js\"></script>",
+			"<link rel=\"stylesheet\" href=\"../stylesheets/ui_style.css\">",
+			"<script src=\"../javascripts/",
+			"",
+			"<script type=\"text/javascript\">writeQuotes()</script>",
+			"<link rel=\"stylesheet\" href=\"../stylesheets/social_foundicons.css\">\n	<script src=\"../javascripts/quote.js\"></script>",
+			"	<!--  Including Javascript -->\n	<script src=\"./javascripts/vendor/jquery.min.js\"></script>\n	<script src=\"./javascripts/vendor/responsiveslides.min.js\"></script>\n	<script src=\"./javascripts/vendor/foundation.min.js\"></script>\n	<script>\n  $(function() {\n    $(\".rslides\").responsiveSlides();\n  });\n</script>\n	<script>\n		$(document).foundation();\n	</script>\n</body>\n</html>",
+			"<link rel=\"stylesheet\" href=\"../stylesheets/ui_style.css\">",
+			"<link rel=\"stylesheet\" href=\"../stylesheets/ui_style.min.css\">",
+			"<link rel=\"stylesheet\" href=\"../stylesheets/app_style.min.css\">",
+			"<link rel=\"stylesheet\" href=\"./stylesheets/ui_style.css\">\n	<script src=\"./javascripts/quote.js\"></script>",
+			"<div>\n							<script type=\"text/javascript\">writeQuotes()</script>\n						</div>",
+			"ui_style.css",
+			"ga('create', 'UA-43651708-2', 'eliteprogrammingclub.tk');",
+			"large-6 c",
+			"./",
+			"../",
+			"large-8 c",
+			"inverse"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 25.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "CourseOutlineTableSeeder.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": false,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 228.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
