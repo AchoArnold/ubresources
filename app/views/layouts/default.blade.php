@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    	<title>{{ $title }} | UB Resources</title>
+        <title>{{ $title }} | UB Resources</title>
       <link rel="icon" href="{{URL::to('assets/images/favicon.ico')}}" type="image/x-icon">
-    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <meta content="UB, Buea, University, University of Buea, resources, useful-links, 'past-questions', 'news', timetables, research" name="keywords"/>
       @yield('head')
-    	<!-- CSS are placed here -->
+        <!-- CSS are placed here -->
       @if(Request::getClientIp() != '127.0.0.1')
         @include('layouts/style')
       @else
-   	  {{HTML::style('assets/css/vendor/bootstrap.css')}}
+         {{HTML::style('assets/css/vendor/bootstrap.css')}}
       @endif
 
-     	{{HTML::style('assets/css/app.css') }}
+         {{HTML::style('assets/css/app.css') }}
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
+
+      <script type="text/javascript">
+          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+          (function(){
+          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+          s1.async=true;
+          s1.src='https://embed.tawk.to/56417f51244fc83214083512/default';
+          s1.charset='UTF-8';
+          s1.setAttribute('crossorigin','*');
+          s0.parentNode.insertBefore(s1,s0);
+          })();
+      </script>
 
   </head>
   <body>
