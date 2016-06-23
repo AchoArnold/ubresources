@@ -2,3 +2,4 @@
 /app/config
 public/assets/.sass-cache/*
 app/storage/past_questions/*
+.idea
