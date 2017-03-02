@@ -13,23 +13,18 @@
          {{HTML::style('assets/css/vendor/bootstrap.css')}}
       @endif
 
-         {{HTML::style('assets/css/app.css') }}
+      {{HTML::style('assets/css/app.css') }}
       <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
       <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
       <![endif]-->
 
-      <script type="text/javascript">
-          var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
-          (function(){
-          var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
-          s1.async=true;
-          s1.src='https://embed.tawk.to/56417f51244fc83214083512/default';
-          s1.charset='UTF-8';
-          s1.setAttribute('crossorigin','*');
-          s0.parentNode.insertBefore(s1,s0);
-          })();
+      <script>
+          !function(){function c(){var a=b.createElement("script");
+              a.src='https://resend.io/widget.js',a.async=!0,a.onload=function(){__init('RAN2V0Q3VOSWlnTk5RQWc9PQ==')},
+                  b.getElementsByTagName("head")[0].appendChild(a)}var a=window,b=document;
+              a.attachEvent?a.attachEvent("onload",c):a.addEventListener("load",c,!1)}();
       </script>
 
   </head>
